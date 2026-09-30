@@ -4,17 +4,17 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
   <meta name="theme-color" content="#123c35"/>
-  <meta name="description" content="PawSOS India — animal emergency contacts, pet care, nutrition guidance, grooming, reminders and official animal welfare updates."/>
+  <meta name="description" content="PawSOS — animal emergency contacts, rescue support, pet care, nutrition guidance, grooming and trusted updates across India and selected countries."/>
   <link rel="manifest" href="manifest.json"/>
   <link rel="icon" href="icon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="styles.css"/>
-  <title>PawSOS India — Rescue & Pet Care</title>
+  <title>PawSOS — Rescue & Pet Care</title>
 </head>
 <body>
   <header class="topbar">
     <button class="brand" onclick="go('home')" aria-label="PawSOS home">
       <span class="brand-mark">🐾</span>
-      <span><strong>PawSOS</strong><small>India • Rescue & Pet Care</small></span>
+      <span><strong>PawSOS</strong><small>Global • Rescue & Pet Care</small></span>
     </button>
     <nav class="desktop-nav" aria-label="Primary">
       <button data-go="home" onclick="go('home')">Home</button>
@@ -22,6 +22,7 @@
       <button data-go="pets" onclick="go('pets')">My pets</button>
       <button data-go="care" onclick="go('care')">Care</button>
       <button data-go="updates" onclick="go('updates')">Updates</button>
+      <button data-go="about" onclick="go('about')">About</button>
     </nav>
     <button class="sos-mini" onclick="openEmergency()">🚨 SOS</button>
   </header>
@@ -32,13 +33,13 @@
         <div class="hero-copy">
           <div class="eyebrow">ANIMAL HELP, WHEN IT MATTERS</div>
           <h1>One calm place for <span>rescue</span> and everyday pet care.</h1>
-          <p>Find vets and rescuers, manage your pets, check food safety, learn grooming routines, track reminders, and follow trusted animal-welfare updates across India.</p>
+          <p>Find vets and rescuers, manage your pets, check food safety, learn grooming routines, track reminders, and access trusted animal-care resources across India and selected countries.</p>
           <div class="hero-actions">
             <button class="primary" onclick="openEmergency()">🚨 Animal emergency</button>
             <button class="secondary" onclick="go('help')">Find help nearby</button>
           </div>
           <div class="trust-row">
-            <span>✓ India-first</span><span>✓ Source-backed contacts</span><span>✓ Works offline after first load</span>
+            <span>✓ 10-country launch</span><span>✓ Source-backed starter contacts</span><span>✓ Works offline after first load</span>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -95,7 +96,7 @@
         </article>
 
         <article class="mini-panel updates-preview">
-          <div class="panel-head"><div><span class="label">TRUSTED UPDATE</span><h3>Animal welfare in India</h3></div><button class="text-btn" onclick="go('updates')">More</button></div>
+          <div class="panel-head"><div><span class="label">TRUSTED UPDATE</span><h3>Animal health & welfare</h3></div><button class="text-btn" onclick="go('updates')">More</button></div>
           <p><strong>World Rabies Day advisory</strong><br><span>Animal Welfare Board of India • 22 Sep 2026</span></p>
           <small>Use PawSOS updates as a shortcut to official sources, not as a replacement for local authority instructions.</small>
         </article>
@@ -104,7 +105,7 @@
 
     <section id="help" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">EMERGENCY DIRECTORY</span><h1>Find animal help in India.</h1><p>Search source-backed contacts first, then build a live city pack from public map data when your city is not covered yet.</p></div>
+        <div><span class="eyebrow">EMERGENCY DIRECTORY</span><h1>Find animal help, wherever you are.</h1><p>Choose a country and city, search source-backed starter contacts, then build a live city pack from public map data when local coverage is limited.</p></div>
         <button class="primary" onclick="openAdd()">+ Add missing contact</button>
       </div>
 
@@ -116,8 +117,9 @@
       <section class="shell directory-panel">
         <div class="directory-tools">
           <label class="search-field">🔎<input id="search" placeholder="Search name, service, phone or address"/></label>
-          <select id="state" class="control"></select>
-          <input id="city" class="control" list="citySuggestions" placeholder="Type any Indian city"/>
+          <select id="country" class="control" aria-label="Country"></select>
+          <select id="state" class="control" aria-label="State or region"></select>
+          <input id="city" class="control" list="citySuggestions" placeholder="Type any city"/>
           <datalist id="citySuggestions"></datalist>
           <label class="switch"><input id="only24" type="checkbox"/><span>24/7 only</span></label>
         </div>
@@ -259,6 +261,34 @@
         <article class="update-card"><span class="update-tag">INDIA DIRECTORY</span><h2>State animal welfare boards</h2><p>Use AWBI's state-board information when you need formal animal-welfare channels beyond an individual rescue contact.</p><a href="https://www.awbi.gov.in/view/index/state-animal-welfare-boards" target="_blank" rel="noreferrer">Open AWBI directory ↗</a></article>
       </div>
     </section>
+
+    <section id="about" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">ABOUT PAWSOS</span><h1>Helping paws. Saving lives. Caring every day.</h1><p>PawSOS brings emergency animal-help contacts and practical everyday pet care into one calm, easy-to-use place.</p></div>
+      </div>
+      <section class="shell about-grid">
+        <article class="about-story">
+          <span class="label">WHY PAWSOS EXISTS</span>
+          <h2>Make the next helpful action easier.</h2>
+          <p>In an emergency, people should be able to quickly find a veterinarian, rescuer or shelter. On ordinary days, PawSOS helps pet parents with food safety, grooming, care reminders and trusted learning resources.</p>
+          <p>The directory is designed to grow responsibly: source-backed starter records are paired with live local discovery and a community option to add missing professional or organisation contacts.</p>
+          <div class="about-values"><span>🚨 Emergency first</span><span>🐾 Everyday care</span><span>🔎 Source transparency</span><span>🤝 Community contribution</span></div>
+        </article>
+        <article class="founder-card">
+          <span class="label">CREATED WITH CARE</span>
+          <div class="founder-paw">🐾</div>
+          <h2>Concept & Created by<br/>Hardik Desai</h2>
+          <p>With love and inspiration from</p>
+          <strong>Nishiv Desai & Rudra Desai ❤️</strong>
+          <div class="about-motto">One useful connection can change an animal's day — or save a life.</div>
+        </article>
+      </section>
+      <section class="shell coverage-card">
+        <div><span class="label">CURRENT RELEASE</span><h2>10-country starter coverage</h2><p>India remains the deepest preloaded directory. International coverage begins with source-backed starter contacts plus live city discovery and community additions.</p></div>
+        <div class="country-pills"><span>🇮🇳 India</span><span>🇺🇸 USA</span><span>🇬🇧 UK</span><span>🇧🇷 Brazil</span><span>🇨🇳 China</span><span>🇷🇺 Russia</span><span>🇲🇽 Mexico</span><span>🇯🇵 Japan</span><span>🇩🇪 Germany</span><span>🇦🇷 Argentina</span></div>
+      </section>
+    </section>
+
   </main>
 
   <nav class="bottom-nav" aria-label="Mobile navigation">
@@ -313,7 +343,8 @@
       <form id="addForm" class="form-grid">
         <label>Name / organisation<input required id="fName"/></label>
         <label>Type<select id="fType"><option>Vet</option><option>Rescuer</option><option>Shelter</option><option>Shop</option></select></label>
-        <label>State<select required id="fState"></select></label>
+        <label>Country<select required id="fCountry"></select></label>
+        <label>State / region<select required id="fState"></select></label>
         <label>City<input required id="fCity"/></label>
         <label>Phone / mobile 1<input required id="fPhone1" inputmode="tel"/></label>
         <label>Phone / mobile 2<input id="fPhone2" inputmode="tel"/></label>
@@ -359,8 +390,8 @@
   </div>
 
   <footer class="footer shell">
-    <div><strong>PawSOS India</strong><span>Helping people help animals.</span></div>
-    <p>Care information is educational and not a veterinary diagnosis. In emergencies, contact a veterinarian, trained rescuer or local authority.</p>
+    <div><strong>PawSOS</strong><span>Helping people help animals.</span><button class="footer-link" onclick="go('about')">About PawSOS</button></div>
+    <p><strong>Concept & Created by Hardik Desai</strong><br/>Inspired with love by Nishiv Desai & Rudra Desai ❤️<br/>Care information is educational and not a veterinary diagnosis. In emergencies, contact a veterinarian, trained rescuer or local authority.</p>
   </footer>
 
   <script src="app.js"></script>

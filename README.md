@@ -1,34 +1,41 @@
-# PawSOS India v2
+# PawSOS Global v3.0
 
-A mobile-first, installable static web app for animal rescue and everyday pet care.
+A mobile-first, installable animal rescue and everyday pet-care web app.
 
-## What is included
-- India-only animal help directory with the source-backed contacts from PawSOS v1.1
-- Multiple phone numbers per listing
-- Search/filter by state, city, category, 24/7 and saved contacts
-- Live public-map lookup for vets, rescuers, shelters and pet shops
-- Add missing local contacts (stored locally, marked unverified)
+## Current countries
+India, USA, UK, Brazil, China, Russia, Mexico, Japan, Germany and Argentina.
+
+India retains the deepest preloaded directory from the previous release. The nine international countries begin with source-backed/public-listing starter contacts plus live city discovery and community-added contacts.
+
+## Key features
+- Country, state/region and city based emergency directory
+- Vets, rescuers, shelters and pet/pet-care shops
+- Multiple phone numbers per contact where published
+- One-tap call, source and map actions
+- Live public-map lookup for additional city options
+- Add missing contacts locally, clearly marked community-added
 - Found-an-animal guided rescue flow
-- Emergency first-response modal
-- My Pet profiles
-- Vaccination/deworming/grooming/medication reminders
-- Daily wellness check-ins
-- “Can my pet eat this?” food-safety checker
-- Grooming coach for dogs and cats
-- Short care academy
-- PawSOS smart assistant (offline rules-based guidance; no medical diagnosis)
-- Trusted official update links
-- PWA manifest + service worker for installability/offline shell
+- Emergency first-response guidance
+- Pet profiles, reminders and daily wellness check-ins
+- Food-safety checker for dogs and cats
+- Grooming coach and short Pet Care Academy
+- PawSOS smart assistant for educational care guidance
+- Trusted animal-health/welfare source links
+- About PawSOS creator credit
+- PWA manifest and service worker for installability/offline shell
+
+## Creator
+Concept & Created by Hardik Desai.
+With love and inspiration from Nishiv Desai & Rudra Desai.
 
 ## Run
-Open `index.html`, or serve the folder with any static host.
+Open `index.html`, or serve the folder with any static web host.
 
 ## Vercel
-Upload all files in this folder to the root of a GitHub repository and import that repository in Vercel.
-No npm install or build command is required.
+Upload every file in this folder to the root of a GitHub repository and import the repository in Vercel. No npm install or build command is required.
 
 ## Important production note
-This version is front-end only. User-added contacts, pet profiles, reminders and check-ins are stored in the browser using localStorage. To make community contacts available to all users, connect a shared backend/database and moderation workflow.
+This release is front-end only. User-added contacts, pet profiles, reminders and check-ins are stored in the browser using localStorage. A production community directory should use a shared backend, moderation, duplicate detection and periodic contact re-verification.
 
 ## Safety
-Food, grooming and care information is educational. It is not a veterinary diagnosis or a substitute for professional veterinary advice.
+Care information is educational. It is not a veterinary diagnosis or a substitute for professional veterinary care. Emergency contact details can change; users should confirm availability before travelling whenever possible.

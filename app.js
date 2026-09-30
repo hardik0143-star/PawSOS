@@ -1,6 +1,75 @@
 
 const STATES={
 'Andaman and Nicobar Islands':['Port Blair'],'Andhra Pradesh':['Visakhapatnam','Vijayawada','Guntur','Tirupati','Nellore','Kurnool','Rajahmundry','Kakinada','Anantapur'],'Arunachal Pradesh':['Itanagar','Naharlagun','Pasighat','Tawang'],'Assam':['Guwahati','Dibrugarh','Silchar','Jorhat','Tezpur'],'Bihar':['Patna','Gaya','Muzaffarpur','Bhagalpur','Darbhanga'],'Chandigarh':['Chandigarh'],'Chhattisgarh':['Raipur','Bhilai','Durg','Bilaspur','Korba'],'Dadra and Nagar Haveli and Daman and Diu':['Daman','Diu','Silvassa'],'Delhi':['New Delhi','Delhi','Dwarka','Rohini','Saket'],'Goa':['Panaji','Margao','Vasco da Gama','Mapusa','Ponda'],'Gujarat':['Ahmedabad','Surat','Vadodara','Rajkot','Gandhinagar','Bhavnagar','Jamnagar','Junagadh'],'Haryana':['Gurugram','Faridabad','Panchkula','Ambala','Panipat','Karnal','Hisar','Rohtak'],'Himachal Pradesh':['Shimla','Dharamshala','Solan','Mandi','Manali'],'Jammu and Kashmir':['Srinagar','Jammu','Anantnag','Baramulla'],'Jharkhand':['Ranchi','Jamshedpur','Dhanbad','Bokaro','Deoghar'],'Karnataka':['Bengaluru','Mysuru','Mangaluru','Hubballi','Belagavi','Kalaburagi','Shivamogga','Davanagere'],'Kerala':['Thiruvananthapuram','Kochi','Kozhikode','Thrissur','Kollam','Kannur','Kottayam','Alappuzha'],'Ladakh':['Leh','Kargil'],'Lakshadweep':['Kavaratti'],'Madhya Pradesh':['Bhopal','Indore','Jabalpur','Gwalior','Ujjain','Sagar'],'Maharashtra':['Mumbai','Pune','Nagpur','Nashik','Thane','Navi Mumbai','Aurangabad','Solapur','Kolhapur','Amravati','Sangli','Satara','Baramati','Panvel','Dombivli','Pandharpur'],'Manipur':['Imphal'],'Meghalaya':['Shillong','Tura'],'Mizoram':['Aizawl','Lunglei'],'Nagaland':['Kohima','Dimapur'],'Odisha':['Bhubaneswar','Cuttack','Rourkela','Puri','Sambalpur','Berhampur'],'Puducherry':['Puducherry','Karaikal'],'Punjab':['Ludhiana','Amritsar','Jalandhar','Patiala','Mohali','Bathinda'],'Rajasthan':['Jaipur','Jodhpur','Udaipur','Kota','Ajmer','Bikaner','Alwar'],'Sikkim':['Gangtok'],'Tamil Nadu':['Chennai','Coimbatore','Madurai','Tiruchirappalli','Salem','Tiruppur','Vellore','Erode','Thanjavur'],'Telangana':['Hyderabad','Warangal','Nizamabad','Karimnagar','Khammam'],'Tripura':['Agartala'],'Uttar Pradesh':['Lucknow','Noida','Ghaziabad','Kanpur','Varanasi','Agra','Prayagraj','Meerut','Bareilly','Gorakhpur','Mathura'],'Uttarakhand':['Dehradun','Haridwar','Rishikesh','Haldwani','Roorkee'],'West Bengal':['Kolkata','Howrah','Siliguri','Durgapur','Asansol','Darjeeling']};
+
+const COUNTRY_DATA={
+  'India':STATES,
+  'USA':{
+    'New York':['New York City','Buffalo','Rochester','Albany'],
+    'California':['Los Angeles','San Francisco','San Diego','Sacramento'],
+    'Texas':['Houston','Dallas','Austin','San Antonio'],
+    'Florida':['Miami','Orlando','Tampa','Jacksonville'],
+    'Illinois':['Chicago','Springfield'],
+    'Massachusetts':['Boston','Cambridge'],
+    'Washington':['Seattle','Tacoma'],
+    'Pennsylvania':['Philadelphia','Pittsburgh'],
+    'Georgia':['Atlanta','Savannah'],
+    'Arizona':['Phoenix','Tucson']
+  },
+  'UK':{
+    'England':['London','Birmingham','Manchester','Liverpool','Leeds','Bristol','Newcastle','Nottingham'],
+    'Scotland':['Edinburgh','Glasgow','Aberdeen','Dundee'],
+    'Wales':['Cardiff','Swansea','Newport'],
+    'Northern Ireland':['Belfast','Derry']
+  },
+  'Brazil':{
+    'São Paulo':['São Paulo','Campinas','Santos','Jundiaí'],
+    'Rio de Janeiro':['Rio de Janeiro','Niterói'],
+    'Minas Gerais':['Belo Horizonte','Uberlândia'],
+    'Paraná':['Curitiba','Londrina'],
+    'Rio Grande do Sul':['Porto Alegre','Caxias do Sul'],
+    'Bahia':['Salvador','Feira de Santana'],
+    'Distrito Federal':['Brasília']
+  },
+  'China':{
+    'Beijing':['Beijing'],'Shanghai':['Shanghai'],
+    'Guangdong':['Guangzhou','Shenzhen','Dongguan'],
+    'Sichuan':['Chengdu'],'Zhejiang':['Hangzhou','Ningbo'],
+    'Jiangsu':['Nanjing','Suzhou'],'Hubei':['Wuhan'],'Shaanxi':['Xi’an']
+  },
+  'Russia':{
+    'Moscow':['Moscow'],'Saint Petersburg':['Saint Petersburg'],
+    'Moscow Oblast':['Khimki','Balashikha','Odintsovo'],
+    'Tatarstan':['Kazan'],'Krasnodar Krai':['Krasnodar','Sochi'],
+    'Sverdlovsk Oblast':['Yekaterinburg'],'Novosibirsk Oblast':['Novosibirsk']
+  },
+  'Mexico':{
+    'Ciudad de México':['Mexico City'],
+    'Estado de México':['Toluca','Naucalpan','Ecatepec'],
+    'Jalisco':['Guadalajara','Zapopan'],'Nuevo León':['Monterrey'],
+    'Puebla':['Puebla'],'Querétaro':['Santiago de Querétaro'],'Guanajuato':['León','Guanajuato']
+  },
+  'Japan':{
+    'Tokyo':['Tokyo'],'Osaka':['Osaka'],'Kanagawa':['Yokohama','Kawasaki'],
+    'Aichi':['Nagoya'],'Hokkaido':['Sapporo'],'Fukuoka':['Fukuoka'],
+    'Hyogo':['Kobe'],'Kyoto':['Kyoto']
+  },
+  'Germany':{
+    'Berlin':['Berlin'],'Bavaria':['Munich','Nuremberg'],
+    'North Rhine-Westphalia':['Cologne','Düsseldorf','Dortmund'],
+    'Baden-Württemberg':['Stuttgart','Heidelberg'],'Hesse':['Frankfurt','Wiesbaden'],
+    'Hamburg':['Hamburg'],'Lower Saxony':['Hanover'],'Saxony':['Dresden','Leipzig']
+  },
+  'Argentina':{
+    'Buenos Aires (CABA)':['Buenos Aires'],
+    'Buenos Aires Province':['La Plata','Mar del Plata'],
+    'Córdoba':['Córdoba'],'Santa Fe':['Rosario','Santa Fe'],
+    'Mendoza':['Mendoza'],'Tucumán':['San Miguel de Tucumán']
+  }
+};
+const COUNTRY_CODES={'India':'in','USA':'us','UK':'gb','Brazil':'br','China':'cn','Russia':'ru','Mexico':'mx','Japan':'jp','Germany':'de','Argentina':'ar'};
+const DEFAULT_COUNTRY='India';
+
 const seed=[
 {type:'Rescuer',name:'Bezuban Charitable Trust',state:'Gujarat',city:'Ahmedabad',phones:['+91 88664 21316'],address:'Ahmedabad, Gujarat',open24:true,services:['Animal emergency','Ambulance'],source:'https://www.bezubancharitabletrust.com/'},
 {type:'Rescuer',name:'Asha and Pets Foundation',state:'Gujarat',city:'Ahmedabad',phones:['+91 97141 06509','+91 98796 65656'],address:'Satellite, Ahmedabad, Gujarat',open24:false,services:['Rescue','Animal care'],source:'https://ashaandpets.org/Contact%20us.html'},
@@ -57,7 +126,51 @@ const seed=[
 {type:'Vet',name:'Thane CPCA Animal Hospital',state:'Maharashtra',city:'Thane',phones:['+91 87676 12344','+91 93222 71966'],address:'Kolshet Road, Thane West, Maharashtra',open24:false,services:['Animal hospital','Rescue'],source:'https://www.thanecpca.org/contact-us/'},
 {type:'Rescuer',name:'Wildlife Welfare Association',state:'Maharashtra',city:'Thane',phones:['+91 97573 22901','+91 97573 22902','+91 97573 22903'],address:'Manpada, Thane, Maharashtra',open24:false,services:['Wildlife rescue'],source:'https://www.wwaindia.org/web/page/service'},
 {type:'Rescuer',name:'RAWW Wildlife Welfare',state:'Maharashtra',city:'Thane',phones:['+91 76666 80202','+91 98697 80202'],address:'Thane / Mumbai region, Maharashtra',open24:false,services:['Wildlife rescue','Ambulance'],source:'https://www.raww.in/ourservices-rescue.php'}
-].map((x,i)=>({...x,id:i+1,verified:true,community:false,email:'',website:x.source}));
+
+].map((x,i)=>({...x,country:'India',id:i+1,verified:true,community:false,email:'',website:x.source}));
+
+const globalSeed=[
+  {country:'USA',type:'Vet',name:'ASPCA Animal Hospital',state:'New York',city:'New York City',phones:['+1 844 692 7722'],address:'New York City, New York',open24:false,services:['Animal hospital','Veterinary care'],source:'https://www.aspca.org/about-us/contact-us'},
+  {country:'USA',type:'Vet',name:'ASPCA Animal Poison Control Center',state:'National',city:'Nationwide',phones:['+1 888 426 4435'],address:'United States nationwide hotline',open24:true,national:true,services:['24/7 poison control','Veterinary toxicology'],source:'https://www.aspca.org/about-us/contact-us'},
+  {country:'USA',type:'Shelter',name:'Animal Care Centers of NYC',state:'New York',city:'New York City',phones:['+1 212 788 4000','311'],address:'326 E 110th Street, New York, NY',open24:false,services:['Shelter','Lost & found','Field services via 311'],source:'https://www.nycacc.org/contact/'},
+  {country:'USA',type:'Vet',name:'Animal Medical Center',state:'New York',city:'New York City',phones:['+1 212 838 8100'],address:'510 E 62nd Street, New York, NY',open24:true,services:['24-hour veterinary emergency'],source:'https://www.aspca.org/nyc/nyc-faq'},
+
+  {country:'UK',type:'Rescuer',name:'RSPCA Cruelty & Emergency Helpline',state:'National',city:'Nationwide',phones:['0300 1234 999'],address:'United Kingdom nationwide service',open24:false,national:true,services:['Injured animals','Cruelty reports','Animal rescue triage'],source:'https://www.rspca.org.uk/reportaconcern'},
+  {country:'UK',type:'Vet',name:'PDSA Veterinary Enquiries',state:'National',city:'Nationwide',phones:['0300 3737 223'],address:'United Kingdom',open24:false,national:true,services:['Veterinary enquiries','Pet hospital support'],source:'https://www.pdsa.org.uk/contact-us'},
+  {country:'UK',type:'Shelter',name:'Battersea Dogs & Cats Home',state:'England',city:'London',phones:['0800 001 4444'],address:'4 Battersea Park Road, London SW8 4AA',open24:false,services:['Shelter','Rehoming','Pet advice'],source:'https://www.battersea.org.uk/about-us/contact-us'},
+
+  {country:'Brazil',type:'Vet',name:'São Paulo Municipal Veterinary Hospital – East Unit I',state:'São Paulo',city:'São Paulo',phones:['156','+55 11 5461 5600'],address:'Av. Salim Farah Maluf at R. Ulisses Cruz, Tatuapé, São Paulo',open24:true,services:['Public veterinary hospital','Urgency & emergency','Dogs & cats'],source:'https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos'},
+  {country:'Brazil',type:'Vet',name:'São Paulo Municipal Veterinary Hospital – North Unit',state:'São Paulo',city:'São Paulo',phones:['156','+55 11 5461 5600'],address:'Rua Atílio Piffer, 687, Casa Verde, São Paulo',open24:false,services:['Public veterinary hospital','Dogs & cats'],source:'https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos'},
+  {country:'Brazil',type:'Rescuer',name:'Jundiaí Animal Welfare Department (DEBEA)',state:'São Paulo',city:'Jundiaí',phones:['156','+55 11 4589 9306','+55 11 4589 9307'],address:'Rua Abraão Farrão, 08, Jundiaí, São Paulo',open24:false,services:['Animal welfare','Clinical service','Adoption'],source:'https://debea.jundiai.sp.gov.br/contato/'},
+
+  {country:'China',type:'Rescuer',name:'China Small Animal Protection Association',state:'Beijing',city:'Beijing',phones:['+86 10 8855 3597'],address:'Haidian District, Beijing',open24:false,services:['Animal protection','Rescue network'],source:'https://www.google.com/maps/search/?api=1&query=China+Small+Animal+Protection+Association+Beijing'},
+  {country:'China',type:'Vet',name:'Beijing Guanshang Animal Hospital',state:'Beijing',city:'Beijing',phones:['+86 10 6204 9742'],address:'7 N 3rd Ring Middle Rd, Xicheng District, Beijing',open24:false,services:['Veterinary hospital'],source:'https://www.google.com/maps/search/?api=1&query=Beijing+Guanshang+Animal+Hospital'},
+  {country:'China',type:'Vet',name:'Beijing Xintiandi International Animal Hospital',state:'Beijing',city:'Beijing',phones:['+86 10 8456 1939'],address:'Wangjing, Chaoyang District, Beijing',open24:false,services:['Animal hospital','Veterinary care'],source:'https://www.google.com/maps/search/?api=1&query=Beijing+Xintiandi+International+Animal+Hospital'},
+  {country:'China',type:'Shop',name:'Donna Pet Shop',state:'Beijing',city:'Beijing',phones:['+86 10 6433 2394'],address:'Jiangtai West Road, Chaoyang District, Beijing',open24:false,services:['Pet supplies'],source:'https://www.google.com/maps/search/?api=1&query=Donna+Pet+Shop+Beijing'},
+
+  {country:'Russia',type:'Shelter',name:'Murkoshа Cat Shelter',state:'Moscow',city:'Moscow',phones:['+7 495 135 51 03'],address:'Ostashkovskaya Ulitsa 14c2, Moscow',open24:false,services:['Cat shelter','Adoption'],source:'https://www.google.com/maps/search/?api=1&query=Murkosha+Cat+Shelter+Moscow'},
+  {country:'Russia',type:'Vet',name:'Gor-vet Veterinary Clinic',state:'Moscow',city:'Moscow',phones:['+7 499 444 02 53'],address:'Sadovaya-Karetnaya Ulitsa 10, Moscow',open24:true,services:['24-hour veterinarian'],source:'https://www.google.com/maps/search/?api=1&query=Gor-vet+Moscow'},
+  {country:'Russia',type:'Rescuer',name:'Ray Fund for Homeless Animals',state:'Moscow',city:'Moscow',phones:['+7 985 066 77 49'],address:'Ulitsa Kotsyubinskogo 4, Moscow',open24:false,services:['Homeless animal support','Rescue network'],source:'https://www.google.com/maps/search/?api=1&query=Ray+Fund+Moscow+animals'},
+  {country:'Russia',type:'Shop',name:'Petshop.ru',state:'Moscow',city:'Moscow',phones:['+7 800 700 00 50'],address:'Taganskaya Ulitsa 31/22, Moscow',open24:false,services:['Pet supplies'],source:'https://www.google.com/maps/search/?api=1&query=Petshop.ru+Taganskaya+Moscow'},
+
+  {country:'Mexico',type:'Vet',name:'LOCATEL Veterinary Advice',state:'Ciudad de México',city:'Mexico City',phones:['*0311','+52 55 5658 1111'],address:'Mexico City telephone veterinary guidance service',open24:false,services:['Veterinary advice','Government service referrals','Lost pets'],source:'https://311locatel.cdmx.gob.mx/Veterinaria.xhtml'},
+  {country:'Mexico',type:'Rescuer',name:'Agencia de Atención Animal (AGATAN)',state:'Ciudad de México',city:'Mexico City',phones:['+52 55 5693 9892'],address:'Ciudad de México',open24:false,services:['Animal welfare agency','Government resource'],source:'https://transparencia.cdmx.gob.mx/agencia-de-atencion-animal'},
+  {country:'Mexico',type:'Rescuer',name:'Mexico City Emergency / LOCATEL',state:'Ciudad de México',city:'Mexico City',phones:['911','+52 55 5658 1111'],address:'Mexico City',open24:true,services:['Emergency routing','City information'],source:'https://www.mexicocity.cdmx.gob.mx/e/emergency/?lang=en'},
+
+  {country:'Japan',type:'Vet',name:'TRVA Animal Medical Center – Night Emergency',state:'Tokyo',city:'Tokyo',phones:['+81 3 5760 1212','+81 3 5760 1211'],address:'8-19-12 Fukasawa, Setagaya-ku, Tokyo',open24:false,services:['Night veterinary emergency','Secondary care'],source:'https://trva.jp/'},
+  {country:'Japan',type:'Rescuer',name:'Japan Animal Welfare Society (JAWS)',state:'Tokyo',city:'Tokyo',phones:['+81 3 6455 7733'],address:'5-21-15 Higashigotanda, Shinagawa-ku, Tokyo',open24:false,services:['Animal welfare consultation'],source:'https://www.jaws.or.jp/about01/about04/'},
+  {country:'Japan',type:'Shelter',name:'Tokyo ARK – Animal Refuge Kansai',state:'Tokyo',city:'Tokyo',phones:['050 1557 2763'],address:'Tokyo facility (location not publicly disclosed)',open24:false,services:['Animal rescue','Shelter','Adoption'],source:'https://arkbark.net/en/contact/'},
+
+  {country:'Germany',type:'Shelter',name:'Tierheim Berlin',state:'Berlin',city:'Berlin',phones:['+49 30 76888 0','+49 30 76888 201','+49 30 76888 250'],address:'Hausvaterweg 39, 13057 Berlin',open24:false,services:['Animal shelter','Found animals','Shelter veterinary service'],source:'https://tierschutz-berlin.de/kontakt/'},
+  {country:'Germany',type:'Vet',name:'Freie Universität Berlin Small Animal Clinic',state:'Berlin',city:'Berlin',phones:['+49 30 838 62422','+49 160 3758447'],address:'Oertzenweg 19b, 14163 Berlin',open24:true,services:['Small animal clinic','Emergency service','Intensive care'],source:'https://www.vetmed.fu-berlin.de/einrichtungen/kliniken/we20/tierhalter/notdienst/index.html'},
+  {country:'Germany',type:'Vet',name:'Tiernotarzt Berlin',state:'Berlin',city:'Berlin',phones:['+49 174 1601606'],address:'Berlin mobile emergency veterinarian',open24:false,services:['Emergency veterinarian','Mobile service'],source:'https://tierschutz-berlin.de/kontakt/'},
+
+  {country:'Argentina',type:'Vet',name:'Desivet Veterinary Emergency Clinic',state:'Buenos Aires (CABA)',city:'Buenos Aires',phones:['+54 11 4501 7400','+54 11 4503 1389','+54 9 11 2335 2383'],address:'Av. San Martín 4428, Buenos Aires',open24:true,services:['24-hour emergency','Hospitalisation','Veterinary clinic'],source:'https://desivet.com.ar/'},
+  {country:'Argentina',type:'Vet',name:'UBA Veterinary Teaching Hospital',state:'Buenos Aires (CABA)',city:'Buenos Aires',phones:['+54 11 5287 2000'],address:'Av. San Martín 4351, Buenos Aires',open24:false,services:['Small animal hospital','Veterinary specialties'],source:'https://www.fvet.uba.ar/'},
+  {country:'Argentina',type:'Rescuer',name:'Buenos Aires Wildlife Rescue / Civil Defence',state:'Buenos Aires (CABA)',city:'Buenos Aires',phones:['103'],address:'Buenos Aires City',open24:true,services:['Wildlife emergencies','Civil Defence'],source:'https://buenosaires.gob.ar/gcaba_historico/ecoparque/programas-de-conservacion/centro-de-rescate-de-fauna-silvestre-crfs'},
+  {country:'Argentina',type:'Vet',name:'Luis Pasteur Zoonosis Institute',state:'Buenos Aires (CABA)',city:'Buenos Aires',phones:['+54 11 4958 9900'],address:'Av. Díaz Vélez 4821, Buenos Aires',open24:false,services:['Zoonosis','Rabies services','Animal health'],source:'https://buenosaires.gob.ar/gcaba_historico/institutopasteur/servicios'}
+].map((x,i)=>({...x,id:'g'+(i+1),verified:true,community:false,email:'',website:x.source}));
+seed.push(...globalSeed);
 
 const TIPS=[
   ['Fresh water check','Refresh bowls, wash them, and notice whether your pet is drinking much more or less than usual.'],
@@ -98,7 +211,7 @@ const FOOD_DB={
 };
 
 const NEWS_DATE='30 Sep 2026';
-let custom=JSON.parse(localStorage.getItem('pawsosCustomContacts')||'[]');
+let custom=JSON.parse(localStorage.getItem('pawsosCustomContacts')||'[]').map(x=>({...x,country:x.country||'India'}));
 let saved=JSON.parse(localStorage.getItem('pawsosSaved')||'[]').map(String);
 let pets=JSON.parse(localStorage.getItem('pawsosPets')||'[]');
 let reminders=JSON.parse(localStorage.getItem('pawsosReminders')||'[]');
@@ -107,20 +220,22 @@ let filter='All', savedOnly=false;
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function escAttr(v){return esc(v)} function cleanPhone(v){return String(v||'').replace(/[^+\d]/g,'')}
+function escAttr(v){return esc(v)} function cleanPhone(v){return String(v||'').replace(/[^+\d*#]/g,'')}
 function store(k,v){localStorage.setItem(k,JSON.stringify(v))}
 
 function init(){
-  const states=['All states',...Object.keys(STATES).sort()];
-  $('#state').innerHTML=states.map(s=>`<option>${esc(s)}</option>`).join('');
-  $('#fState').innerHTML=Object.keys(STATES).sort().map(s=>`<option>${esc(s)}</option>`).join('');
+  const countries=Object.keys(COUNTRY_DATA);
+  $('#country').innerHTML=countries.map(c=>`<option ${c===DEFAULT_COUNTRY?'selected':''}>${esc(c)}</option>`).join('');
+  $('#fCountry').innerHTML=countries.map(c=>`<option ${c===DEFAULT_COUNTRY?'selected':''}>${esc(c)}</option>`).join('');
+  refreshRegions(); refreshAddRegions();
   $('#chips').innerHTML=['All','Vet','Rescuer','Shelter','Shop'].map(x=>`<button class="chip ${x==='All'?'active':''}" data-filter="${x}">${x}</button>`).join('');
   $$('.chip').forEach(b=>b.onclick=()=>setFilter(b.dataset.filter));
-  $('#state').onchange=()=>{refreshCities();renderDirectory()}; $('#city').oninput=renderDirectory; $('#search').oninput=renderDirectory; $('#only24').onchange=renderDirectory;
+  $('#country').onchange=()=>{refreshRegions();renderDirectory()}; $('#state').onchange=()=>{refreshCities();renderDirectory()}; $('#city').oninput=renderDirectory; $('#search').oninput=renderDirectory; $('#only24').onchange=renderDirectory;
+  $('#fCountry').onchange=refreshAddRegions;
   $('#addForm').onsubmit=saveContact; $('#petForm').onsubmit=savePet; $('#reminderForm').onsubmit=saveReminder; $('#checkinForm').onsubmit=saveCheckin;
   $('#foodQuery').oninput=renderFoodSuggestions; $('#foodSpecies').onchange=renderFoodSuggestions;
   $('#assistantInput').addEventListener('keydown',e=>{if(e.key==='Enter')askAssistant()});
-  refreshCities(); renderDirectory(); renderPets(); renderReminders(); renderCheckinChooser(); updateHomeMetrics(); nextTip(true);
+  renderDirectory(); renderPets(); renderReminders(); renderCheckinChooser(); updateHomeMetrics(); nextTip(true);
   const start=localStorage.getItem('pawsosLastPage')||'home'; go(start,false);
   if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(()=>{});
 }
@@ -151,32 +266,60 @@ function updateHomeMetrics(){
   $('#homeReminder').textContent=note;
 }
 
+function currentRegions(country){return COUNTRY_DATA[country]||{}}
+function refreshRegions(){
+  const country=$('#country').value||DEFAULT_COUNTRY, regions=currentRegions(country);
+  $('#state').innerHTML=['All regions',...Object.keys(regions).sort()].map(s=>`<option>${esc(s)}</option>`).join('');
+  refreshCities();
+}
+function refreshAddRegions(){
+  const country=$('#fCountry').value||DEFAULT_COUNTRY, regions=currentRegions(country), previous=$('#fState').value;
+  $('#fState').innerHTML=Object.keys(regions).sort().map(s=>`<option>${esc(s)}</option>`).join('');
+  if(previous&&Object.prototype.hasOwnProperty.call(regions,previous))$('#fState').value=previous;
+}
 function refreshCities(){
-  const s=$('#state').value; const cities=s==='All states'?[...new Set(Object.values(STATES).flat())]:(STATES[s]||[]);
+  const country=$('#country').value||DEFAULT_COUNTRY, regions=currentRegions(country), s=$('#state').value;
+  const cities=s==='All regions'?[...new Set(Object.values(regions).flat())]:(regions[s]||[]);
   $('#citySuggestions').innerHTML=cities.sort().map(c=>`<option value="${esc(c)}"></option>`).join('');
+  $('#city').placeholder=`Type any city in ${country}`;
 }
 function allContacts(){return [...seed,...custom]}
 function renderDirectory(){
-  const term=$('#search').value.trim().toLowerCase(), state=$('#state').value, city=$('#city').value.trim().toLowerCase(), only24=$('#only24').checked;
-  let items=allContacts().filter(i=>(filter==='All'||i.type===filter)&&(state==='All states'||i.state===state)&&(!city||i.city.toLowerCase().includes(city))&&(!only24||i.open24)&&(`${i.name} ${i.state} ${i.city} ${i.address} ${(i.phones||[]).join(' ')} ${(i.services||[]).join(' ')}`.toLowerCase().includes(term)));
+  const term=$('#search').value.trim().toLowerCase(), country=$('#country').value||DEFAULT_COUNTRY, state=$('#state').value, city=$('#city').value.trim().toLowerCase(), only24=$('#only24').checked;
+  let items=allContacts().filter(i=>{
+    const sameCountry=(i.country||'India')===country;
+    const regionOK=i.national||state==='All regions'||i.state===state;
+    const cityOK=i.national||!city||(i.city||'').toLowerCase().includes(city);
+    const hay=`${i.name} ${i.country||'India'} ${i.state||''} ${i.city||''} ${i.address||''} ${(i.phones||[]).join(' ')} ${(i.services||[]).join(' ')}`.toLowerCase();
+    return sameCountry&&regionOK&&cityOK&&(filter==='All'||i.type===filter)&&(!only24||i.open24)&&hay.includes(term);
+  });
   if(savedOnly) items=items.filter(i=>saved.includes(String(i.id)));
-  $('#resultCount').textContent=`${items.length} contact${items.length===1?'':'s'} ${savedOnly?'saved':'shown'}`;
+  $('#resultCount').textContent=`${items.length} contact${items.length===1?'':'s'} ${savedOnly?'saved':'shown'} • ${country}`;
   $('#cards').innerHTML=items.length?items.map(contactCard).join(''):`<div class="empty-soft" style="grid-column:1/-1">No matching directory contact yet. Try a live city search or add a known contact.<br><br><button class="primary" onclick="loadCityPack()">Build city emergency pack</button> <button class="secondary" onclick="openAdd()">+ Add contact</button></div>`;
 }
 function contactCard(i){
-  const phones=(i.phones||[]).filter(Boolean),primary=phones[0]||'';
-  return `<article class="contact-card"><div class="card-top"><span class="type-badge ${i.type.toLowerCase()}">${esc(i.type)}</span><button class="save-btn" onclick="toggleSave('${i.id}')">${saved.includes(String(i.id))?'♥':'♡'}</button></div><h3>${esc(i.name)}</h3><div class="location">📍 ${esc(i.address)}<br>${esc(i.city)}, ${esc(i.state)}, India</div><div class="services">${(i.services||[]).map(s=>`<span>${esc(s)}</span>`).join('')}</div><div class="phones">${phones.length?phones.map((p,n)=>`<div class="phone"><span>${n?'Alternate':'Primary'}</span><a href="tel:${cleanPhone(p)}">${esc(p)}</a></div>`).join(''):'<div class="muted">No published phone</div>'}</div><div class="card-meta"><span>${i.open24?'● Listed 24/7':'Check hours'}</span><span class="${i.community?'community':'verified'}">${i.community?'◷ Community-added':'✓ Public-source record'}</span></div><div class="contact-actions">${primary?`<a href="tel:${cleanPhone(primary)}">📞 Call</a>`:`<button onclick="openMapsSearch('${esc(i.name)}')">⌕ Search</button>`}${i.source?`<a target="_blank" rel="noreferrer" href="${escAttr(i.source)}">↗ Source</a>`:`<span></span>`}<a target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i.name+', '+i.address+', '+i.city+', '+i.state+', India')}">🧭 Map</a></div></article>`;
+  const phones=(i.phones||[]).filter(Boolean),primary=phones[0]||'', country=i.country||'India';
+  const where=i.national?`${country} • nationwide`:[i.city,i.state,country].filter(Boolean).join(', ');
+  return `<article class="contact-card"><div class="card-top"><span class="type-badge ${i.type.toLowerCase()}">${esc(i.type)}</span><button class="save-btn" onclick="toggleSave('${i.id}')">${saved.includes(String(i.id))?'♥':'♡'}</button></div><h3>${esc(i.name)}</h3><div class="location">📍 ${esc(i.address)}<br>${esc(where)}</div><div class="services">${(i.services||[]).map(s=>`<span>${esc(s)}</span>`).join('')}</div><div class="phones">${phones.length?phones.map((p,n)=>`<div class="phone"><span>${n?'Alternate':'Primary'}</span><a href="tel:${cleanPhone(p)}">${esc(p)}</a></div>`).join(''):'<div class="muted">No published phone</div>'}</div><div class="card-meta"><span>${i.open24?'● Listed 24/7':'Check hours'}</span><span class="${i.community?'community':'verified'}">${i.community?'◷ Community-added':'✓ Public-source record'}</span></div><div class="contact-actions">${primary?`<a href="tel:${cleanPhone(primary)}">📞 Call</a>`:`<button onclick="openMapsSearch('${esc(i.name)}')">⌕ Search</button>`}${i.source?`<a target="_blank" rel="noreferrer" href="${escAttr(i.source)}">↗ Source</a>`:`<span></span>`}<a target="_blank" rel="noreferrer" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(i.name+', '+i.address+', '+where)}">🧭 Map</a></div></article>`;
 }
 function toggleSave(id){id=String(id);saved=saved.includes(id)?saved.filter(x=>x!==id):[...saved,id];store('pawsosSaved',saved);renderDirectory();updateHomeMetrics()}
 function showSaved(){savedOnly=!savedOnly;renderDirectory()}
 function setFilter(v){filter=v;savedOnly=false;$$('.chip').forEach(x=>x.classList.toggle('active',x.dataset.filter===v));renderDirectory()}
-function openAdd(){const s=$('#state').value;if(s&&s!=='All states')$('#fState').value=s;if($('#city').value)$('#fCity').value=$('#city').value;show('addModal')}
-function saveContact(e){e.preventDefault();const phones=[$('#fPhone1').value.trim(),$('#fPhone2').value.trim()].filter(Boolean);custom.unshift({id:'c'+Date.now(),type:$('#fType').value,name:$('#fName').value.trim(),state:$('#fState').value,city:$('#fCity').value.trim(),phones,address:$('#fAddress').value.trim(),email:$('#fEmail').value.trim(),website:$('#fWebsite').value.trim(),source:$('#fWebsite').value.trim(),open24:$('#f24').checked,services:$('#fServices').value.split(',').map(x=>x.trim()).filter(Boolean),verified:false,community:true});store('pawsosCustomContacts',custom);e.target.reset();hide('addModal');renderDirectory()}
+function openAdd(){
+  const country=$('#country').value||DEFAULT_COUNTRY;$('#fCountry').value=country;refreshAddRegions();
+  const s=$('#state').value;if(s&&s!=='All regions'&&[...$('#fState').options].some(o=>o.value===s))$('#fState').value=s;
+  if($('#city').value)$('#fCity').value=$('#city').value;show('addModal')
+}
+function saveContact(e){
+  e.preventDefault();const phones=[$('#fPhone1').value.trim(),$('#fPhone2').value.trim()].filter(Boolean);
+  custom.unshift({id:'c'+Date.now(),country:$('#fCountry').value,type:$('#fType').value,name:$('#fName').value.trim(),state:$('#fState').value,city:$('#fCity').value.trim(),phones,address:$('#fAddress').value.trim(),email:$('#fEmail').value.trim(),website:$('#fWebsite').value.trim(),source:$('#fWebsite').value.trim(),open24:$('#f24').checked,services:$('#fServices').value.split(',').map(x=>x.trim()).filter(Boolean),verified:false,community:true});
+  store('pawsosCustomContacts',custom);e.target.reset();$('#fCountry').value=$('#country').value||DEFAULT_COUNTRY;refreshAddRegions();hide('addModal');renderDirectory()
+}
 
 async function geocodeCity(){
- const city=$('#city').value.trim(), state=$('#state').value;if(!city)throw new Error('Enter a city first.');
- const q=[city,state!=='All states'?state:'','India'].filter(Boolean).join(', ');
- const r=await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=in&q=${encodeURIComponent(q)}`);
+ const city=$('#city').value.trim(), state=$('#state').value, country=$('#country').value||DEFAULT_COUNTRY;if(!city)throw new Error('Enter a city first.');
+ const q=[city,state!=='All regions'?state:'',country].filter(Boolean).join(', '), code=COUNTRY_CODES[country]||'';
+ const r=await fetch(`https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=${encodeURIComponent(code)}&q=${encodeURIComponent(q)}`);
  if(!r.ok)throw new Error('Could not reach the public map service.');const data=await r.json();if(!data.length)throw new Error('City not found in public map data.');return{lat:+data[0].lat,lon:+data[0].lon};
 }
 async function fetchLivePlaces(type,g){
@@ -186,10 +329,10 @@ async function fetchLivePlaces(type,g){
  const r=await fetch('https://overpass-api.de/api/interpreter?data='+encodeURIComponent(query));if(!r.ok)throw new Error('Live directory service is temporarily busy.');const data=await r.json();return data.elements.map(osmPlace).filter(x=>x.name).sort((a,b)=>(b.phone?1:0)-(a.phone?1:0));
 }
 function osmPlace(e){const t=e.tags||{},lat=e.lat||(e.center&&e.center.lat),lon=e.lon||(e.center&&e.center.lon),phone=t['contact:phone']||t.phone||t['contact:mobile']||'',email=t['contact:email']||t.email||'',website=t['contact:website']||t.website||'',address=[t['addr:housenumber'],t['addr:street'],t['addr:suburb'],t['addr:city']].filter(Boolean).join(', ');return{name:t.name||t.operator||'',phone,email,website,address,lat,lon}}
-function liveCard(p){const map=p.lat&&p.lon?`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name+' '+$('#city').value+' India')}`;return`<div class="live-item"><strong>${esc(p.name)}</strong><small>${esc(p.address||'Address not published in public map data')}</small><small>${p.phone?'☎ '+esc(p.phone):'Phone not published'}${p.email?' • ✉ '+esc(p.email):''}</small><div class="mini-actions">${p.phone?`<a href="tel:${cleanPhone(p.phone)}">Call</a>`:''}<a target="_blank" rel="noreferrer" href="${map}">Directions</a>${p.website?`<a target="_blank" rel="noreferrer" href="${escAttr(p.website)}">Website</a>`:''}</div></div>`}
+function liveCard(p){const map=p.lat&&p.lon?`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}`:`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name+' '+$('#city').value+' '+($('#country').value||DEFAULT_COUNTRY))}`;return`<div class="live-item"><strong>${esc(p.name)}</strong><small>${esc(p.address||'Address not published in public map data')}</small><small>${p.phone?'☎ '+esc(p.phone):'Phone not published'}${p.email?' • ✉ '+esc(p.email):''}</small><div class="mini-actions">${p.phone?`<a href="tel:${cleanPhone(p.phone)}">Call</a>`:''}<a target="_blank" rel="noreferrer" href="${map}">Directions</a>${p.website?`<a target="_blank" rel="noreferrer" href="${escAttr(p.website)}">Website</a>`:''}</div></div>`}
 async function loadLive(type){try{$('#liveStatus').textContent='Searching public map data…';$('#liveResults').innerHTML='<div class="empty-soft">Loading…</div>';const g=await geocodeCity(),places=(await fetchLivePlaces(type,g)).slice(0,12);$('#liveTitle').textContent=`${type} listings near ${$('#city').value.trim()}`;$('#liveStatus').textContent=`Found ${places.length} public map listing${places.length===1?'':'s'}. Published phone availability varies.`;$('#liveResults').innerHTML=places.length?places.map(liveCard).join(''):'<div class="empty-soft">No usable public listings returned. Try another category or add a known local contact.</div>';}catch(err){$('#liveStatus').textContent=err.message;$('#liveResults').innerHTML=`<div class="empty-soft">${esc(err.message)}</div>`}}
 async function loadCityPack(){try{const city=$('#city').value.trim();if(!city)throw new Error('Enter a city first.');$('#liveStatus').textContent='Building city emergency pack…';$('#liveResults').innerHTML='<div class="empty-soft">Searching vets, rescuers, shelters and pet shops…</div>';const g=await geocodeCity();const groups=await Promise.all(['Vet','Rescuer','Shelter','Shop'].map(async type=>{try{return[type,(await fetchLivePlaces(type,g)).slice(0,3)]}catch(e){return[type,[]]}}));$('#liveTitle').textContent=`Emergency pack for ${city}`;let total=0;$('#liveResults').innerHTML=groups.map(([type,items])=>{total+=items.length;return`<div class="live-item"><strong>${type==='Vet'?'🩺':type==='Rescuer'?'🛟':type==='Shelter'?'🏠':'🛍️'} ${type}s</strong>${items.length?items.map(x=>liveCard(x)).join(''):'<small>No usable public listing returned.</small>'}</div>`}).join('');$('#liveStatus').textContent=`Found ${total} public listings. Confirm availability before travelling.`;}catch(err){$('#liveStatus').textContent=err.message;$('#liveResults').innerHTML=`<div class="empty-soft">${esc(err.message)}</div>`}}
-function openMapsSearch(q){window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q+' '+($('#city').value||'')+' India')}`,'_blank','noopener')}
+function openMapsSearch(q){window.open(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q+' '+($('#city').value||'')+' '+($('#country').value||DEFAULT_COUNTRY))}`,'_blank','noopener')}
 
 function petEmoji(s){return s==='Dog'?'🐶':s==='Cat'?'🐱':s==='Bird'?'🐦':'🐾'}
 function openPetForm(){show('petModal')}

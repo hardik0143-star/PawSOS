@@ -1,11 +1,11 @@
 {
-  "name": "PawSOS India \u2014 Rescue & Pet Care",
+  "name": "PawSOS — Rescue & Pet Care",
   "short_name": "PawSOS",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#fbfaf5",
   "theme_color": "#123c35",
-  "description": "Animal emergency directory, pet care, food safety, grooming and reminders for India.",
+  "description": "Animal emergency directory, rescue support, pet care, food safety and grooming across India and selected countries.",
   "icons": [
     {
       "src": "icon.svg",
