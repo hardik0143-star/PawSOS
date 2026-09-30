@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+  <meta name="theme-color" content="#123c35"/>
+  <meta name="description" content="PawSOS India — animal emergency contacts, pet care, nutrition guidance, grooming, reminders and official animal welfare updates."/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="icon" href="icon.svg" type="image/svg+xml"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <title>PawSOS India — Rescue & Pet Care</title>
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" onclick="go('home')" aria-label="PawSOS home">
+      <span class="brand-mark">🐾</span>
+      <span><strong>PawSOS</strong><small>India • Rescue & Pet Care</small></span>
+    </button>
+    <nav class="desktop-nav" aria-label="Primary">
+      <button data-go="home" onclick="go('home')">Home</button>
+      <button data-go="help" onclick="go('help')">Find help</button>
+      <button data-go="pets" onclick="go('pets')">My pets</button>
+      <button data-go="care" onclick="go('care')">Care</button>
+      <button data-go="updates" onclick="go('updates')">Updates</button>
+    </nav>
+    <button class="sos-mini" onclick="openEmergency()">🚨 SOS</button>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow">ANIMAL HELP, WHEN IT MATTERS</div>
+          <h1>One calm place for <span>rescue</span> and everyday pet care.</h1>
+          <p>Find vets and rescuers, manage your pets, check food safety, learn grooming routines, track reminders, and follow trusted animal-welfare updates across India.</p>
+          <div class="hero-actions">
+            <button class="primary" onclick="openEmergency()">🚨 Animal emergency</button>
+            <button class="secondary" onclick="go('help')">Find help nearby</button>
+          </div>
+          <div class="trust-row">
+            <span>✓ India-first</span><span>✓ Source-backed contacts</span><span>✓ Works offline after first load</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb orb-a"></div><div class="orb orb-b"></div>
+          <div class="pet-bubble dog">🐶</div>
+          <div class="pet-bubble cat">🐱</div>
+          <div class="pet-bubble bird">🐦</div>
+          <div class="hero-paw">🐾</div>
+          <div class="hero-note"><b>Ready when they need you.</b><span>Emergency help • care • reminders</span></div>
+        </div>
+      </div>
+
+      <div class="shell daily-wrap">
+        <article class="daily-card">
+          <div>
+            <span class="label">TODAY'S 60-SECOND CARE TIP</span>
+            <h2 id="dailyTipTitle">Fresh water check</h2>
+            <p id="dailyTipText">Refresh bowls, wash them, and notice whether your pet is drinking much more or less than usual.</p>
+          </div>
+          <button class="ghost" onclick="nextTip()">Another tip ↻</button>
+        </article>
+      </div>
+
+      <section class="shell home-grid">
+        <button class="feature-card emergency" onclick="openFoundWizard()">
+          <span class="feature-icon">🛟</span><strong>I found an animal</strong><small>Injured, abandoned, lost pet or wildlife</small><b>Start rescue flow →</b>
+        </button>
+        <button class="feature-card" onclick="go('help')">
+          <span class="feature-icon">🩺</span><strong>Find help</strong><small>Vets, rescuers, shelters & pet shops</small><b>Open directory →</b>
+        </button>
+        <button class="feature-card" onclick="go('pets')">
+          <span class="feature-icon">🐶</span><strong>My pets</strong><small>Profiles, daily check-ins & reminders</small><b>Open pet dashboard →</b>
+        </button>
+        <button class="feature-card" onclick="go('care','food')">
+          <span class="feature-icon">🥗</span><strong>Can my pet eat this?</strong><small>Fast food-safety checker for dogs & cats</small><b>Check a food →</b>
+        </button>
+        <button class="feature-card" onclick="go('care','groom')">
+          <span class="feature-icon">🛁</span><strong>Grooming coach</strong><small>Simple coat, nail, ear & dental routines</small><b>Build a routine →</b>
+        </button>
+        <button class="feature-card" onclick="openAssistant()">
+          <span class="feature-icon">✨</span><strong>PawSOS Assistant</strong><small>Care guidance with emergency escalation</small><b>Ask a question →</b>
+        </button>
+      </section>
+
+      <section class="shell insight-grid">
+        <article class="mini-panel">
+          <div class="panel-head"><div><span class="label">MY DASHBOARD</span><h3>At a glance</h3></div><button class="text-btn" onclick="go('pets')">Open</button></div>
+          <div class="metric-row">
+            <div><b id="petCount">0</b><span>Pets</span></div>
+            <div><b id="dueCount">0</b><span>Due reminders</span></div>
+            <div><b id="savedCount">0</b><span>Saved contacts</span></div>
+          </div>
+          <div id="homeReminder" class="soft-note">Add a pet to start a care dashboard.</div>
+        </article>
+
+        <article class="mini-panel updates-preview">
+          <div class="panel-head"><div><span class="label">TRUSTED UPDATE</span><h3>Animal welfare in India</h3></div><button class="text-btn" onclick="go('updates')">More</button></div>
+          <p><strong>World Rabies Day advisory</strong><br><span>Animal Welfare Board of India • 22 Sep 2026</span></p>
+          <small>Use PawSOS updates as a shortcut to official sources, not as a replacement for local authority instructions.</small>
+        </article>
+      </section>
+    </section>
+
+    <section id="help" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">EMERGENCY DIRECTORY</span><h1>Find animal help in India.</h1><p>Search source-backed contacts first, then build a live city pack from public map data when your city is not covered yet.</p></div>
+        <button class="primary" onclick="openAdd()">+ Add missing contact</button>
+      </div>
+
+      <section class="shell rescue-strip">
+        <div><b>Found an animal?</b><span>Use the guided flow to decide what to do before transport.</span></div>
+        <button class="danger-btn" onclick="openFoundWizard()">Start rescue flow</button>
+      </section>
+
+      <section class="shell directory-panel">
+        <div class="directory-tools">
+          <label class="search-field">🔎<input id="search" placeholder="Search name, service, phone or address"/></label>
+          <select id="state" class="control"></select>
+          <input id="city" class="control" list="citySuggestions" placeholder="Type any Indian city"/>
+          <datalist id="citySuggestions"></datalist>
+          <label class="switch"><input id="only24" type="checkbox"/><span>24/7 only</span></label>
+        </div>
+        <div id="chips" class="chips"></div>
+        <div class="directory-meta"><span id="resultCount">0 contacts</span><div><button class="link-btn" onclick="loadCityPack()">◎ Build city emergency pack</button><button class="link-btn" onclick="showSaved()">♥ Saved only</button></div></div>
+        <div id="cards" class="cards"></div>
+      </section>
+
+      <section class="shell live-panel">
+        <div>
+          <span class="label">CITY DISCOVERY</span><h2 id="liveTitle">Need more local options?</h2>
+          <p id="liveStatus">Enter a city above, then build an emergency pack. PawSOS queries public map data and prioritises listings with published contact details.</p>
+          <div class="live-buttons">
+            <button onclick="loadLive('Vet')">🩺 Vets</button><button onclick="loadLive('Rescuer')">🛟 Rescuers</button>
+            <button onclick="loadLive('Shelter')">🏠 Shelters</button><button onclick="loadLive('Shop')">🛍️ Pet shops</button>
+          </div>
+        </div>
+        <div id="liveResults" class="live-results"><div class="empty-soft">Live results will appear here.</div></div>
+      </section>
+    </section>
+
+    <section id="pets" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">MY PETS</span><h1>Your pet-care home base.</h1><p>Keep simple profiles, care reminders and daily wellness check-ins on this device.</p></div>
+        <button class="primary" onclick="openPetForm()">+ Add a pet</button>
+      </div>
+      <div class="shell two-col">
+        <section class="panel">
+          <div class="panel-head"><div><span class="label">PROFILES</span><h2>My pets</h2></div></div>
+          <div id="petList" class="pet-list"></div>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><div><span class="label">SMART REMINDERS</span><h2>Care calendar</h2></div><button class="text-btn" onclick="openReminderForm()">+ Add</button></div>
+          <div id="reminderList" class="reminder-list"></div>
+        </section>
+      </div>
+      <div class="shell two-col">
+        <section class="panel">
+          <span class="label">DAILY CHECK-IN</span><h2>How is your pet today?</h2>
+          <div id="checkinChooser"></div>
+          <form id="checkinForm" class="checkin-grid">
+            <label>Appetite<select id="ciAppetite"><option value="2">Normal</option><option value="1">Less than usual</option><option value="0">Not eating</option></select></label>
+            <label>Energy<select id="ciEnergy"><option value="2">Normal</option><option value="1">Lower than usual</option><option value="0">Very low / unable to settle</option></select></label>
+            <label>Water<select id="ciWater"><option value="2">Normal</option><option value="1">A little unusual</option><option value="0">Much more / much less</option></select></label>
+            <label>Stool / urine<select id="ciToilet"><option value="2">Normal</option><option value="1">Mild change</option><option value="0">Major change / blood / unable</option></select></label>
+            <button class="primary wide" type="submit">Save today's check-in</button>
+          </form>
+          <div id="checkinResult" class="soft-note">A check-in is not a diagnosis. PawSOS only flags patterns worth discussing with a vet.</div>
+        </section>
+        <section class="panel">
+          <span class="label">PET CARE HABITS</span><h2>Small things that matter</h2>
+          <div class="habit-list">
+            <div><span>💧</span><p><b>Water</b><small>Fresh water and clean bowls daily.</small></p></div>
+            <div><span>🦷</span><p><b>Dental</b><small>Use pet-safe dental care; never human toothpaste.</small></p></div>
+            <div><span>⚖️</span><p><b>Weight</b><small>Track trends, not just a single number.</small></p></div>
+            <div><span>🎾</span><p><b>Enrichment</b><small>Age-appropriate movement, play and mental stimulation.</small></p></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="care" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">CARE HUB</span><h1>Everyday guidance, made simple.</h1><p>Food safety, grooming routines and short learning cards. For illness, medication or special diets, use your veterinarian.</p></div>
+      </div>
+
+      <div class="shell care-tabs">
+        <button class="care-tab active" data-care="food" onclick="showCare('food')">🥗 Food checker</button>
+        <button class="care-tab" data-care="groom" onclick="showCare('groom')">🛁 Grooming coach</button>
+        <button class="care-tab" data-care="academy" onclick="showCare('academy')">🎓 Care academy</button>
+      </div>
+
+      <section id="care-food" class="shell care-view active">
+        <div class="two-col">
+          <article class="panel food-checker">
+            <span class="label">CAN MY PET EAT THIS?</span><h2>Food safety checker</h2>
+            <div class="food-controls">
+              <select id="foodSpecies" class="control"><option value="dog">🐶 Dog</option><option value="cat">🐱 Cat</option></select>
+              <input id="foodQuery" class="control" placeholder="Try chocolate, banana, rice, milk..." autocomplete="off"/>
+            </div>
+            <div id="foodSuggestions" class="food-suggestions"></div>
+            <div id="foodResult" class="food-result empty-state">
+              <span class="big-icon">🥣</span><b>Search a food</b><p>PawSOS will show a simple safety category and why.</p>
+            </div>
+          </article>
+          <article class="panel">
+            <span class="label">NUTRITION BASICS</span><h2>Healthy feeding principles</h2>
+            <div class="principles">
+              <div><b>1</b><p><strong>Complete first</strong><span>Use a nutritionally complete food appropriate for species and life stage as the foundation.</span></p></div>
+              <div><b>2</b><p><strong>Portions are individual</strong><span>Age, body condition, activity, neuter status and illness change energy needs.</span></p></div>
+              <div><b>3</b><p><strong>Treats stay small</strong><span>Extras should not crowd out balanced nutrition.</span></p></div>
+              <div><b>4</b><p><strong>Special diets need a vet</strong><span>Kidney, liver, diabetes, allergy and weight-management diets should be personalised.</span></p></div>
+            </div>
+            <div class="source-box">Reference shortcuts: <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noreferrer">WSAVA nutrition guidelines ↗</a> · <a href="https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noreferrer">ASPCA foods to avoid ↗</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="care-groom" class="shell care-view">
+        <div class="two-col">
+          <article class="panel">
+            <span class="label">PERSONALISED ROUTINE</span><h2>Grooming coach</h2>
+            <div class="form-stack">
+              <label>Pet<select id="gSpecies" class="control"><option value="dog">🐶 Dog</option><option value="cat">🐱 Cat</option></select></label>
+              <label>Coat<select id="gCoat" class="control"><option value="short">Short</option><option value="medium">Medium / double coat</option><option value="long">Long / dense</option></select></label>
+              <label>Lifestyle<select id="gLifestyle" class="control"><option value="indoor">Mostly indoor</option><option value="mixed">Indoor + outdoor</option><option value="outdoor">Mostly outdoor / very active</option></select></label>
+              <button class="primary" onclick="buildGrooming()">Build my routine</button>
+            </div>
+          </article>
+          <article class="panel" id="groomPlan">
+            <span class="label">YOUR ROUTINE</span><h2>Start with the coat</h2>
+            <div class="empty-soft">Choose the pet, coat and lifestyle to create a simple routine.</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="care-academy" class="shell care-view">
+        <div class="academy-grid">
+          <article class="lesson"><span>🐾</span><b>New pet: first 7 days</b><p>Quiet space, gradual introductions, predictable meals and an early vet relationship.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🦷</span><b>Dental care basics</b><p>Build tolerance slowly and use pet-specific products. Bad breath can be more than a cosmetic issue.</p><small>2 min read</small></article>
+          <article class="lesson"><span>☀️</span><b>Heat safety</b><p>Shade, water and cooler activity times. Never leave an animal in a parked vehicle.</p><small>90 sec read</small></article>
+          <article class="lesson"><span>🪱</span><b>Parasite prevention</b><p>Discuss deworming and tick/flea prevention with your vet based on age, species and exposure.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🐕</span><b>Body language</b><p>Look for tension, avoidance, pinned ears, stiff posture and other stress signals before handling.</p><small>3 min read</small></article>
+          <article class="lesson"><span>🧸</span><b>Enrichment</b><p>Sniffing, play, climbing, training and food puzzles can support wellbeing when matched to the animal.</p><small>2 min read</small></article>
+        </div>
+      </section>
+    </section>
+
+    <section id="updates" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">NEWS & ALERTS</span><h1>Trusted sources, without the noise.</h1><p>PawSOS points users to authoritative animal-welfare and pet-health sources. These cards are curated snapshots; tap the source for the latest information.</p></div>
+      </div>
+      <div class="shell update-grid">
+        <article class="update-card featured"><span class="update-tag">AWBI • 22 SEP 2026</span><h2>World Rabies Day advisory</h2><p>Official Animal Welfare Board of India advisory connected to World Rabies Day on 28 September 2026.</p><a href="https://www.awbi.gov.in/circulars" target="_blank" rel="noreferrer">Open AWBI circulars ↗</a></article>
+        <article class="update-card"><span class="update-tag">AWBI • 11 AUG 2026</span><h2>Flood rescue & rehabilitation</h2><p>Advisory on rescue and rehabilitation of animals affected by severe floods in Assam and Gujarat.</p><a href="https://www.awbi.gov.in/circulars" target="_blank" rel="noreferrer">Open official source ↗</a></article>
+        <article class="update-card"><span class="update-tag">AWBI • 04 AUG 2025</span><h2>24×7 helpline & emergency veterinary services</h2><p>AWBI advisory requesting establishment of round-the-clock helpline and emergency veterinary services for injured and sick animals.</p><a href="https://www.awbi.gov.in/circulars" target="_blank" rel="noreferrer">Open official source ↗</a></article>
+        <article class="update-card"><span class="update-tag">PET HEALTH</span><h2>Nutrition resources</h2><p>WSAVA's nutrition toolkit includes body-condition, calorie and pet-food-selection resources for veterinary teams and owners.</p><a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noreferrer">Open WSAVA ↗</a></article>
+        <article class="update-card"><span class="update-tag">TOXIN SAFETY</span><h2>Foods to avoid</h2><p>ASPCA Poison Control maintains guidance on common human foods and household exposures that can harm pets.</p><a href="https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noreferrer">Open ASPCA ↗</a></article>
+        <article class="update-card"><span class="update-tag">INDIA DIRECTORY</span><h2>State animal welfare boards</h2><p>Use AWBI's state-board information when you need formal animal-welfare channels beyond an individual rescue contact.</p><a href="https://www.awbi.gov.in/view/index/state-animal-welfare-boards" target="_blank" rel="noreferrer">Open AWBI directory ↗</a></article>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Mobile navigation">
+    <button data-go="home" onclick="go('home')"><span>⌂</span>Home</button>
+    <button data-go="help" onclick="go('help')"><span>✚</span>Help</button>
+    <button data-go="pets" onclick="go('pets')"><span>🐾</span>Pets</button>
+    <button data-go="care" onclick="go('care')"><span>♡</span>Care</button>
+    <button data-go="updates" onclick="go('updates')"><span>◉</span>Updates</button>
+  </nav>
+
+  <button class="assistant-fab" onclick="openAssistant()" aria-label="Open PawSOS Assistant">✨</button>
+
+  <div id="assistantSheet" class="sheet hidden" onclick="sheetBackdrop(event,'assistantSheet')">
+    <div class="sheet-card" onclick="event.stopPropagation()">
+      <div class="sheet-head"><div><span class="label">PAWSOS ASSISTANT</span><h2>How can I help?</h2></div><button class="close" onclick="hide('assistantSheet')">×</button></div>
+      <div id="assistantChat" class="assistant-chat"><div class="bot-msg">Ask about grooming, food safety, minor care questions or what to do while arranging professional help. I don't diagnose or prescribe medication.</div></div>
+      <div class="prompt-chips"><button onclick="quickAsk('My dog is not eating')">Not eating</button><button onclick="quickAsk('Can my pet eat chocolate?')">Food safety</button><button onclick="quickAsk('How often should I groom my pet?')">Grooming</button><button onclick="quickAsk('I found an injured animal')">Found animal</button></div>
+      <div class="chat-input"><input id="assistantInput" placeholder="Type your question..."/><button onclick="askAssistant()">Send</button></div>
+    </div>
+  </div>
+
+  <div id="emergencyModal" class="modal-back hidden" onclick="sheetBackdrop(event,'emergencyModal')">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="sheet-head"><div><span class="label danger-text">ANIMAL EMERGENCY</span><h2>Safety first. Then get help.</h2></div><button class="close" onclick="hide('emergencyModal')">×</button></div>
+      <div class="emergency-grid">
+        <button onclick="emergencyChoice('road')">🚗 Road injury</button><button onclick="emergencyChoice('bleeding')">🩸 Bleeding</button>
+        <button onclick="emergencyChoice('poison')">⚠️ Possible poisoning</button><button onclick="emergencyChoice('heat')">☀️ Heat distress</button>
+        <button onclick="emergencyChoice('breathing')">🫁 Breathing difficulty</button><button onclick="emergencyChoice('other')">🐾 Other emergency</button>
+      </div>
+      <div id="emergencyAdvice" class="emergency-advice">Choose the closest situation. PawSOS will give brief first-response guidance and take you to emergency contacts.</div>
+      <div class="modal-actions"><button class="secondary" onclick="setFilter('Rescuer');hide('emergencyModal');go('help')">Find rescuer</button><button class="primary" onclick="setFilter('Vet');hide('emergencyModal');go('help')">Find vet</button></div>
+    </div>
+  </div>
+
+  <div id="foundModal" class="modal-back hidden" onclick="sheetBackdrop(event,'foundModal')">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="sheet-head"><div><span class="label">FOUND AN ANIMAL</span><h2>Start with the situation.</h2></div><button class="close" onclick="hide('foundModal')">×</button></div>
+      <div class="found-types">
+        <button onclick="foundChoice('injured')">🩹 Injured / sick</button><button onclick="foundChoice('road')">🚗 Road accident</button>
+        <button onclick="foundChoice('abandoned')">📦 Abandoned</button><button onclick="foundChoice('lost')">🔎 Lost pet</button>
+        <button onclick="foundChoice('wildlife')">🦜 Wildlife</button><button onclick="foundChoice('babies')">🐣 Mother / babies</button>
+      </div>
+      <div id="foundAdvice" class="emergency-advice">Choose a situation to see safe next steps.</div>
+      <div class="modal-actions"><button class="secondary" onclick="hide('foundModal');openAdd()">+ Add local contact</button><button class="primary" onclick="hide('foundModal');go('help')">Open help directory</button></div>
+    </div>
+  </div>
+
+  <div id="addModal" class="modal-back hidden" onclick="sheetBackdrop(event,'addModal')">
+    <div class="modal large" onclick="event.stopPropagation()">
+      <div class="sheet-head"><div><span class="label">ADD MISSING CONTACT</span><h2>Help improve your local directory.</h2></div><button class="close" onclick="hide('addModal')">×</button></div>
+      <p class="muted">Add only publicly shareable professional or organisation details. This build stores community additions on this device and marks them unverified.</p>
+      <form id="addForm" class="form-grid">
+        <label>Name / organisation<input required id="fName"/></label>
+        <label>Type<select id="fType"><option>Vet</option><option>Rescuer</option><option>Shelter</option><option>Shop</option></select></label>
+        <label>State<select required id="fState"></select></label>
+        <label>City<input required id="fCity"/></label>
+        <label>Phone / mobile 1<input required id="fPhone1" inputmode="tel"/></label>
+        <label>Phone / mobile 2<input id="fPhone2" inputmode="tel"/></label>
+        <label>Email<input id="fEmail" type="email"/></label>
+        <label>Website<input id="fWebsite" type="url" placeholder="https://..."/></label>
+        <label class="wide">Address<textarea required id="fAddress"></textarea></label>
+        <label class="wide">Services / notes<input id="fServices" placeholder="Emergency, ambulance, surgery, pharmacy..."/></label>
+        <label class="check wide"><input id="f24" type="checkbox"/> Available 24/7</label>
+        <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('addModal')">Cancel</button><button class="primary" type="submit">Save contact</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="petModal" class="modal-back hidden" onclick="sheetBackdrop(event,'petModal')">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="sheet-head"><div><span class="label">PET PROFILE</span><h2>Add a pet</h2></div><button class="close" onclick="hide('petModal')">×</button></div>
+      <form id="petForm" class="form-grid">
+        <label>Name<input required id="pName" placeholder="e.g. Bruno"/></label>
+        <label>Species<select id="pSpecies"><option value="Dog">Dog</option><option value="Cat">Cat</option><option value="Bird">Bird</option><option value="Other">Other</option></select></label>
+        <label>Breed<input id="pBreed" placeholder="Optional"/></label>
+        <label>Age<input id="pAge" placeholder="e.g. 4 years"/></label>
+        <label>Weight (kg)<input id="pWeight" type="number" min="0" step="0.1"/></label>
+        <label>Sex<select id="pSex"><option>Not specified</option><option>Male</option><option>Female</option></select></label>
+        <label>Coat / notes<input id="pCoat" placeholder="Short, long, double coat..."/></label>
+        <label>City<input id="pCity" placeholder="Optional"/></label>
+        <label class="wide">Important notes<textarea id="pNotes" placeholder="Allergies, behaviour, special needs..."></textarea></label>
+        <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('petModal')">Cancel</button><button class="primary" type="submit">Save pet</button></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="reminderModal" class="modal-back hidden" onclick="sheetBackdrop(event,'reminderModal')">
+    <div class="modal" onclick="event.stopPropagation()">
+      <div class="sheet-head"><div><span class="label">CARE REMINDER</span><h2>Add a reminder</h2></div><button class="close" onclick="hide('reminderModal')">×</button></div>
+      <form id="reminderForm" class="form-grid">
+        <label>Pet<select id="rPet"></select></label>
+        <label>Type<select id="rType"><option>Vaccination</option><option>Deworming</option><option>Tick / flea prevention</option><option>Vet check</option><option>Grooming</option><option>Medication</option><option>Other</option></select></label>
+        <label class="wide">Reminder title<input required id="rTitle" placeholder="e.g. Annual vaccine"/></label>
+        <label class="wide">Due date<input required id="rDate" type="date"/></label>
+        <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('reminderModal')">Cancel</button><button class="primary" type="submit">Save reminder</button></div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="footer shell">
+    <div><strong>PawSOS India</strong><span>Helping people help animals.</span></div>
+    <p>Care information is educational and not a veterinary diagnosis. In emergencies, contact a veterinarian, trained rescuer or local authority.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
