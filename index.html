@@ -4,27 +4,28 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
   <meta name="theme-color" content="#123c35"/>
-  <meta name="description" content="PawSOS — animal emergency contacts, rescue support, pet care, nutrition guidance, grooming and trusted updates across India and selected countries."/>
+  <meta name="description" content="PawWing SOS — emergency rescue contacts and everyday care for animals and birds, with separate bird rescue, avian vet, food, grooming, donation and emergency helpline tools across selected countries."/>
   <link rel="manifest" href="manifest.json"/>
   <link rel="icon" href="icon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="styles.css"/>
-  <title>PawSOS — Rescue & Pet Care</title>
+  <title>PawWing SOS — Animal & Bird Rescue Network</title>
 </head>
 <body>
   <header class="topbar">
-    <button class="brand" onclick="go('home')" aria-label="PawSOS home">
+    <button class="brand" onclick="go('home')" aria-label="PawWing SOS home">
       <span class="brand-mark">🐾</span>
-      <span><strong>PawSOS</strong><small>Global • Rescue & Pet Care</small></span>
+      <span><strong>PawWing SOS</strong><small>Animal &amp; Bird Rescue Network</small></span>
     </button>
     <nav class="desktop-nav" aria-label="Primary">
       <button data-go="home" onclick="go('home')">Home</button>
       <button data-go="help" onclick="go('help')">Find help</button>
-      <button data-go="pets" onclick="go('pets')">My pets</button>
+      <button data-go="pets" onclick="go('pets')">My animals</button>
       <button data-go="care" onclick="go('care')">Care</button>
       <button data-go="updates" onclick="go('updates')">Updates</button>
+      <button data-go="donate" onclick="go('donate')">Donate</button>
       <button data-go="about" onclick="go('about')">About</button>
     </nav>
-    <button class="sos-mini" onclick="openEmergency()">🚨 SOS</button>
+    <button class="sos-mini" onclick="openEmergency('animal')">🚨 SOS</button>
   </header>
 
   <main>
@@ -32,14 +33,15 @@
       <div class="hero shell">
         <div class="hero-copy">
           <div class="eyebrow">ANIMAL HELP, WHEN IT MATTERS</div>
-          <h1>One calm place for <span>rescue</span> and everyday pet care.</h1>
-          <p>Find vets and rescuers, manage your pets, check food safety, learn grooming routines, track reminders, and access trusted animal-care resources across India and selected countries.</p>
+          <h1>One calm place for <span>animal & bird rescue</span> and everyday care.</h1>
+          <p>Find animal or bird specialists fast, access rescue plans and emergency helplines, care for companion and large animals, learn bird-safe feeding and grooming, track reminders, and support trusted rescue organisations.</p>
           <div class="hero-actions">
-            <button class="primary" onclick="openEmergency()">🚨 Animal emergency</button>
+            <button class="primary" onclick="openEmergency('animal')">🚨 Animal emergency</button>
+            <button class="secondary bird-emergency-btn" onclick="openEmergency('bird')">🐦 Bird emergency</button>
             <button class="secondary" onclick="go('help')">Find help nearby</button>
           </div>
           <div class="trust-row">
-            <span>✓ 10-country launch</span><span>✓ Source-backed starter contacts</span><span>✓ Works offline after first load</span>
+            <span>✓ Animal + bird rescue</span><span>✓ Source-backed starter contacts</span><span>✓ Installable & offline-ready</span><button class="install-pill" onclick="installPWA()">📲 Install PawWing SOS</button>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -47,6 +49,8 @@
           <div class="pet-bubble dog">🐶</div>
           <div class="pet-bubble cat">🐱</div>
           <div class="pet-bubble bird">🐦</div>
+          <div class="pet-bubble farm">🐄</div>
+          <div class="pet-bubble horse">🐎</div>
           <div class="hero-paw">🐾</div>
           <div class="hero-note"><b>Ready when they need you.</b><span>Emergency help • care • reminders</span></div>
         </div>
@@ -63,24 +67,36 @@
         </article>
       </div>
 
+      <section class="shell hotline-hero" id="homeHotlinePanel">
+        <div><span class="hotline-kicker">INDIA QUICK HELP</span><strong>1962</strong><p>Toll-free animal/mobile veterinary service in participating Indian states. Coverage and hours vary by state.</p></div>
+        <a href="tel:1962" class="hotline-call">📞 Call 1962</a>
+        <button class="hotline-more" onclick="go('help');setTimeout(()=>document.getElementById('helplines').scrollIntoView({behavior:'smooth'}),120)">Other countries & helplines →</button>
+      </section>
+
       <section class="shell home-grid">
         <button class="feature-card emergency" onclick="openFoundWizard()">
-          <span class="feature-icon">🛟</span><strong>I found an animal</strong><small>Injured, abandoned, lost pet or wildlife</small><b>Start rescue flow →</b>
+          <span class="feature-icon">🛟</span><strong>I found an animal / bird</strong><small>Injured, abandoned, trapped, lost or wildlife</small><b>Start rescue flow →</b>
         </button>
         <button class="feature-card" onclick="go('help')">
-          <span class="feature-icon">🩺</span><strong>Find help</strong><small>Vets, rescuers, shelters & pet shops</small><b>Open directory →</b>
+          <span class="feature-icon">🩺</span><strong>Find help</strong><small>Separate animal & bird vets, rescuers, shelters and shops</small><b>Open directory →</b>
         </button>
         <button class="feature-card" onclick="go('pets')">
-          <span class="feature-icon">🐶</span><strong>My pets</strong><small>Profiles, daily check-ins & reminders</small><b>Open pet dashboard →</b>
+          <span class="feature-icon">🐾</span><strong>My animals</strong><small>Profiles, daily check-ins & reminders</small><b>Open animal dashboard →</b>
         </button>
         <button class="feature-card" onclick="go('care','food')">
-          <span class="feature-icon">🥗</span><strong>Can my pet eat this?</strong><small>Fast food-safety checker for dogs & cats</small><b>Check a food →</b>
+          <span class="feature-icon">🥗</span><strong>Food & feeding guide</strong><small>Food safety for pets + feeding basics for large animals</small><b>Open food guide →</b>
         </button>
         <button class="feature-card" onclick="go('care','groom')">
           <span class="feature-icon">🛁</span><strong>Grooming coach</strong><small>Simple coat, nail, ear & dental routines</small><b>Build a routine →</b>
         </button>
+        <button class="feature-card bird-card" onclick="go('help');setTimeout(()=>setHelpMode('bird'),80)">
+          <span class="feature-icon">🐦</span><strong>Bird Rescue</strong><small>Avian vets, bird rescuers, bird shops & emergency plan</small><b>Open bird help →</b>
+        </button>
+        <button class="feature-card" onclick="go('donate')">
+          <span class="feature-icon">❤️</span><strong>Support a rescue</strong><small>Donate directly on selected organisations’ official sites</small><b>Donation options →</b>
+        </button>
         <button class="feature-card" onclick="openAssistant()">
-          <span class="feature-icon">✨</span><strong>PawSOS Assistant</strong><small>Care guidance with emergency escalation</small><b>Ask a question →</b>
+          <span class="feature-icon">✨</span><strong>PawWing SOS Assistant</strong><small>Animal & bird care guidance with emergency escalation</small><b>Ask a question →</b>
         </button>
       </section>
 
@@ -88,7 +104,7 @@
         <article class="mini-panel">
           <div class="panel-head"><div><span class="label">MY DASHBOARD</span><h3>At a glance</h3></div><button class="text-btn" onclick="go('pets')">Open</button></div>
           <div class="metric-row">
-            <div><b id="petCount">0</b><span>Pets</span></div>
+            <div><b id="petCount">0</b><span>Animals</span></div>
             <div><b id="dueCount">0</b><span>Due reminders</span></div>
             <div><b id="savedCount">0</b><span>Saved contacts</span></div>
           </div>
@@ -98,20 +114,30 @@
         <article class="mini-panel updates-preview">
           <div class="panel-head"><div><span class="label">TRUSTED UPDATE</span><h3>Animal health & welfare</h3></div><button class="text-btn" onclick="go('updates')">More</button></div>
           <p><strong>World Rabies Day advisory</strong><br><span>Animal Welfare Board of India • 22 Sep 2026</span></p>
-          <small>Use PawSOS updates as a shortcut to official sources, not as a replacement for local authority instructions.</small>
+          <small>Use PawWing SOS updates as a shortcut to official sources, not as a replacement for local authority instructions.</small>
         </article>
       </section>
     </section>
 
     <section id="help" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">EMERGENCY DIRECTORY</span><h1>Find animal help, wherever you are.</h1><p>Choose a country and city, search source-backed starter contacts, then build a live city pack from public map data when local coverage is limited.</p></div>
+        <div><span class="eyebrow">EMERGENCY DIRECTORY</span><h1>Find the right help fast.</h1><p>Switch between Animal Help and Bird Help so emergency contacts stay clear. Choose a country and city, then use source-backed records, public map discovery and Google Maps search.</p></div>
         <button class="primary" onclick="openAdd()">+ Add missing contact</button>
       </div>
 
+      <section class="shell help-mode-switch">
+        <button id="modeAnimal" class="help-mode active" onclick="setHelpMode('animal')"><span>🐾</span><b>Animal Help</b><small>Vets • rescuers • shelters • pet shops</small></button>
+        <button id="modeBird" class="help-mode" onclick="setHelpMode('bird')"><span>🐦</span><b>Bird Help</b><small>Avian vets • bird rescuers • bird food/shops</small></button>
+      </section>
+
       <section class="shell rescue-strip">
-        <div><b>Found an animal?</b><span>Use the guided flow to decide what to do before transport.</span></div>
+        <div><b>Found an animal or bird?</b><span>Use the guided flow before handling or transport.</span></div>
         <button class="danger-btn" onclick="openFoundWizard()">Start rescue flow</button>
+      </section>
+
+      <section id="helplines" class="shell helpline-panel">
+        <div class="panel-head"><div><span class="label">EMERGENCY HELPLINES</span><h2 id="helplineTitle">India quick contacts</h2></div><span class="source-pill">Coverage shown clearly</span></div>
+        <div id="helplineCards" class="helpline-cards"></div>
       </section>
 
       <section class="shell directory-panel">
@@ -131,10 +157,11 @@
       <section class="shell live-panel">
         <div>
           <span class="label">CITY DISCOVERY</span><h2 id="liveTitle">Need more local options?</h2>
-          <p id="liveStatus">Enter a city above, then build an emergency pack. PawSOS queries public map data and prioritises listings with published contact details.</p>
+          <p id="liveStatus">Enter a city above, then build an emergency pack. PawWing SOS queries public map data and prioritises listings with published contact details.</p>
           <div class="live-buttons">
-            <button onclick="loadLive('Vet')">🩺 Vets</button><button onclick="loadLive('Rescuer')">🛟 Rescuers</button>
-            <button onclick="loadLive('Shelter')">🏠 Shelters</button><button onclick="loadLive('Shop')">🛍️ Pet shops</button>
+            <button onclick="loadLive('Vet')">🩺 <span id="liveVetLabel">Vets</span></button><button onclick="loadLive('Rescuer')">🛟 <span id="liveRescuerLabel">Rescuers</span></button>
+            <button onclick="loadLive('Shelter')">🏠 <span id="liveShelterLabel">Shelters</span></button><button onclick="loadLive('Shop')">🛍️ <span id="liveShopLabel">Pet shops</span></button>
+            <button id="birdMapsButton" class="bird-map-quick hidden" onclick="openBirdMaps()">🗺️ Google Maps bird specialists</button>
           </div>
         </div>
         <div id="liveResults" class="live-results"><div class="empty-soft">Live results will appear here.</div></div>
@@ -143,12 +170,12 @@
 
     <section id="pets" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">MY PETS</span><h1>Your pet-care home base.</h1><p>Keep simple profiles, care reminders and daily wellness check-ins on this device.</p></div>
-        <button class="primary" onclick="openPetForm()">+ Add a pet</button>
+        <div><span class="eyebrow">MY ANIMALS</span><h1>Your animal-care home base.</h1><p>Keep profiles, care reminders and daily wellness check-ins for pets, livestock and large animals on this device.</p></div>
+        <button class="primary" onclick="openPetForm()">+ Add an animal</button>
       </div>
       <div class="shell two-col">
         <section class="panel">
-          <div class="panel-head"><div><span class="label">PROFILES</span><h2>My pets</h2></div></div>
+          <div class="panel-head"><div><span class="label">PROFILES</span><h2>My animals</h2></div></div>
           <div id="petList" class="pet-list"></div>
         </section>
         <section class="panel">
@@ -158,7 +185,7 @@
       </div>
       <div class="shell two-col">
         <section class="panel">
-          <span class="label">DAILY CHECK-IN</span><h2>How is your pet today?</h2>
+          <span class="label">DAILY CHECK-IN</span><h2>How is your animal today?</h2>
           <div id="checkinChooser"></div>
           <form id="checkinForm" class="checkin-grid">
             <label>Appetite<select id="ciAppetite"><option value="2">Normal</option><option value="1">Less than usual</option><option value="0">Not eating</option></select></label>
@@ -167,7 +194,7 @@
             <label>Stool / urine<select id="ciToilet"><option value="2">Normal</option><option value="1">Mild change</option><option value="0">Major change / blood / unable</option></select></label>
             <button class="primary wide" type="submit">Save today's check-in</button>
           </form>
-          <div id="checkinResult" class="soft-note">A check-in is not a diagnosis. PawSOS only flags patterns worth discussing with a vet.</div>
+          <div id="checkinResult" class="soft-note">A check-in is not a diagnosis. PawWing SOS only flags patterns worth discussing with a vet.</div>
         </section>
         <section class="panel">
           <span class="label">PET CARE HABITS</span><h2>Small things that matter</h2>
@@ -183,11 +210,11 @@
 
     <section id="care" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">CARE HUB</span><h1>Everyday guidance, made simple.</h1><p>Food safety, grooming routines and short learning cards. For illness, medication or special diets, use your veterinarian.</p></div>
+        <div><span class="eyebrow">CARE HUB</span><h1>Everyday guidance, made simple.</h1><p>Food safety, species-aware feeding basics, grooming routines and short learning cards. For illness, medication or individual rations, use a veterinarian or qualified animal-nutrition professional.</p></div>
       </div>
 
       <div class="shell care-tabs">
-        <button class="care-tab active" data-care="food" onclick="showCare('food')">🥗 Food checker</button>
+        <button class="care-tab active" data-care="food" onclick="showCare('food')">🥗 Food & feeding</button>
         <button class="care-tab" data-care="groom" onclick="showCare('groom')">🛁 Grooming coach</button>
         <button class="care-tab" data-care="academy" onclick="showCare('academy')">🎓 Care academy</button>
       </div>
@@ -197,12 +224,12 @@
           <article class="panel food-checker">
             <span class="label">CAN MY PET EAT THIS?</span><h2>Food safety checker</h2>
             <div class="food-controls">
-              <select id="foodSpecies" class="control"><option value="dog">🐶 Dog</option><option value="cat">🐱 Cat</option></select>
-              <input id="foodQuery" class="control" placeholder="Try chocolate, banana, rice, milk..." autocomplete="off"/>
+              <select id="foodSpecies" class="control"><option value="dog">🐶 Dog</option><option value="cat">🐱 Cat</option><option value="rabbit">🐇 Rabbit</option><option value="bird">🐦 Bird</option><option value="horse">🐎 Horse</option><option value="donkey">🫏 Donkey</option><option value="cow">🐄 Cow / Cattle</option><option value="buffalo">🐃 Buffalo</option><option value="goat">🐐 Goat</option><option value="sheep">🐑 Sheep</option><option value="camel">🐪 Camel</option><option value="pig">🐖 Pig</option></select>
+              <input id="foodQuery" class="control" placeholder="Dogs/cats: try chocolate, banana, rice, milk..." autocomplete="off"/>
             </div>
             <div id="foodSuggestions" class="food-suggestions"></div>
             <div id="foodResult" class="food-result empty-state">
-              <span class="big-icon">🥣</span><b>Search a food</b><p>PawSOS will show a simple safety category and why.</p>
+              <span class="big-icon">🥣</span><b>Choose an animal</b><p>Dogs and cats get an item-by-item checker. Birds, rabbits and large animals get species-aware feeding basics.</p>
             </div>
           </article>
           <article class="panel">
@@ -213,7 +240,7 @@
               <div><b>3</b><p><strong>Treats stay small</strong><span>Extras should not crowd out balanced nutrition.</span></p></div>
               <div><b>4</b><p><strong>Special diets need a vet</strong><span>Kidney, liver, diabetes, allergy and weight-management diets should be personalised.</span></p></div>
             </div>
-            <div class="source-box">Reference shortcuts: <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noreferrer">WSAVA nutrition guidelines ↗</a> · <a href="https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noreferrer">ASPCA foods to avoid ↗</a></div>
+            <div class="source-box">Reference shortcuts: <a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noreferrer">WSAVA dog/cat nutrition ↗</a> · <a href="https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noreferrer">ASPCA foods to avoid ↗</a> · <a href="https://www.merckvetmanual.com/all-other-pets/rabbits/diet-for-rabbits" target="_blank" rel="noreferrer">Rabbit diet ↗</a> · <a href="https://www.aav.org/page/birdowners" target="_blank" rel="noreferrer">AAV bird care ↗</a> · <a href="https://www.merckvetmanual.com/management-and-nutrition/nutrition-horses/feeding-practices-in-horses-and-other-equids" target="_blank" rel="noreferrer">Horse feeding ↗</a></div>
           </article>
         </div>
       </section>
@@ -223,7 +250,7 @@
           <article class="panel">
             <span class="label">PERSONALISED ROUTINE</span><h2>Grooming coach</h2>
             <div class="form-stack">
-              <label>Pet<select id="gSpecies" class="control"><option value="dog">🐶 Dog</option><option value="cat">🐱 Cat</option></select></label>
+              <label>Animal<select id="gSpecies" class="control"><option value="dog">🐶 Dog</option><option value="cat">🐱 Cat</option><option value="rabbit">🐇 Rabbit</option><option value="bird">🐦 Bird</option><option value="horse">🐎 Horse</option><option value="donkey">🫏 Donkey</option><option value="cow">🐄 Cow / Cattle</option><option value="buffalo">🐃 Buffalo</option><option value="goat">🐐 Goat</option><option value="sheep">🐑 Sheep</option><option value="camel">🐪 Camel</option><option value="pig">🐖 Pig</option></select></label>
               <label>Coat<select id="gCoat" class="control"><option value="short">Short</option><option value="medium">Medium / double coat</option><option value="long">Long / dense</option></select></label>
               <label>Lifestyle<select id="gLifestyle" class="control"><option value="indoor">Mostly indoor</option><option value="mixed">Indoor + outdoor</option><option value="outdoor">Mostly outdoor / very active</option></select></label>
               <button class="primary" onclick="buildGrooming()">Build my routine</button>
@@ -231,26 +258,30 @@
           </article>
           <article class="panel" id="groomPlan">
             <span class="label">YOUR ROUTINE</span><h2>Start with the coat</h2>
-            <div class="empty-soft">Choose the pet, coat and lifestyle to create a simple routine.</div>
+            <div class="empty-soft">Choose the animal, coat and lifestyle to create a simple routine.</div>
           </article>
         </div>
       </section>
 
       <section id="care-academy" class="shell care-view">
         <div class="academy-grid">
-          <article class="lesson"><span>🐾</span><b>New pet: first 7 days</b><p>Quiet space, gradual introductions, predictable meals and an early vet relationship.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🐾</span><b>New animal: first 7 days</b><p>Safe housing, gradual introductions, predictable feeding and an early veterinary relationship.</p><small>2 min read</small></article>
           <article class="lesson"><span>🦷</span><b>Dental care basics</b><p>Build tolerance slowly and use pet-specific products. Bad breath can be more than a cosmetic issue.</p><small>2 min read</small></article>
           <article class="lesson"><span>☀️</span><b>Heat safety</b><p>Shade, water and cooler activity times. Never leave an animal in a parked vehicle.</p><small>90 sec read</small></article>
           <article class="lesson"><span>🪱</span><b>Parasite prevention</b><p>Discuss deworming and tick/flea prevention with your vet based on age, species and exposure.</p><small>2 min read</small></article>
           <article class="lesson"><span>🐕</span><b>Body language</b><p>Look for tension, avoidance, pinned ears, stiff posture and other stress signals before handling.</p><small>3 min read</small></article>
-          <article class="lesson"><span>🧸</span><b>Enrichment</b><p>Sniffing, play, climbing, training and food puzzles can support wellbeing when matched to the animal.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🧸</span><b>Enrichment</b><p>Movement, social contact, browsing/grazing, play, training and species-appropriate enrichment can support wellbeing.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🐄</span><b>Large-animal daily checks</b><p>Notice appetite, water intake, movement, manure, wounds, hoof condition and changes in normal herd behaviour.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🐎</span><b>Horse & donkey basics</b><p>Forage, clean water, regular hoof care, safe handling and prompt attention to colic or lameness signs.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🐦</span><b>Bird rescue basics</b><p>Minimal handling, a ventilated box, quiet/dim conditions and prompt avian-vet or wildlife-rescue advice can reduce stress and injury.</p><small>2 min read</small></article>
+          <article class="lesson"><span>🪶</span><b>Companion bird care</b><p>Species-appropriate nutrition, clean water, safe perches, enrichment, feather checks and avian-veterinary care matter more than cosmetic grooming.</p><small>2 min read</small></article>
         </div>
       </section>
     </section>
 
     <section id="updates" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">NEWS & ALERTS</span><h1>Trusted sources, without the noise.</h1><p>PawSOS points users to authoritative animal-welfare and pet-health sources. These cards are curated snapshots; tap the source for the latest information.</p></div>
+        <div><span class="eyebrow">NEWS & ALERTS</span><h1>Trusted sources, without the noise.</h1><p>PawWing SOS points users to authoritative animal-welfare and pet-health sources. These cards are curated snapshots; tap the source for the latest information.</p></div>
       </div>
       <div class="shell update-grid">
         <article class="update-card featured"><span class="update-tag">AWBI • 22 SEP 2026</span><h2>World Rabies Day advisory</h2><p>Official Animal Welfare Board of India advisory connected to World Rabies Day on 28 September 2026.</p><a href="https://www.awbi.gov.in/circulars" target="_blank" rel="noreferrer">Open AWBI circulars ↗</a></article>
@@ -259,18 +290,39 @@
         <article class="update-card"><span class="update-tag">PET HEALTH</span><h2>Nutrition resources</h2><p>WSAVA's nutrition toolkit includes body-condition, calorie and pet-food-selection resources for veterinary teams and owners.</p><a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" target="_blank" rel="noreferrer">Open WSAVA ↗</a></article>
         <article class="update-card"><span class="update-tag">TOXIN SAFETY</span><h2>Foods to avoid</h2><p>ASPCA Poison Control maintains guidance on common human foods and household exposures that can harm pets.</p><a href="https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets" target="_blank" rel="noreferrer">Open ASPCA ↗</a></article>
         <article class="update-card"><span class="update-tag">INDIA DIRECTORY</span><h2>State animal welfare boards</h2><p>Use AWBI's state-board information when you need formal animal-welfare channels beyond an individual rescue contact.</p><a href="https://www.awbi.gov.in/view/index/state-animal-welfare-boards" target="_blank" rel="noreferrer">Open AWBI directory ↗</a></article>
+        <article class="update-card"><span class="update-tag">AVIAN CARE</span><h2>Pet bird care resources</h2><p>The Association of Avian Veterinarians provides owner resources covering basic care, feeding, signs of illness and emergency topics.</p><a href="https://www.aav.org/page/birdowners" target="_blank" rel="noreferrer">Open AAV resources ↗</a></article>
       </div>
+    </section>
+
+    <section id="donate" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">SUPPORT RESCUE WORK</span><h1>Donate directly to trusted organisations.</h1><p>PawWing SOS does not collect or hold donation money in this release. Choose an organisation and continue on its official website so the payment relationship stays between you and that organisation.</p></div>
+      </div>
+      <div class="shell donation-note">❤️ Suggested amounts are only planning shortcuts. Always verify the organisation and final payment page before donating.</div>
+      <div id="donationGrid" class="shell donation-grid"></div>
+    </section>
+
+    <section id="admin" class="page">
+      <div class="page-hero shell compact">
+        <div><span class="eyebrow">ADMINISTRATION</span><h1>PawWing SOS directory control.</h1><p>Administrator-only local editing for source-backed and community contacts. Changes in this static build apply to this browser/device.</p></div>
+        <button class="secondary" onclick="adminLogout()">Log out</button>
+      </div>
+      <section class="shell admin-summary" id="adminSummary"></section>
+      <section class="shell directory-panel">
+        <div class="directory-tools admin-tools"><label class="search-field">🔎<input id="adminSearch" placeholder="Search all contacts" oninput="renderAdmin()"/></label><select id="adminCountry" class="control" onchange="renderAdmin()"></select><select id="adminDomain" class="control" onchange="renderAdmin()"><option value="all">Animal + Bird</option><option value="animal">Animal</option><option value="bird">Bird</option><option value="both">Both</option></select></div>
+        <div id="adminTable" class="admin-table"></div>
+      </section>
     </section>
 
     <section id="about" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">ABOUT PAWSOS</span><h1>Helping paws. Saving lives. Caring every day.</h1><p>PawSOS brings emergency animal-help contacts and practical everyday pet care into one calm, easy-to-use place.</p></div>
+        <div><span class="eyebrow">ABOUT PAWWING SOS</span><h1>Helping paws. Saving lives. Caring every day.</h1><p>PawWing SOS brings emergency animal-help contacts and practical everyday pet care into one calm, easy-to-use place.</p></div>
       </div>
       <section class="shell about-grid">
         <article class="about-story">
-          <span class="label">WHY PAWSOS EXISTS</span>
+          <span class="label">WHY PAWWING SOS EXISTS</span>
           <h2>Make the next helpful action easier.</h2>
-          <p>In an emergency, people should be able to quickly find a veterinarian, rescuer or shelter. On ordinary days, PawSOS helps pet parents with food safety, grooming, care reminders and trusted learning resources.</p>
+          <p>In an emergency, people should be able to quickly find a veterinarian, rescuer or shelter. On ordinary days, PawWing SOS supports people caring for pets, livestock and large animals with feeding basics, grooming, care reminders and trusted learning resources.</p>
           <p>The directory is designed to grow responsibly: source-backed starter records are paired with live local discovery and a community option to add missing professional or organisation contacts.</p>
           <div class="about-values"><span>🚨 Emergency first</span><span>🐾 Everyday care</span><span>🔎 Source transparency</span><span>🤝 Community contribution</span></div>
         </article>
@@ -294,38 +346,35 @@
   <nav class="bottom-nav" aria-label="Mobile navigation">
     <button data-go="home" onclick="go('home')"><span>⌂</span>Home</button>
     <button data-go="help" onclick="go('help')"><span>✚</span>Help</button>
-    <button data-go="pets" onclick="go('pets')"><span>🐾</span>Pets</button>
+    <button data-go="pets" onclick="go('pets')"><span>🐾</span>Animals</button>
     <button data-go="care" onclick="go('care')"><span>♡</span>Care</button>
     <button data-go="updates" onclick="go('updates')"><span>◉</span>Updates</button>
   </nav>
 
-  <button class="assistant-fab" onclick="openAssistant()" aria-label="Open PawSOS Assistant">✨</button>
+  <button class="assistant-fab" onclick="openAssistant()" aria-label="Open PawWing SOS Assistant">✨</button>
 
   <div id="assistantSheet" class="sheet hidden" onclick="sheetBackdrop(event,'assistantSheet')">
     <div class="sheet-card" onclick="event.stopPropagation()">
-      <div class="sheet-head"><div><span class="label">PAWSOS ASSISTANT</span><h2>How can I help?</h2></div><button class="close" onclick="hide('assistantSheet')">×</button></div>
-      <div id="assistantChat" class="assistant-chat"><div class="bot-msg">Ask about grooming, food safety, minor care questions or what to do while arranging professional help. I don't diagnose or prescribe medication.</div></div>
-      <div class="prompt-chips"><button onclick="quickAsk('My dog is not eating')">Not eating</button><button onclick="quickAsk('Can my pet eat chocolate?')">Food safety</button><button onclick="quickAsk('How often should I groom my pet?')">Grooming</button><button onclick="quickAsk('I found an injured animal')">Found animal</button></div>
+      <div class="sheet-head"><div><span class="label">PAWWING SOS ASSISTANT</span><h2>How can I help?</h2></div><button class="close" onclick="hide('assistantSheet')">×</button></div>
+      <div id="assistantChat" class="assistant-chat"><div class="bot-msg">Ask about animals or birds—bird rescue, avian feeding/grooming, dogs, cats, rabbits, horses, cattle, buffaloes, camels, goats, sheep, emergency first-response and everyday care. I don't diagnose or prescribe medication.</div></div>
+      <div class="prompt-chips"><button onclick="quickAsk('My dog is not eating')">Not eating</button><button onclick="quickAsk('What should I feed my rabbit?')">Rabbit feeding</button><button onclick="quickAsk('How should I care for a horse?')">Horse care</button><button onclick="quickAsk('I found an injured cow')">Large-animal rescue</button><button onclick="quickAsk('I found an injured bird')">Injured bird</button><button onclick="quickAsk('What should I feed my bird?')">Bird feeding</button></div>
       <div class="chat-input"><input id="assistantInput" placeholder="Type your question..."/><button onclick="askAssistant()">Send</button></div>
     </div>
   </div>
 
   <div id="emergencyModal" class="modal-back hidden" onclick="sheetBackdrop(event,'emergencyModal')">
     <div class="modal" onclick="event.stopPropagation()">
-      <div class="sheet-head"><div><span class="label danger-text">ANIMAL EMERGENCY</span><h2>Safety first. Then get help.</h2></div><button class="close" onclick="hide('emergencyModal')">×</button></div>
-      <div class="emergency-grid">
-        <button onclick="emergencyChoice('road')">🚗 Road injury</button><button onclick="emergencyChoice('bleeding')">🩸 Bleeding</button>
-        <button onclick="emergencyChoice('poison')">⚠️ Possible poisoning</button><button onclick="emergencyChoice('heat')">☀️ Heat distress</button>
-        <button onclick="emergencyChoice('breathing')">🫁 Breathing difficulty</button><button onclick="emergencyChoice('other')">🐾 Other emergency</button>
-      </div>
-      <div id="emergencyAdvice" class="emergency-advice">Choose the closest situation. PawSOS will give brief first-response guidance and take you to emergency contacts.</div>
-      <div class="modal-actions"><button class="secondary" onclick="setFilter('Rescuer');hide('emergencyModal');go('help')">Find rescuer</button><button class="primary" onclick="setFilter('Vet');hide('emergencyModal');go('help')">Find vet</button></div>
+      <div class="sheet-head"><div><span id="emergencyLabel" class="label danger-text">ANIMAL EMERGENCY</span><h2 id="emergencyHeading">Safety first. Then get help.</h2></div><button class="close" onclick="hide('emergencyModal')">×</button></div><div class="emergency-mode-row"><button id="emAnimal" class="active" onclick="setEmergencyMode('animal')">🐾 Animal</button><button id="emBird" onclick="setEmergencyMode('bird')">🐦 Bird</button></div>
+      <div id="animalEmergencyGrid" class="emergency-grid"><button onclick="emergencyChoice('road')">🚗 Road injury</button><button onclick="emergencyChoice('bleeding')">🩸 Bleeding</button><button onclick="emergencyChoice('poison')">⚠️ Possible poisoning</button><button onclick="emergencyChoice('heat')">☀️ Heat distress</button><button onclick="emergencyChoice('breathing')">🫁 Breathing difficulty</button><button onclick="emergencyChoice('other')">🐾 Other emergency</button></div><div id="birdEmergencyGrid" class="emergency-grid hidden"><button onclick="emergencyChoice('collision')">🪟 Collision / stunned</button><button onclick="emergencyChoice('birdBleeding')">🩸 Bleeding / wound</button><button onclick="emergencyChoice('catBite')">🐈 Cat/dog attack</button><button onclick="emergencyChoice('entangled')">🧵 Entangled / manja</button><button onclick="emergencyChoice('birdBreathing')">🫁 Breathing / weak</button><button onclick="emergencyChoice('babyBird')">🐣 Baby bird</button></div>
+      <div id="emergencyAdvice" class="emergency-advice">Choose the closest situation. PawWing SOS will give brief first-response guidance and take you to emergency contacts.</div>
+      <div class="modal-actions"><button class="secondary" onclick="emergencyFind('Rescuer')">Find rescuer</button><button class="primary" onclick="emergencyFind('Vet')">Find vet</button></div>
     </div>
   </div>
 
   <div id="foundModal" class="modal-back hidden" onclick="sheetBackdrop(event,'foundModal')">
     <div class="modal" onclick="event.stopPropagation()">
-      <div class="sheet-head"><div><span class="label">FOUND AN ANIMAL</span><h2>Start with the situation.</h2></div><button class="close" onclick="hide('foundModal')">×</button></div>
+      <div class="sheet-head"><div><span class="label">FOUND AN ANIMAL</span><h2>Start with the animal and situation.</h2></div><button class="close" onclick="hide('foundModal')">×</button></div>
+      <label style="display:block;margin:0 0 14px">Animal type<select id="foundSpecies" class="control"><option value="companion">Dog / cat / small pet</option><option value="rabbit">Rabbit</option><option value="bird">Bird / fledgling / pet bird</option><option value="equine">Horse / donkey</option><option value="ruminant">Cow / buffalo / goat / sheep</option><option value="camel">Camel</option><option value="pig">Pig</option><option value="wildlife">Wildlife / unknown</option></select></label>
       <div class="found-types">
         <button onclick="foundChoice('injured')">🩹 Injured / sick</button><button onclick="foundChoice('road')">🚗 Road accident</button>
         <button onclick="foundChoice('abandoned')">📦 Abandoned</button><button onclick="foundChoice('lost')">🔎 Lost pet</button>
@@ -342,7 +391,7 @@
       <p class="muted">Add only publicly shareable professional or organisation details. This build stores community additions on this device and marks them unverified.</p>
       <form id="addForm" class="form-grid">
         <label>Name / organisation<input required id="fName"/></label>
-        <label>Type<select id="fType"><option>Vet</option><option>Rescuer</option><option>Shelter</option><option>Shop</option></select></label>
+        <label>Directory<select id="fDomain"><option value="animal">🐾 Animal</option><option value="bird">🐦 Bird</option><option value="both">🐾🐦 Animal + Bird</option></select></label><label>Type<select id="fType"><option>Vet</option><option>Rescuer</option><option>Shelter</option><option>Shop</option></select></label>
         <label>Country<select required id="fCountry"></select></label>
         <label>State / region<select required id="fState"></select></label>
         <label>City<input required id="fCity"/></label>
@@ -360,17 +409,17 @@
 
   <div id="petModal" class="modal-back hidden" onclick="sheetBackdrop(event,'petModal')">
     <div class="modal" onclick="event.stopPropagation()">
-      <div class="sheet-head"><div><span class="label">PET PROFILE</span><h2>Add a pet</h2></div><button class="close" onclick="hide('petModal')">×</button></div>
+      <div class="sheet-head"><div><span class="label">ANIMAL PROFILE</span><h2>Add an animal</h2></div><button class="close" onclick="hide('petModal')">×</button></div>
       <form id="petForm" class="form-grid">
         <label>Name<input required id="pName" placeholder="e.g. Bruno"/></label>
-        <label>Species<select id="pSpecies"><option value="Dog">Dog</option><option value="Cat">Cat</option><option value="Bird">Bird</option><option value="Other">Other</option></select></label>
+        <label>Species<select id="pSpecies"><option value="Dog">🐶 Dog</option><option value="Cat">🐱 Cat</option><option value="Rabbit">🐇 Rabbit</option><option value="Cow">🐄 Cow / Cattle</option><option value="Buffalo">🐃 Buffalo</option><option value="Horse">🐎 Horse</option><option value="Donkey">🫏 Donkey</option><option value="Camel">🐪 Camel</option><option value="Goat">🐐 Goat</option><option value="Sheep">🐑 Sheep</option><option value="Pig">🐖 Pig</option><option value="Llama / Alpaca">🦙 Llama / Alpaca</option><option value="Bird">🐦 Bird</option><option value="Other">🐾 Other</option></select></label>
         <label>Breed<input id="pBreed" placeholder="Optional"/></label>
         <label>Age<input id="pAge" placeholder="e.g. 4 years"/></label>
         <label>Weight (kg)<input id="pWeight" type="number" min="0" step="0.1"/></label>
         <label>Sex<select id="pSex"><option>Not specified</option><option>Male</option><option>Female</option></select></label>
-        <label>Coat / notes<input id="pCoat" placeholder="Short, long, double coat..."/></label>
+        <label>Coat / type<input id="pCoat" placeholder="Short coat, long coat, wool, breed type..."/></label>
         <label>City<input id="pCity" placeholder="Optional"/></label>
-        <label class="wide">Important notes<textarea id="pNotes" placeholder="Allergies, behaviour, special needs..."></textarea></label>
+        <label class="wide">Important notes<textarea id="pNotes" placeholder="Allergies, behaviour, pregnancy/lactation, work level, special needs..."></textarea></label>
         <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('petModal')">Cancel</button><button class="primary" type="submit">Save pet</button></div>
       </form>
     </div>
@@ -381,7 +430,7 @@
       <div class="sheet-head"><div><span class="label">CARE REMINDER</span><h2>Add a reminder</h2></div><button class="close" onclick="hide('reminderModal')">×</button></div>
       <form id="reminderForm" class="form-grid">
         <label>Pet<select id="rPet"></select></label>
-        <label>Type<select id="rType"><option>Vaccination</option><option>Deworming</option><option>Tick / flea prevention</option><option>Vet check</option><option>Grooming</option><option>Medication</option><option>Other</option></select></label>
+        <label>Type<select id="rType"><option>Vaccination</option><option>Deworming</option><option>Tick / flea prevention</option><option>Vet check</option><option>Grooming</option><option>Hoof / foot care</option><option>Dental check</option><option>Farrier</option><option>Medication</option><option>Other</option></select></label>
         <label class="wide">Reminder title<input required id="rTitle" placeholder="e.g. Annual vaccine"/></label>
         <label class="wide">Due date<input required id="rDate" type="date"/></label>
         <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('reminderModal')">Cancel</button><button class="primary" type="submit">Save reminder</button></div>
@@ -389,8 +438,14 @@
     </div>
   </div>
 
+  <div id="adminLoginModal" class="modal-back hidden" onclick="sheetBackdrop(event,'adminLoginModal')"><div class="modal admin-login" onclick="event.stopPropagation()"><div class="sheet-head"><div><span class="label">ADMIN LOGIN</span><h2>Directory administration</h2></div><button class="close" onclick="hide('adminLoginModal')">×</button></div><p class="muted">Administrator access is required to edit or delete directory records.</p><form id="adminLoginForm" class="form-grid"><label>Login ID<input id="adminUser" autocomplete="username" required/></label><label>Password<input id="adminPass" type="password" autocomplete="current-password" required/></label><div id="adminLoginError" class="wide admin-error"></div><div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('adminLoginModal')">Cancel</button><button class="primary" type="submit">Log in</button></div></form></div></div>
+
+  <div id="adminEditModal" class="modal-back hidden" onclick="sheetBackdrop(event,'adminEditModal')"><div class="modal large" onclick="event.stopPropagation()"><div class="sheet-head"><div><span class="label">EDIT DIRECTORY RECORD</span><h2 id="adminEditTitle">Edit contact</h2></div><button class="close" onclick="hide('adminEditModal')">×</button></div><form id="adminEditForm" class="form-grid"><input id="aeId" type="hidden"/><label>Name / organisation<input id="aeName" required/></label><label>Directory<select id="aeDomain"><option value="animal">Animal</option><option value="bird">Bird</option><option value="both">Animal + Bird</option></select></label><label>Type<select id="aeType"><option>Vet</option><option>Rescuer</option><option>Shelter</option><option>Shop</option></select></label><label>Country<select id="aeCountry"></select></label><label>State / region<input id="aeState"/></label><label>City<input id="aeCity"/></label><label>Phone 1<input id="aePhone1" inputmode="tel"/></label><label>Phone 2<input id="aePhone2" inputmode="tel"/></label><label>Phone 3<input id="aePhone3" inputmode="tel"/></label><label>Website / source<input id="aeSource" type="url"/></label><label class="wide">Address<textarea id="aeAddress" required></textarea></label><label class="wide">Services / notes<input id="aeServices"/></label><label class="check wide"><input id="ae24" type="checkbox"/> Listed 24/7</label><div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('adminEditModal')">Cancel</button><button class="primary" type="submit">Save changes</button></div></form></div></div>
+
+  <div id="updateToast" class="update-toast hidden"><div><b>✨ PawWing SOS update available</b><small>A newer version is ready.</small></div><button onclick="applyAppUpdate()">Update now</button><button class="close-mini" onclick="hide('updateToast')">×</button></div>
+
   <footer class="footer shell">
-    <div><strong>PawSOS</strong><span>Helping people help animals.</span><button class="footer-link" onclick="go('about')">About PawSOS</button></div>
+    <div><strong>PawWing SOS</strong><span>Animal &amp; Bird Rescue Network</span><button class="footer-link" onclick="go('about')">About PawWing SOS</button> · <button class="footer-link" onclick="go('donate')">Donate</button> · <button class="footer-link" onclick="openAdminLogin()">Admin</button> · <button id="installBtn" class="footer-link" onclick="installPWA()">Install app</button></div>
     <p><strong>Concept & Created by Hardik Desai</strong><br/>Inspired with love by Nishiv Desai & Rudra Desai ❤️<br/>Care information is educational and not a veterinary diagnosis. In emergencies, contact a veterinarian, trained rescuer or local authority.</p>
   </footer>
 

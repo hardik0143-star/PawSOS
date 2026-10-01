@@ -1,41 +1,67 @@
-# PawSOS Global v3.0
+# PawWing SOS v5.1 — Animal & Bird Rescue Network
 
-A mobile-first, installable animal rescue and everyday pet-care web app.
+PawWing SOS is an installable static Progressive Web App (PWA) for animal and bird emergency discovery, rescue first-response education, everyday care, and source-backed contact lookup across the current 10-country release: India, USA, UK, Brazil, China, Russia, Mexico, Japan, Germany and Argentina.
 
-## Current countries
-India, USA, UK, Brazil, China, Russia, Mexico, Japan, Germany and Argentina.
+## What is new in v5.1
 
-India retains the deepest preloaded directory from the previous release. The nine international countries begin with source-backed/public-listing starter contacts plus live city discovery and community-added contacts.
+- Brand updated to **PawWing SOS — Animal & Bird Rescue Network**. Existing browser storage identifiers are intentionally retained so upgrades do not wipe saved local data.
 
-## Key features
-- Country, state/region and city based emergency directory
-- Vets, rescuers, shelters and pet/pet-care shops
-- Multiple phone numbers per contact where published
-- One-tap call, source and map actions
-- Live public-map lookup for additional city options
-- Add missing contacts locally, clearly marked community-added
-- Found-an-animal guided rescue flow
-- Emergency first-response guidance
-- Pet profiles, reminders and daily wellness check-ins
-- Food-safety checker for dogs and cats
-- Grooming coach and short Pet Care Academy
-- PawSOS smart assistant for educational care guidance
-- Trusted animal-health/welfare source links
-- About PawSOS creator credit
-- PWA manifest and service worker for installability/offline shell
+- Separate **Animal Help** and **Bird Help** emergency directories.
+- Bird-specific starter contacts: avian/exotic vets, bird/wildlife rescuers, bird medical aid and bird shops where reliable public contact information was available.
+- Bird rescue plan for collision/stunning, bleeding, cat/dog attacks, manja/thread entanglement, breathing/weakness and baby birds.
+- Bird feeding and grooming guidance, plus Bird Care Academy cards and Assistant responses.
+- Country-aware **Emergency Helplines** panel. India prominently shows **1962**, with an explicit note that state activation, service scope and hours vary.
+- Google Maps action on every directory card, plus a bird-specialist map search for cities without preloaded specialist coverage.
+- Donation page that sends donors to organisations' official websites; PawWing SOS does not collect payment details.
+- Administrator-only local edit/delete functions.
+- Install button and PWA support for mobile/desktop browsers.
+- Service-worker update detection with an in-app **Update now** banner when a newer deployed build is available.
 
-## Creator
-Concept & Created by Hardik Desai.
-With love and inspiration from Nishiv Desai & Rudra Desai.
+## Administrator login
 
-## Run
-Open `index.html`, or serve the folder with any static web host.
+- Login ID: `admin`
+- Password: `administrator@123`
 
-## Vercel
-Upload every file in this folder to the root of a GitHub repository and import the repository in Vercel. No npm install or build command is required.
+The password is compared against a SHA-256 digest in the browser. **Important security limitation:** this is a static web application. A technically skilled user with the site files/browser tools can bypass client-side controls. The admin edits/deletions are stored only in that browser's local storage. For genuinely secure multi-user administration, audit history, centrally shared edits and role-based access control, move the directory to a backend/database with server-side authentication.
 
-## Important production note
-This release is front-end only. User-added contacts, pet profiles, reminders and check-ins are stored in the browser using localStorage. A production community directory should use a shared backend, moderation, duplicate detection and periodic contact re-verification.
+## Data model and verification
 
-## Safety
-Care information is educational. It is not a veterinary diagnosis or a substitute for professional veterinary care. Emergency contact details can change; users should confirm availability before travelling whenever possible.
+Preloaded records carry a source URL and are labelled **Source-backed record**, not “guaranteed currently open”. Emergency numbers, hours and service areas can change. Users should confirm availability when possible before travel. Community additions are clearly marked **Community-added** until a later cloud moderation workflow is implemented.
+
+For Bird Help, public map data often does not state whether a veterinarian treats birds. Live results therefore tell the user to confirm avian capability before travelling. Curated avian/bird records are kept separate for emergency clarity.
+
+## Install and updates
+
+Host these files over HTTPS (for example on Vercel, Netlify, GitHub Pages or another static host). The browser can then install PawWing SOS as a PWA. The service worker checks the deployed files and the app checks periodically for a new service worker. When a newer build is installed and waiting, PawWing SOS shows an **Update now** banner.
+
+The PWA cannot silently replace code while someone is using it; the update button activates the new service worker and reloads to the new version. This avoids interrupting an emergency lookup.
+
+## Deploy to Vercel
+
+All required files are kept in one folder:
+
+- `index.html`
+- `styles.css`
+- `app.js`
+- `manifest.json`
+- `sw.js`
+- `icon.svg`
+- `README.md`
+
+Upload the folder contents to a GitHub repository and import the repository into Vercel as a static project. No Node build step is required.
+
+## Donation safety
+
+PawWing SOS v5.1 does not process donations. Donation cards open the selected organisation's official website in a new tab. This avoids PawWing SOS storing payment card, UPI or banking details.
+
+## Medical / rescue disclaimer
+
+PawWing SOS offers educational first-response information, not diagnosis, treatment or a substitute for a veterinarian, avian veterinarian, trained wildlife rehabilitator or emergency authority. Wild birds can carry infectious disease; avoid unnecessary bare-hand contact with sick/dead wildlife and follow local public-health/wildlife guidance.
+
+## Credit
+
+**Concept & Created by Hardik Desai**
+
+With love and inspiration from **Nishiv Desai & Rudra Desai ❤️**
+
+> Helping paws. Saving lives. Caring every day.
