@@ -1,14 +1,28 @@
 {
-  "id": "./?app=pawsos-global-v5",
+  "id": "./?app=pawwing-sos-global-v5-2",
   "name": "PawWing SOS — Animal & Bird Rescue Network",
   "short_name": "PawWing SOS",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "display_override": ["standalone", "minimal-ui"],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
   "background_color": "#fbfaf5",
   "theme_color": "#123c35",
-  "description": "Animal and bird emergency contacts, rescue plans, avian care, helplines, donations and everyday care across selected countries.",
-  "categories": ["medical", "lifestyle", "utilities"],
-  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+  "description": "Animal and bird emergency contacts, live local discovery, rescue plans, care academy, helplines and everyday care across selected countries.",
+  "categories": [
+    "medical",
+    "lifestyle",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
 }

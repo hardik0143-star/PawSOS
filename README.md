@@ -1,10 +1,16 @@
-# PawWing SOS v5.1 — Animal & Bird Rescue Network
+# PawWing SOS v5.2 — Animal & Bird Rescue Network
 
 PawWing SOS is an installable static Progressive Web App (PWA) for animal and bird emergency discovery, rescue first-response education, everyday care, and source-backed contact lookup across the current 10-country release: India, USA, UK, Brazil, China, Russia, Mexico, Japan, Germany and Argentina.
 
-## What is new in v5.1
+## What is new in v5.2
 
-- Brand updated to **PawWing SOS — Animal & Bird Rescue Network**. Existing browser storage identifiers are intentionally retained so upgrades do not wipe saved local data.
+- Brand remains **PawWing SOS — Animal & Bird Rescue Network**. Existing browser storage identifiers are intentionally retained so upgrades do not wipe saved local data.
+
+- Expanded source-backed starter directory with additional current vet, rescue, shelter, pet-shop, avian and wildlife listings across all 10 supported countries; new records include a `checked` date.
+- Added one-tap **live Google Maps category discovery** for vets, rescuers, shelters and shops in any typed city, including bird-specific searches in Bird Help. This provides a fallback for regions not yet preloaded.
+- Care Academy rebuilt as substantial expandable mini-guides with warning signs, practical steps and direct references to WSAVA, ASPCA, Merck Veterinary Manual and the Association of Avian Veterinarians.
+- Simplified the supported animal menus and care logic by removing the two species requested by the project owner.
+- Improved directory and academy UI for faster scanning on mobile.
 
 - Separate **Animal Help** and **Bird Help** emergency directories.
 - Bird-specific starter contacts: avian/exotic vets, bird/wildlife rescuers, bird medical aid and bird shops where reliable public contact information was available.
@@ -52,7 +58,7 @@ Upload the folder contents to a GitHub repository and import the repository into
 
 ## Donation safety
 
-PawWing SOS v5.1 does not process donations. Donation cards open the selected organisation's official website in a new tab. This avoids PawWing SOS storing payment card, UPI or banking details.
+PawWing SOS v5.2 does not process donations. Donation cards open the selected organisation's official website in a new tab. This avoids PawWing SOS storing payment card, UPI or banking details.
 
 ## Medical / rescue disclaimer
 
@@ -65,3 +71,7 @@ PawWing SOS offers educational first-response information, not diagnosis, treatm
 With love and inspiration from **Nishiv Desai & Rudra Desai ❤️**
 
 > Helping paws. Saving lives. Caring every day.
+
+## Directory freshness
+
+Local business phone numbers, hours and service scope can change. Curated records are source-backed and newly added v5.2 listings include a last-checked date, but users should still call before travel. Live Google Maps discovery is intentionally available for every typed city so PawWing SOS does not pretend a static database can remain exhaustive worldwide.
