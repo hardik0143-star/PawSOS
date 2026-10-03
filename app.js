@@ -706,4 +706,154 @@ init=function(){
   const countries=Object.keys(COUNTRY_DATA);$('#country').innerHTML=countries.map(c=>`<option ${c===DEFAULT_COUNTRY?'selected':''}>${esc(c)}</option>`).join('');$('#fCountry').innerHTML=countries.map(c=>`<option ${c===DEFAULT_COUNTRY?'selected':''}>${esc(c)}</option>`).join('');$('#adminCountry').innerHTML='<option value="all">All countries</option>'+countries.map(c=>`<option>${esc(c)}</option>`).join('');$('#aeCountry').innerHTML=countries.map(c=>`<option>${esc(c)}</option>`).join('');refreshRegions();refreshAddRegions();$('#chips').innerHTML=['All','Vet','Rescuer','Shelter','Shop'].map(x=>`<button class="chip ${x==='All'?'active':''}" data-filter="${x}">${x}</button>`).join('');$$('.chip').forEach(b=>b.onclick=()=>setFilter(b.dataset.filter));$('#country').onchange=()=>{refreshRegions();renderDirectory();renderHelplines()};$('#state').onchange=()=>{refreshCities();renderDirectory()};$('#city').oninput=renderDirectory;$('#search').oninput=renderDirectory;$('#only24').onchange=renderDirectory;$('#fCountry').onchange=refreshAddRegions;$('#addForm').onsubmit=saveContact;$('#petForm').onsubmit=savePet;$('#reminderForm').onsubmit=saveReminder;$('#checkinForm').onsubmit=saveCheckin;$('#foodQuery').oninput=renderFoodSuggestions;$('#foodSpecies').onchange=renderFoodSuggestions;$('#assistantInput').addEventListener('keydown',e=>{if(e.key==='Enter')askAssistant()});$('#adminLoginForm').onsubmit=adminLogin;$('#adminEditForm').onsubmit=saveAdminEdit;renderDirectory();renderHelplines();renderPets();renderReminders();renderCheckinChooser();renderDonations();updateHomeMetrics();nextTip(true);setHelpMode(helpMode);const start=localStorage.getItem('pawsosLastPage')||'home';go(start,false);registerPWA();
 };
 
+
+/* --------------------------------------------------------------------------
+   PawWing SOS v5.3 cloud directory override
+   - The built-in directory remains as an emergency/offline fallback.
+   - Approved records sync from the shared cloud database when available.
+   - Community additions are reviewed by an administrator before publication.
+   - Admin authentication/edit/delete now happen server-side via /api routes.
+   -------------------------------------------------------------------------- */
+let cloudContacts = (()=>{try{return JSON.parse(localStorage.getItem('pawwingCloudContactsCache')||'null')}catch{return null}})();
+let cloudAdminContacts = null;
+let cloudSubmissions = [];
+let adminAuthenticated = false;
+let backendConfigured = false;
+let lastCloudSync = 0;
+
+function dedupeContacts(items){
+  const seen=new Set();
+  return (items||[]).filter(Boolean).filter(x=>{
+    const k=`${x.id||''}|${x.country||'India'}|${(x.name||'').toLowerCase()}|${(x.city||'').toLowerCase()}`;
+    if(seen.has(k))return false;seen.add(k);return true;
+  });
+}
+function builtInContacts(){return dedupeContacts([...seed,...BIRD_CONTACTS,...EXPANDED_CONTACTS,...custom])}
+function apiJson(url,options={}){
+  return fetch(url,{credentials:'same-origin',...options,headers:{'Content-Type':'application/json',...(options.headers||{})}}).then(async r=>{
+    const data=await r.json().catch(()=>({}));
+    if(!r.ok)throw new Error(data.error||data.message||`Request failed (${r.status})`);
+    return data;
+  });
+}
+function setCloudStatus(text,mode=''){
+  const el=$('#cloudStatus');if(!el)return;el.textContent=text;el.classList.remove('live','offline');if(mode)el.classList.add(mode);
+}
+function cloudContactShape(x){
+  return {...x,id:String(x.id),phones:Array.isArray(x.phones)?x.phones:[],services:Array.isArray(x.services)?x.services:[],open24:!!x.open24,community:!!x.community,verified:!!x.verified};
+}
+
+allContacts=function(){
+  const source=Array.isArray(cloudContacts)&&cloudContacts.length?cloudContacts:builtInContacts();
+  return dedupeContacts(source.map(cloudContactShape));
+};
+isAdmin=function(){return adminAuthenticated};
+
+async function syncCloudContacts(force=false){
+  const now=Date.now();if(!force&&now-lastCloudSync<60000)return;
+  lastCloudSync=now;
+  try{
+    const health=await apiJson('/api/health');backendConfigured=!!health.configured;
+    if(!backendConfigured){setCloudStatus('Offline starter directory · cloud setup pending','offline');return}
+    const data=await apiJson('/api/contacts');
+    if(Array.isArray(data.contacts)&&data.contacts.length){
+      cloudContacts=data.contacts.map(cloudContactShape);
+      localStorage.setItem('pawwingCloudContactsCache',JSON.stringify(cloudContacts));
+      setCloudStatus(`☁ Shared directory live · ${cloudContacts.length} contacts`,'live');
+    }else{
+      setCloudStatus('Cloud connected · starter data not seeded yet','offline');
+    }
+    renderDirectory();
+  }catch(err){
+    const cached=Array.isArray(cloudContacts)&&cloudContacts.length;
+    setCloudStatus(cached?`Offline · using last synced ${cloudContacts.length} contacts`:'Offline · using built-in emergency directory','offline');
+  }
+}
+
+saveContact=async function(e){
+  e.preventDefault();
+  const btn=$('#submitContactBtn');if(btn){btn.disabled=true;btn.textContent='Submitting…'}
+  const payload={
+    name:$('#fName').value.trim(),country:$('#fCountry').value,domain:$('#fDomain')?.value||helpMode,type:$('#fType').value,
+    state:$('#fState').value,city:$('#fCity').value.trim(),phones:[$('#fPhone1').value.trim(),$('#fPhone2').value.trim()].filter(Boolean),
+    email:$('#fEmail').value.trim(),website:$('#fWebsite').value.trim(),source:$('#fWebsite').value.trim(),address:$('#fAddress').value.trim(),
+    services:$('#fServices').value.split(',').map(x=>x.trim()).filter(Boolean),open24:$('#f24').checked
+  };
+  try{
+    const data=await apiJson('/api/submissions',{method:'POST',body:JSON.stringify(payload)});
+    e.target.reset();$('#fCountry').value=$('#country').value||DEFAULT_COUNTRY;refreshAddRegions();hide('addModal');
+    alert(data.message||'Contact submitted for administrator review.');
+  }catch(err){
+    /* Emergency-safe fallback: preserve the contribution locally if cloud is unavailable. */
+    const local={id:'local-'+Date.now(),...payload,verified:false,community:true};custom.unshift(local);store('pawsosCustomContacts',custom);renderDirectory();hide('addModal');
+    alert(`Cloud submission is unavailable right now. The contact was saved only on this device as an unverified local entry.\n\n${err.message}`);
+  }finally{if(btn){btn.disabled=false;btn.textContent='Submit for review'}}
+};
+
+async function checkAdminSession(){
+  try{const data=await apiJson('/api/admin-session');backendConfigured=!!data.configured;adminAuthenticated=!!data.authenticated;return adminAuthenticated}catch{adminAuthenticated=false;return false}
+}
+openAdminLogin=function(){if(isAdmin()){go('admin');return}$('#adminLoginError').textContent='';$('#adminUser').value='';$('#adminPass').value='';show('adminLoginModal');setTimeout(()=>$('#adminUser').focus(),120)};
+adminLogin=async function(e){
+  e.preventDefault();const err=$('#adminLoginError');err.textContent='';
+  try{
+    const data=await apiJson('/api/admin-login',{method:'POST',body:JSON.stringify({username:$('#adminUser').value.trim(),password:$('#adminPass').value})});
+    adminAuthenticated=true;hide('adminLoginModal');await refreshAdminCloud();go('admin');renderDirectory();
+  }catch(error){err.textContent=error.message}
+};
+adminLogout=async function(){try{await apiJson('/api/admin-logout',{method:'POST',body:'{}'})}catch{}adminAuthenticated=false;cloudAdminContacts=null;cloudSubmissions=[];go('home');renderDirectory()};
+
+function adminFilterRows(){
+  if(!Array.isArray(cloudAdminContacts))return [];
+  const term=($('#adminSearch')?.value||'').toLowerCase(),country=$('#adminCountry')?.value||'all',domain=$('#adminDomain')?.value||'all';
+  return cloudAdminContacts.filter(x=>(country==='all'||x.country===country)&&(domain==='all'||x.domain===domain)&&(`${x.name} ${x.city} ${x.state} ${(x.phones||[]).join(' ')}`).toLowerCase().includes(term));
+}
+renderAdmin=function(){
+  if(!isAdmin()){openAdminLogin();return}
+  if(!Array.isArray(cloudAdminContacts)){refreshAdminCloud();return}
+  const items=adminFilterRows();const approved=cloudAdminContacts.filter(x=>x.status!=='deleted').length,deleted=cloudAdminContacts.filter(x=>x.status==='deleted').length,pending=cloudSubmissions.filter(x=>x.status==='pending').length;
+  if($('#adminSummary'))$('#adminSummary').innerHTML=`<div><b>${approved}</b><span>Approved shared records</span></div><div><b>${cloudAdminContacts.filter(x=>x.domain==='bird'||x.domain==='both').length}</b><span>Bird-capable records</span></div><div><b>${pending}</b><span>Pending submissions</span></div><div><b>${deleted}</b><span>Deleted / restorable</span></div><button class="secondary" onclick="restoreDeleted()">Restore all deleted</button>`;
+  if($('#adminTable'))$('#adminTable').innerHTML=items.map(i=>`<article class="admin-row ${i.status==='deleted'?'deleted-row':''}"><div><span>${esc(domainLabel(i))} • ${esc(i.type)} • ${esc(i.country)} <em class="status-tag">${esc(i.status||'approved')}</em></span><b>${esc(i.name)}</b><small>${esc(i.city||'')} ${i.phones?.length?'• '+esc(i.phones.join(' / ')):''}</small></div><div>${i.status==='deleted'?`<button onclick="adminRestore('${i.id}')">Restore</button>`:`<button onclick="adminEdit('${i.id}')">Edit</button><button class="delete-btn" onclick="adminDelete('${i.id}')">Delete</button>`}</div></article>`).join('')||'<div class="empty-soft">No records match.</div>';
+};
+
+async function refreshAdminCloud(){
+  if(!isAdmin()){openAdminLogin();return}
+  const title=$('#adminCloudTitle'),text=$('#adminCloudText');if(title)title.textContent='Synchronising…';
+  try{
+    const [contactData,submissionData]=await Promise.all([apiJson('/api/admin-contacts'),apiJson('/api/admin-submissions')]);
+    cloudAdminContacts=(contactData.contacts||[]).map(cloudContactShape);cloudSubmissions=submissionData.submissions||[];
+    if(title)title.textContent='Cloud directory connected';if(text)text.textContent=`${cloudAdminContacts.filter(x=>x.status!=='deleted').length} approved records · ${cloudSubmissions.filter(x=>x.status==='pending').length} submissions awaiting review.`;
+    renderAdmin();renderAdminSubmissions();
+  }catch(error){if(title)title.textContent='Cloud directory unavailable';if(text)text.textContent=error.message;if($('#adminTable'))$('#adminTable').innerHTML=`<div class="backend-warning">${esc(error.message)}</div>`}
+}
+async function loadAdminSubmissions(force=false){if(!isAdmin())return openAdminLogin();if(!force&&cloudSubmissions.length){renderAdminSubmissions();return}try{const data=await apiJson('/api/admin-submissions');cloudSubmissions=data.submissions||[];renderAdminSubmissions();renderAdmin()}catch(error){if($('#adminSubmissions'))$('#adminSubmissions').innerHTML=`<div class="backend-warning">${esc(error.message)}</div>`}}
+function renderAdminSubmissions(){
+  const el=$('#adminSubmissions');if(!el)return;const pending=(cloudSubmissions||[]).filter(x=>x.status==='pending');
+  el.innerHTML=pending.length?pending.map(s=>`<article class="submission-row"><div><span>${esc(domainLabel(s))} • ${esc(s.type)} • ${esc(s.country)}</span><b>${esc(s.name)}</b><small>${esc([s.city,s.state,s.country].filter(Boolean).join(', '))}<br>${esc((s.phones||[]).join(' / '))}${s.address?'<br>'+esc(s.address):''}${s.source?'<br>'+esc(s.source):''}</small></div><div class="submission-actions"><button class="approve-btn" onclick="reviewSubmission('${s.id}','approve')">Approve</button><button class="reject-btn" onclick="reviewSubmission('${s.id}','reject')">Reject</button></div></article>`).join(''):'<div class="empty-soft">No pending community submissions.</div>';
+}
+async function reviewSubmission(id,action){if(!isAdmin())return openAdminLogin();const label=action==='approve'?'approve':'reject';if(!confirm(`${label[0].toUpperCase()+label.slice(1)} this submitted contact?`))return;try{await apiJson('/api/admin-submissions',{method:'POST',body:JSON.stringify({id,action})});await refreshAdminCloud();await syncCloudContacts(true)}catch(error){alert(error.message)}}
+
+adminEdit=function(id){
+  if(!isAdmin())return openAdminLogin();const i=(cloudAdminContacts||[]).find(x=>String(x.id)===String(id))||allContacts().find(x=>String(x.id)===String(id));if(!i)return;
+  $('#aeId').value=i.id;$('#adminEditTitle').textContent=i.name;$('#aeName').value=i.name||'';$('#aeDomain').value=i.domain||'animal';$('#aeType').value=i.type||'Vet';$('#aeCountry').value=i.country||'India';$('#aeState').value=i.state||'';$('#aeCity').value=i.city||'';$('#aePhone1').value=i.phones?.[0]||'';$('#aePhone2').value=i.phones?.[1]||'';$('#aePhone3').value=i.phones?.[2]||'';$('#aeSource').value=i.source||i.website||'';$('#aeAddress').value=i.address||'';$('#aeServices').value=(i.services||[]).join(', ');$('#ae24').checked=!!i.open24;show('adminEditModal')
+};
+saveAdminEdit=async function(e){
+  e.preventDefault();if(!isAdmin())return openAdminLogin();const id=$('#aeId').value;
+  const base=(cloudAdminContacts||[]).find(x=>String(x.id)===String(id))||{};const contact={name:$('#aeName').value.trim(),domain:$('#aeDomain').value,type:$('#aeType').value,country:$('#aeCountry').value,state:$('#aeState').value.trim(),city:$('#aeCity').value.trim(),phones:[$('#aePhone1').value.trim(),$('#aePhone2').value.trim(),$('#aePhone3').value.trim()].filter(Boolean),source:$('#aeSource').value.trim(),website:$('#aeSource').value.trim(),address:$('#aeAddress').value.trim(),services:$('#aeServices').value.split(',').map(x=>x.trim()).filter(Boolean),open24:$('#ae24').checked,national:!!base.national};
+  try{await apiJson('/api/admin-contacts',{method:'POST',body:JSON.stringify({action:'update',id,contact})});hide('adminEditModal');await refreshAdminCloud();await syncCloudContacts(true)}catch(error){alert(error.message)}
+};
+adminDelete=async function(id){if(!isAdmin())return openAdminLogin();const i=(cloudAdminContacts||[]).find(x=>String(x.id)===String(id));if(!i)return;if(!confirm(`Delete ${i.name} from the shared PawWing SOS directory? You can restore it later.`))return;try{await apiJson('/api/admin-contacts',{method:'POST',body:JSON.stringify({action:'delete',id})});await refreshAdminCloud();await syncCloudContacts(true)}catch(error){alert(error.message)}};
+async function adminRestore(id){if(!isAdmin())return openAdminLogin();try{await apiJson('/api/admin-contacts',{method:'POST',body:JSON.stringify({action:'restore',id})});await refreshAdminCloud();await syncCloudContacts(true)}catch(error){alert(error.message)}}
+restoreDeleted=async function(){if(!isAdmin())return;if(!confirm('Restore all deleted cloud directory records?'))return;try{await apiJson('/api/admin-contacts',{method:'POST',body:JSON.stringify({action:'restoreAll'})});await refreshAdminCloud();await syncCloudContacts(true)}catch(error){alert(error.message)}};
+
+const cloudBaseInit=init;
+init=function(){
+  cloudBaseInit();
+  checkAdminSession().then(()=>renderDirectory());
+  syncCloudContacts(true);
+  setInterval(()=>syncCloudContacts(false),5*60*1000);
+  window.addEventListener('online',()=>syncCloudContacts(true));
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')syncCloudContacts(false)});
+};
+
 init();

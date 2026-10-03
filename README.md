@@ -1,77 +1,165 @@
-# PawWing SOS v5.2 — Animal & Bird Rescue Network
+# PawWing SOS v5.3.1 — Shared Cloud Directory
 
-PawWing SOS is an installable static Progressive Web App (PWA) for animal and bird emergency discovery, rescue first-response education, everyday care, and source-backed contact lookup across the current 10-country release: India, USA, UK, Brazil, China, Russia, Mexico, Japan, Germany and Argentina.
+**PawWing SOS — Animal & Bird Rescue Network**
 
-## What is new in v5.2
+This release upgrades the v5.2 static directory into a shared cloud-backed rescue directory while preserving the built-in emergency contacts as an offline fallback.
 
-- Brand remains **PawWing SOS — Animal & Bird Rescue Network**. Existing browser storage identifiers are intentionally retained so upgrades do not wipe saved local data.
+## What changed
 
-- Expanded source-backed starter directory with additional current vet, rescue, shelter, pet-shop, avian and wildlife listings across all 10 supported countries; new records include a `checked` date.
-- Added one-tap **live Google Maps category discovery** for vets, rescuers, shelters and shops in any typed city, including bird-specific searches in Bird Help. This provides a fallback for regions not yet preloaded.
-- Care Academy rebuilt as substantial expandable mini-guides with warning signs, practical steps and direct references to WSAVA, ASPCA, Merck Veterinary Manual and the Association of Avian Veterinarians.
-- Simplified the supported animal menus and care logic by removing the two species requested by the project owner.
-- Improved directory and academy UI for faster scanning on mobile.
-
-- Separate **Animal Help** and **Bird Help** emergency directories.
-- Bird-specific starter contacts: avian/exotic vets, bird/wildlife rescuers, bird medical aid and bird shops where reliable public contact information was available.
-- Bird rescue plan for collision/stunning, bleeding, cat/dog attacks, manja/thread entanglement, breathing/weakness and baby birds.
-- Bird feeding and grooming guidance, plus Bird Care Academy cards and Assistant responses.
-- Country-aware **Emergency Helplines** panel. India prominently shows **1962**, with an explicit note that state activation, service scope and hours vary.
-- Google Maps action on every directory card, plus a bird-specialist map search for cities without preloaded specialist coverage.
-- Donation page that sends donors to organisations' official websites; PawWing SOS does not collect payment details.
-- Administrator-only local edit/delete functions.
-- Install button and PWA support for mobile/desktop browsers.
-- Service-worker update detection with an in-app **Update now** banner when a newer deployed build is available.
+- Shared central contact database using Supabase/Postgres.
+- All 197 v5.2 approved starter contacts are included in `supabase/setup.sql`.
+- Public users can read approved contacts but cannot directly edit them.
+- “Add missing contact” now submits a contact for administrator review.
+- Administrator can approve/reject submissions and edit/delete/restore shared contacts.
+- Approved admin changes become visible to every PawWing SOS user after sync.
+- Browser clients refresh the shared directory on launch, when returning online, when the app becomes active again, and periodically while open.
+- Last synced contacts are cached locally; the built-in directory remains available if the cloud is unavailable.
+- Server-side admin session cookie is HttpOnly + SameSite=Strict.
+- Admin actions are recorded in an `audit_log` table.
+- API responses are not cached by the PWA service worker.
+- PWA cache/version upgraded to v5.3.1.
 
 ## Administrator login
+
+Requested default credentials:
 
 - Login ID: `admin`
 - Password: `administrator@123`
 
-The password is compared against a SHA-256 digest in the browser. **Important security limitation:** this is a static web application. A technically skilled user with the site files/browser tools can bypass client-side controls. The admin edits/deletions are stored only in that browser's local storage. For genuinely secure multi-user administration, audit history, centrally shared edits and role-based access control, move the directory to a backend/database with server-side authentication.
+The browser no longer validates this password. Validation happens in the server-side API. The default password is represented by a scrypt salt/hash in `server/auth.js`.
 
-## Data model and verification
+**Before a public launch, change the password.** Generate a replacement:
 
-Preloaded records carry a source URL and are labelled **Source-backed record**, not “guaranteed currently open”. Emergency numbers, hours and service areas can change. Users should confirm availability when possible before travel. Community additions are clearly marked **Community-added** until a later cloud moderation workflow is implemented.
+```bash
+npm run generate-admin-hash -- "your-new-password"
+```
 
-For Bird Help, public map data often does not state whether a veterinarian treats birds. Live results therefore tell the user to confirm avian capability before travelling. Curated avian/bird records are kept separate for emergency clarity.
+Then add the generated `ADMIN_PASSWORD_SALT` and `ADMIN_PASSWORD_HASH` to Vercel Environment Variables.
 
-## Install and updates
+## One-time cloud setup
 
-Host these files over HTTPS (for example on Vercel, Netlify, GitHub Pages or another static host). The browser can then install PawWing SOS as a PWA. The service worker checks the deployed files and the app checks periodically for a new service worker. When a newer build is installed and waiting, PawWing SOS shows an **Update now** banner.
+### 1. Create a Supabase project
 
-The PWA cannot silently replace code while someone is using it; the update button activates the new service worker and reloads to the new version. This avoids interrupting an emergency lookup.
+Create a project and wait for its Postgres database to become ready.
 
-## Deploy to Vercel
+### 2. Create and seed PawWing SOS tables
 
-All required files are kept in one folder:
+Open **Supabase → SQL Editor**, copy the entire contents of:
 
-- `index.html`
-- `styles.css`
-- `app.js`
-- `manifest.json`
-- `sw.js`
-- `icon.svg`
-- `README.md`
+`supabase/setup.sql`
 
-Upload the folder contents to a GitHub repository and import the repository into Vercel as a static project. No Node build step is required.
+and run it once.
 
-## Donation safety
+It creates:
 
-PawWing SOS v5.2 does not process donations. Donation cards open the selected organisation's official website in a new tab. This avoids PawWing SOS storing payment card, UPI or banking details.
+- `contacts`
+- `contact_submissions`
+- `audit_log`
 
-## Medical / rescue disclaimer
+It also seeds the 197 approved v5.2 starter contacts. The seed uses `ON CONFLICT DO NOTHING`, so re-running it will not overwrite later admin edits.
 
-PawWing SOS offers educational first-response information, not diagnosis, treatment or a substitute for a veterinarian, avian veterinarian, trained wildlife rehabilitator or emergency authority. Wild birds can carry infectious disease; avoid unnecessary bare-hand contact with sick/dead wildlife and follow local public-health/wildlife guidance.
+### 3. Add Vercel Environment Variables
 
-## Credit
+In the PawWing SOS Vercel project add:
 
-**Concept & Created by Hardik Desai**
+```text
+SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVER_ONLY_SERVICE_ROLE_KEY
+ADMIN_USERNAME=admin
+```
 
-With love and inspiration from **Nishiv Desai & Rudra Desai ❤️**
+Optional but recommended:
 
-> Helping paws. Saving lives. Caring every day.
+```text
+SESSION_SECRET=a-long-random-secret
+```
 
-## Directory freshness
+If `SESSION_SECRET` is omitted, the server derives its session-signing key from the Supabase service-role secret.
 
-Local business phone numbers, hours and service scope can change. Curated records are source-backed and newly added v5.2 listings include a last-checked date, but users should still call before travel. Live Google Maps discovery is intentionally available for every typed city so PawWing SOS does not pretend a static database can remain exhaustive worldwide.
+**Never put `SUPABASE_SERVICE_ROLE_KEY` in `app.js`, HTML, GitHub screenshots, or a `NEXT_PUBLIC_` variable. It must stay server-side.**
+
+### 4. Deploy
+
+Upload this complete folder to GitHub and import it into Vercel. Keep the project root at this folder. The project is configured for Node.js 24.x.
+
+After deployment, visit:
+
+`/api/health`
+
+A correctly configured release should return JSON containing:
+
+```json
+{"configured":true,"mode":"cloud"}
+```
+
+Then open PawWing SOS. The Help page should show a green **Shared directory live** badge.
+
+## Directory workflow
+
+### Public user
+
+1. Opens Help.
+2. PawWing loads approved contacts from the central database.
+3. If the database cannot be reached, PawWing uses the last synced copy or the built-in starter directory.
+4. A missing contact can be submitted through **+ Add missing contact**.
+5. The submitted record stays pending until the administrator reviews it.
+
+### Administrator
+
+1. Footer → **Admin**.
+2. Log in.
+3. Review pending community submissions.
+4. Approve or reject them.
+5. Edit existing shared records or soft-delete them.
+6. Deleted records can be restored.
+7. Actions are written to `audit_log`.
+
+## Project structure
+
+```text
+index.html
+styles.css
+app.js
+manifest.json
+sw.js
+icon.svg
+package.json
+vercel.json
+.env.example
+api/
+  health.js
+  contacts.js
+  submissions.js
+  admin-login.js
+  admin-logout.js
+  admin-session.js
+  admin-contacts.js
+  admin-submissions.js
+server/
+  auth.js
+  contact.js
+  db.js
+  http.js
+supabase/
+  setup.sql
+  seed-contacts.json
+scripts/
+  check-project.mjs
+  generate-admin-hash.mjs
+```
+
+## Validation performed
+
+- JavaScript syntax checks for frontend, service worker, server helpers and API routes.
+- Project structure/manifest check.
+- 197 seed records checked for unique IDs, supported countries, domains and categories.
+- Requested admin credential verified against server-side scrypt hash.
+- Signed admin session creation/verification tested.
+- `/api/health`, admin login and session handlers unit-tested with a mocked Supabase response.
+- Frontend offline-fallback flow executed in an in-memory Chromium page: 69 India animal contacts rendered and Bird mode rendered 21 contacts without page errors.
+- Frontend cloud flow executed with mocked API responses: cloud contacts replaced the fallback, Bird mode switched correctly, admin login opened the cloud admin page and pending submissions rendered.
+- Localhost/file navigation is blocked by the execution environment’s browser administrator policy, so browser tests were run in-memory instead of against a local URL.
+
+## Important operational note
+
+Emergency-contact data changes over time. Cloud administration makes corrections much easier, but PawWing SOS should still periodically re-check phone numbers, operating hours and organisation status against official or first-party sources.

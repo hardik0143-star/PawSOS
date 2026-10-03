@@ -1,0 +1,14 @@
+{
+  "name": "pawwing-sos-global-v5-3-cloud",
+  "version": "5.3.0",
+  "private": true,
+  "description": "PawWing SOS \u2014 Animal & Bird Rescue Network with a shared Supabase directory and secure Vercel admin APIs.",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "check": "node --check app.js && node --check sw.js && node scripts/check-project.mjs",
+    "generate-admin-hash": "node scripts/generate-admin-hash.mjs"
+  },
+  "type": "module"
+}

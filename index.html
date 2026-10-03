@@ -122,7 +122,7 @@
     <section id="help" class="page">
       <div class="page-hero shell compact">
         <div><span class="eyebrow">EMERGENCY DIRECTORY</span><h1>Find the right help fast.</h1><p>Switch between Animal Help and Bird Help so emergency contacts stay clear. Choose a country and city, then use source-backed records, public map discovery and Google Maps search.</p></div>
-        <button class="primary" onclick="openAdd()">+ Add missing contact</button>
+        <div class="hero-side-actions"><span id="cloudStatus" class="cloud-status">Checking shared directory…</span><button class="primary" onclick="openAdd()">+ Add missing contact</button></div>
       </div>
 
       <section class="shell help-mode-switch">
@@ -332,10 +332,12 @@
 
     <section id="admin" class="page">
       <div class="page-hero shell compact">
-        <div><span class="eyebrow">ADMINISTRATION</span><h1>PawWing SOS directory control.</h1><p>Administrator-only local editing for source-backed and community contacts. Changes in this static build apply to this browser/device.</p></div>
+        <div><span class="eyebrow">ADMINISTRATION</span><h1>PawWing SOS directory control.</h1><p>Administrator-only local editing for source-backed and community contacts. Changes in this shared cloud directory. Approved edits update PawWing SOS for everyone using the app.</p></div>
         <button class="secondary" onclick="adminLogout()">Log out</button>
       </div>
+      <section class="shell cloud-admin-card"><div><span class="label">SHARED CLOUD DIRECTORY</span><h2 id="adminCloudTitle">Checking backend…</h2><p id="adminCloudText">Approved admin changes are shared with all PawWing SOS users.</p></div><button class="secondary" onclick="refreshAdminCloud()">Refresh</button></section>
       <section class="shell admin-summary" id="adminSummary"></section>
+      <section class="shell directory-panel admin-submissions-panel"><div class="panel-head"><div><span class="label">COMMUNITY SUBMISSIONS</span><h2>Pending review</h2></div><button class="text-btn" onclick="loadAdminSubmissions(true)">Refresh</button></div><div id="adminSubmissions" class="admin-table"><div class="empty-soft">Log in to review submitted contacts.</div></div></section>
       <section class="shell directory-panel">
         <div class="directory-tools admin-tools"><label class="search-field">🔎<input id="adminSearch" placeholder="Search all contacts" oninput="renderAdmin()"/></label><select id="adminCountry" class="control" onchange="renderAdmin()"></select><select id="adminDomain" class="control" onchange="renderAdmin()"><option value="all">Animal + Bird</option><option value="animal">Animal</option><option value="bird">Bird</option><option value="both">Both</option></select></div>
         <div id="adminTable" class="admin-table"></div>
@@ -357,14 +359,13 @@
         <article class="founder-card">
           <span class="label">CREATED WITH CARE</span>
           <div class="founder-paw">🐾</div>
-          <h2>Concept & Created by<br/>Hardik Desai</h2>
-          <p>With love and inspiration from</p>
-          <strong>Nishiv Desai & Rudra Desai ❤️</strong>
+          <h2>Conceptualized & Created by<br/>Hardik Desai</h2>
+          <p>Inspired by family, compassion, and a love for animals &amp; birds ❤️</p>
           <div class="about-motto">One useful connection can change an animal's day — or save a life.</div>
         </article>
       </section>
       <section class="shell coverage-card">
-        <div><span class="label">CURRENT RELEASE</span><h2>10-country starter coverage</h2><p>India remains the deepest preloaded directory. International coverage begins with source-backed starter contacts plus live city discovery and community additions.</p></div>
+        <div><span class="label">CURRENT RELEASE</span><h2>10-country shared rescue directory</h2><p>The app keeps an offline starter directory for emergencies and synchronises approved contacts from a central cloud database when online. Community submissions are reviewed before publication.</p></div>
         <div class="country-pills"><span>🇮🇳 India</span><span>🇺🇸 USA</span><span>🇬🇧 UK</span><span>🇧🇷 Brazil</span><span>🇨🇳 China</span><span>🇷🇺 Russia</span><span>🇲🇽 Mexico</span><span>🇯🇵 Japan</span><span>🇩🇪 Germany</span><span>🇦🇷 Argentina</span></div>
       </section>
     </section>
@@ -416,7 +417,7 @@
   <div id="addModal" class="modal-back hidden" onclick="sheetBackdrop(event,'addModal')">
     <div class="modal large" onclick="event.stopPropagation()">
       <div class="sheet-head"><div><span class="label">ADD MISSING CONTACT</span><h2>Help improve your local directory.</h2></div><button class="close" onclick="hide('addModal')">×</button></div>
-      <p class="muted">Add only publicly shareable professional or organisation details. This build stores community additions on this device and marks them unverified.</p>
+      <p class="muted">Add only publicly shareable professional or organisation details. In the cloud version, submissions go to the administrator for review before appearing publicly.</p>
       <form id="addForm" class="form-grid">
         <label>Name / organisation<input required id="fName"/></label>
         <label>Directory<select id="fDomain"><option value="animal">🐾 Animal</option><option value="bird">🐦 Bird</option><option value="both">🐾🐦 Animal + Bird</option></select></label><label>Type<select id="fType"><option>Vet</option><option>Rescuer</option><option>Shelter</option><option>Shop</option></select></label>
@@ -430,7 +431,7 @@
         <label class="wide">Address<textarea required id="fAddress"></textarea></label>
         <label class="wide">Services / notes<input id="fServices" placeholder="Emergency, ambulance, surgery, pharmacy..."/></label>
         <label class="check wide"><input id="f24" type="checkbox"/> Available 24/7</label>
-        <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('addModal')">Cancel</button><button class="primary" type="submit">Save contact</button></div>
+        <div class="modal-actions wide"><button type="button" class="secondary" onclick="hide('addModal')">Cancel</button><button class="primary" type="submit" id="submitContactBtn">Submit for review</button></div>
       </form>
     </div>
   </div>
@@ -474,7 +475,7 @@
 
   <footer class="footer shell">
     <div><strong>PawWing SOS</strong><span>Animal &amp; Bird Rescue Network</span><button class="footer-link" onclick="go('about')">About PawWing SOS</button> · <button class="footer-link" onclick="go('donate')">Donate</button> · <button class="footer-link" onclick="openAdminLogin()">Admin</button> · <button id="installBtn" class="footer-link" onclick="installPWA()">Install app</button></div>
-    <p><strong>Concept & Created by Hardik Desai</strong><br/>Inspired with love by Nishiv Desai & Rudra Desai ❤️<br/>Care information is educational and not a veterinary diagnosis. In emergencies, contact a veterinarian, trained rescuer or local authority.</p>
+    <p><strong>Conceptualized & Created by Hardik Desai</strong><br/>Inspired by family, compassion, and a love for animals &amp; birds ❤️<br/>Care information is educational and not a veterinary diagnosis. In emergencies, contact a veterinarian, trained rescuer or local authority.</p>
   </footer>
 
   <script src="app.js"></script>
