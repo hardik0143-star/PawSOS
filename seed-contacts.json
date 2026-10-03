@@ -1,0 +1,4378 @@
+[
+  {
+    "type": "Rescuer",
+    "name": "Bezuban Charitable Trust",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "phones": [
+      "+91 88664 21316"
+    ],
+    "address": "Ahmedabad, Gujarat",
+    "open24": true,
+    "services": [
+      "Animal emergency",
+      "Ambulance"
+    ],
+    "source": "https://www.bezubancharitabletrust.com/",
+    "country": "India",
+    "id": 1,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.bezubancharitabletrust.com/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Asha and Pets Foundation",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "phones": [
+      "+91 97141 06509",
+      "+91 98796 65656"
+    ],
+    "address": "Satellite, Ahmedabad, Gujarat",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Animal care"
+    ],
+    "source": "https://ashaandpets.org/Contact%20us.html",
+    "country": "India",
+    "id": 2,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://ashaandpets.org/Contact%20us.html",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Jivdaya Charitable Trust",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "phones": [
+      "+91 99244 18184"
+    ],
+    "address": "Ahmedabad Panjrapol Campus, Ambawadi, Ahmedabad",
+    "open24": false,
+    "services": [
+      "Hospital",
+      "Street animals",
+      "Rehabilitation"
+    ],
+    "source": "https://www.jivdayatrust.org/contact",
+    "country": "India",
+    "id": 3,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.jivdayatrust.org/contact",
+    "domain": "both"
+  },
+  {
+    "type": "Rescuer",
+    "name": "CUPA Trauma & Rescue Centre",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "phones": [
+      "+91 98454 25678",
+      "080 22947300"
+    ],
+    "address": "Veterinary College Campus, Bellary Road, Hebbal, Bengaluru",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Ambulance",
+      "Street animals"
+    ],
+    "source": "https://cupabangalore.org/trauma-rescue-centre/",
+    "country": "India",
+    "id": 4,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://cupabangalore.org/trauma-rescue-centre/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "CUPA Small Animal Specialty Hospital",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "phones": [
+      "+91 91088 55888",
+      "080 22947312",
+      "080 22947313"
+    ],
+    "address": "R.T. Nagar, Bengaluru, Karnataka",
+    "open24": false,
+    "services": [
+      "Vet",
+      "Surgery",
+      "Diagnostics",
+      "Pharmacy"
+    ],
+    "source": "https://cupabangalore.org/small-animal-specialty-hospital/",
+    "country": "India",
+    "id": 5,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://cupabangalore.org/small-animal-specialty-hospital/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Sarvoham Animal Foundation",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "phones": [
+      "1800 102 8032"
+    ],
+    "address": "JP Nagar, Bengaluru, Karnataka",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Rescue"
+    ],
+    "source": "https://sarvoham.org/",
+    "country": "India",
+    "id": 6,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://sarvoham.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "SPCA Chandigarh",
+    "state": "Chandigarh",
+    "city": "Chandigarh",
+    "phones": [
+      "0172 2696450",
+      "0172 2696491"
+    ],
+    "address": "Chandigarh",
+    "open24": false,
+    "services": [
+      "Animal welfare",
+      "Hospital"
+    ],
+    "source": "https://chandigarh.gov.in/helpline",
+    "country": "India",
+    "id": 7,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://chandigarh.gov.in/helpline",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "MowgliAid Animal Rescue Ambulance",
+    "state": "Chandigarh",
+    "city": "Chandigarh",
+    "phones": [
+      "+91 80549 11911"
+    ],
+    "address": "Chandigarh Tricity",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Ambulance"
+    ],
+    "source": "https://mowgliaid.org/",
+    "country": "India",
+    "id": 8,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://mowgliaid.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "The Bhau Project",
+    "state": "Chandigarh",
+    "city": "Chandigarh",
+    "phones": [
+      "+91 88470 08090"
+    ],
+    "address": "Chandigarh Tricity",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Ambulance"
+    ],
+    "source": "https://thebhauproject.com/",
+    "country": "India",
+    "id": 9,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://thebhauproject.com/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Blue Cross of India",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "phones": [
+      "+91 99629 98886"
+    ],
+    "address": "Chennai, Tamil Nadu",
+    "open24": false,
+    "services": [
+      "Rescue requests",
+      "Animal welfare"
+    ],
+    "source": "http://bluecrossofindia.org/",
+    "country": "India",
+    "id": 10,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "http://bluecrossofindia.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Animal Care Trust Chennai",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "phones": [
+      "+91 90031 50947"
+    ],
+    "address": "New Washermenpet, Chennai",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Animal care"
+    ],
+    "source": "https://animalrehab.org/",
+    "country": "India",
+    "id": 11,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://animalrehab.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Tamil Nadu Animal Welfare Board Help Desk",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "phones": [
+      "044 24575701",
+      "1962"
+    ],
+    "address": "Thiruvanmiyur, Chennai, Tamil Nadu",
+    "open24": false,
+    "services": [
+      "Animal welfare help desk",
+      "Emergency call route"
+    ],
+    "source": "https://tnawb.tn.gov.in/contact-us",
+    "country": "India",
+    "id": 12,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://tnawb.tn.gov.in/contact-us",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Humane Animal Society",
+    "state": "Tamil Nadu",
+    "city": "Coimbatore",
+    "phones": [
+      "+91 93661 27215",
+      "+91 97915 32266"
+    ],
+    "address": "Coimbatore, Tamil Nadu",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Ambulance",
+      "ABC"
+    ],
+    "source": "https://hasindia.org/",
+    "country": "India",
+    "id": 13,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://hasindia.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "The Pawsome People Project",
+    "state": "Tamil Nadu",
+    "city": "Coimbatore",
+    "phones": [
+      "+91 99408 54800"
+    ],
+    "address": "Avinashi Road, Coimbatore, Tamil Nadu",
+    "open24": false,
+    "services": [
+      "Street dog rescue",
+      "Treatment"
+    ],
+    "source": "https://pawsomepeople.org/contact",
+    "country": "India",
+    "id": 14,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://pawsomepeople.org/contact",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Animal Husbandry Department, Coimbatore",
+    "state": "Tamil Nadu",
+    "city": "Coimbatore",
+    "phones": [
+      "0422 2381900"
+    ],
+    "address": "Veterinary Poly Clinic campus, Town Hall, Coimbatore",
+    "open24": false,
+    "services": [
+      "Government veterinary office"
+    ],
+    "source": "https://coimbatore.nic.in/animal-husbandry-department-2/",
+    "country": "India",
+    "id": 15,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://coimbatore.nic.in/animal-husbandry-department-2/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Sanjay Gandhi Animal Care Centre",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 95608 02425",
+      "+91 88823 25407"
+    ],
+    "address": "Delhi",
+    "open24": true,
+    "services": [
+      "24-hour OPD",
+      "Animal ambulance"
+    ],
+    "source": "https://sanjaygandhianimalcarecentre.org/",
+    "country": "India",
+    "id": 16,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://sanjaygandhianimalcarecentre.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Friendicoes SECA Delhi",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "011 35712913",
+      "011 35712939",
+      "+91 88829 31057"
+    ],
+    "address": "Defence Colony Flyover Market, New Delhi",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Ambulance",
+      "Shelter"
+    ],
+    "source": "https://friendicoes.org/",
+    "country": "India",
+    "id": 17,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://friendicoes.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Sonadi Charitable Trust",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 92127 97696",
+      "+91 98100 54693"
+    ],
+    "address": "Najafgarh, Delhi",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Animal welfare"
+    ],
+    "source": "https://sonadicharitabletrust.org/",
+    "country": "India",
+    "id": 18,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://sonadicharitabletrust.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Friendicoes SECA Gurugram",
+    "state": "Haryana",
+    "city": "Gurugram",
+    "phones": [
+      "+91 70277 77951",
+      "+91 70277 77946"
+    ],
+    "address": "Sector 99, Gurugram, Haryana",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Ambulance"
+    ],
+    "source": "https://friendicoes.org/",
+    "country": "India",
+    "id": 19,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://friendicoes.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Umeed For Animals Foundation",
+    "state": "Haryana",
+    "city": "Gurugram",
+    "phones": [
+      "+91 99999 56541"
+    ],
+    "address": "Gurugram, Haryana",
+    "open24": false,
+    "services": [
+      "Rehabilitation",
+      "Animal rescue"
+    ],
+    "source": "https://umeedforanimals.org/",
+    "country": "India",
+    "id": 20,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://umeedforanimals.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Municipal Corporation Gurugram Emergency",
+    "state": "Haryana",
+    "city": "Gurugram",
+    "phones": [
+      "1800 180 1817"
+    ],
+    "address": "Gurugram, Haryana",
+    "open24": true,
+    "services": [
+      "Municipal emergency",
+      "Ask for veterinary section"
+    ],
+    "source": "https://www.mcg.gov.in/",
+    "country": "India",
+    "id": 21,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.mcg.gov.in/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "People For Animals Hyderabad",
+    "state": "Telangana",
+    "city": "Hyderabad",
+    "phones": [
+      "+91 73374 50643",
+      "+91 94901 49601",
+      "+91 73309 62323"
+    ],
+    "address": "Hyderabad / Secunderabad, Telangana",
+    "open24": true,
+    "services": [
+      "Sick & injured animals",
+      "Cruelty complaints"
+    ],
+    "source": "https://pfahyd.org/contact/",
+    "country": "India",
+    "id": 22,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://pfahyd.org/contact/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Blue Cross of Hyderabad",
+    "state": "Telangana",
+    "city": "Hyderabad",
+    "phones": [
+      "+91 88866 76074"
+    ],
+    "address": "Jubilee Hills, Hyderabad, Telangana",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Animal welfare"
+    ],
+    "source": "https://bluecrossofhyd.org/",
+    "country": "India",
+    "id": 23,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://bluecrossofhyd.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "AASRA Hyderabad",
+    "state": "Telangana",
+    "city": "Hyderabad",
+    "phones": [
+      "+91 78939 93955",
+      "+91 99498 72527"
+    ],
+    "address": "Bowrampet, Hyderabad, Telangana",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Animal care"
+    ],
+    "source": "https://weaasra.org/",
+    "country": "India",
+    "id": 24,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://weaasra.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Arham Always Care Animal Ambulance",
+    "state": "Madhya Pradesh",
+    "city": "Indore",
+    "phones": [
+      "+91 89890 80848"
+    ],
+    "address": "Indore, Madhya Pradesh",
+    "open24": false,
+    "services": [
+      "Animal ambulance",
+      "Rescue"
+    ],
+    "source": "https://alwayscare.arham.org/",
+    "country": "India",
+    "id": 25,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://alwayscare.arham.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Jasraj Animal Shelter",
+    "state": "Madhya Pradesh",
+    "city": "Indore",
+    "phones": [
+      "+91 87706 72085"
+    ],
+    "address": "Near Rau Bypass, Indore, Madhya Pradesh",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Rescue",
+      "Treatment"
+    ],
+    "source": "https://www.facebook.com/jasrajanimalsheltertaws",
+    "country": "India",
+    "id": 26,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.facebook.com/jasrajanimalsheltertaws",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Animal Husbandry Department, Indore",
+    "state": "Madhya Pradesh",
+    "city": "Indore",
+    "phones": [
+      "0731 2380967",
+      "0731 2386669"
+    ],
+    "address": "M.O.G. Lines, Mhow Naka, Indore",
+    "open24": false,
+    "services": [
+      "Government veterinary department"
+    ],
+    "source": "https://indore.nic.in/en/animal-husbandry/",
+    "country": "India",
+    "id": 27,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://indore.nic.in/en/animal-husbandry/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Help in Suffering",
+    "state": "Rajasthan",
+    "city": "Jaipur",
+    "phones": [
+      "+91 81072 99711"
+    ],
+    "address": "Maharani Farm, Durgapura, Jaipur",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Treatment"
+    ],
+    "source": "https://helpinsuffering.org/",
+    "country": "India",
+    "id": 28,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://helpinsuffering.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Dakash Animal Welfare Foundation",
+    "state": "Rajasthan",
+    "city": "Jaipur",
+    "phones": [
+      "+91 96944 71194"
+    ],
+    "address": "Niwaru Road, Jaipur, Rajasthan",
+    "open24": true,
+    "services": [
+      "Emergency rescue",
+      "Shelter"
+    ],
+    "source": "https://www.dakashanimalwelfarefoundation.com/contact",
+    "country": "India",
+    "id": 29,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.dakashanimalwelfarefoundation.com/contact",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Jaipur Animal Welfare Association",
+    "state": "Rajasthan",
+    "city": "Jaipur",
+    "phones": [
+      "+91 99839 04242",
+      "+91 88753 33397"
+    ],
+    "address": "Jaipur, Rajasthan",
+    "open24": false,
+    "services": [
+      "Animal welfare guidance"
+    ],
+    "source": "https://www.jaipuranimalwelfareassociation.org/",
+    "country": "India",
+    "id": 30,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.jaipuranimalwelfareassociation.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Animal Rescue Kochi",
+    "state": "Kerala",
+    "city": "Kochi",
+    "phones": [
+      "+91 97477 73950"
+    ],
+    "address": "Kochi, Kerala",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Immediate assistance"
+    ],
+    "source": "https://animalrescuekochi.org/",
+    "country": "India",
+    "id": 31,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://animalrescuekochi.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "DAYA Animal Welfare Organisation",
+    "state": "Kerala",
+    "city": "Kochi",
+    "phones": [
+      "+91 62384 17127"
+    ],
+    "address": "Ernakulam district, Kerala",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Relief",
+      "Rehabilitation"
+    ],
+    "source": "https://dayaawo.org/",
+    "country": "India",
+    "id": 32,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://dayaawo.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Kerala Mobile Veterinary Units",
+    "state": "Kerala",
+    "city": "Kochi",
+    "phones": [
+      "1962"
+    ],
+    "address": "Kerala statewide service",
+    "open24": true,
+    "services": [
+      "Mobile veterinary unit",
+      "Livestock emergency"
+    ],
+    "source": "https://ahd.kerala.gov.in/mobile-veterinary-unit/",
+    "country": "India",
+    "id": 33,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://ahd.kerala.gov.in/mobile-veterinary-unit/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Animal Rescue and Care Kolkata",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "phones": [
+      "+91 78905 35353",
+      "+91 78908 38383"
+    ],
+    "address": "Kolkata, West Bengal",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Ambulance"
+    ],
+    "source": "https://www.arckolkata.org/",
+    "country": "India",
+    "id": 34,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.arckolkata.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Love N Care For Animals",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "phones": [
+      "+91 94330 75715",
+      "+91 98300 37693"
+    ],
+    "address": "Kolkata, West Bengal",
+    "open24": false,
+    "services": [
+      "Street animals",
+      "Rescue"
+    ],
+    "source": "https://www.lovencareforanimals.co.in/",
+    "country": "India",
+    "id": 35,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.lovencareforanimals.co.in/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "PRCA Chhaya Animal Hospital & Shelter",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "phones": [
+      "+91 98302 11138",
+      "+91 98302 79138"
+    ],
+    "address": "Kolkata, West Bengal",
+    "open24": false,
+    "services": [
+      "Hospital",
+      "Shelter",
+      "Rescue"
+    ],
+    "source": "https://prca-chhaya.in/",
+    "country": "India",
+    "id": 36,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://prca-chhaya.in/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Lucknow Nagar Nigam Control Room",
+    "state": "Uttar Pradesh",
+    "city": "Lucknow",
+    "phones": [
+      "1533",
+      "+91 92199 02911",
+      "+91 92199 02912"
+    ],
+    "address": "Lucknow, Uttar Pradesh",
+    "open24": false,
+    "services": [
+      "Municipal control room",
+      "Ask for animal/veterinary help"
+    ],
+    "source": "https://lmc.up.nic.in/helpline.aspx",
+    "country": "India",
+    "id": 37,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://lmc.up.nic.in/helpline.aspx",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Indu Sewa Sansthan",
+    "state": "Uttar Pradesh",
+    "city": "Lucknow",
+    "phones": [
+      "+91 98382 22033",
+      "+91 98394 22033"
+    ],
+    "address": "Gomti Nagar, Lucknow, Uttar Pradesh",
+    "open24": false,
+    "services": [
+      "Stray rescue",
+      "Protection centre"
+    ],
+    "source": "https://igssngo.com/contact",
+    "country": "India",
+    "id": 38,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://igssngo.com/contact",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Jeev Aashraya",
+    "state": "Uttar Pradesh",
+    "city": "Lucknow",
+    "phones": [
+      "+91 80093 92222",
+      "+91 80095 21111"
+    ],
+    "address": "Gomti Nagar, Lucknow, Uttar Pradesh",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Cattle",
+      "Dogs",
+      "Shelter"
+    ],
+    "source": "https://www.jeevaashraya.com/contact-us/",
+    "country": "India",
+    "id": 39,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.jeevaashraya.com/contact-us/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "BMC Veterinary Health Department",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 75649 76649"
+    ],
+    "address": "Mumbai, Maharashtra",
+    "open24": true,
+    "services": [
+      "Municipal veterinary helpline"
+    ],
+    "source": "https://vhd.mcgm.gov.in/",
+    "country": "India",
+    "id": 40,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://vhd.mcgm.gov.in/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Bombay SPCA Hospital for Animals",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 85916 59398",
+      "+91 93727 87750",
+      "+91 80972 61337"
+    ],
+    "address": "Dr. S. S. Rao Road, Parel, Mumbai",
+    "open24": true,
+    "services": [
+      "Hospital",
+      "Ambulance",
+      "Emergency"
+    ],
+    "source": "https://bombayspca.org/get-in-touch.html",
+    "country": "India",
+    "id": 41,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://bombayspca.org/get-in-touch.html",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Animals Matter To Me",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 99207 37737",
+      "+91 99201 12227"
+    ],
+    "address": "Malad West, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Shelter"
+    ],
+    "source": "https://amtmindia.org/contact-us/",
+    "country": "India",
+    "id": 42,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://amtmindia.org/contact-us/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "In Defense of Animals India - Turbhe",
+    "state": "Maharashtra",
+    "city": "Navi Mumbai",
+    "phones": [
+      "+91 93200 56585"
+    ],
+    "address": "Turbhe, Navi Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Night service"
+    ],
+    "source": "https://www.idaindia.org/contact",
+    "country": "India",
+    "id": 43,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.idaindia.org/contact",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "In Defense of Animals India - Panvel",
+    "state": "Maharashtra",
+    "city": "Navi Mumbai",
+    "phones": [
+      "+91 93200 56589"
+    ],
+    "address": "New Panvel East, Maharashtra",
+    "open24": false,
+    "services": [
+      "Rescue",
+      "Animal care"
+    ],
+    "source": "https://www.idaindia.org/panvel-center",
+    "country": "India",
+    "id": 44,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.idaindia.org/panvel-center",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Navi Mumbai Municipal Corporation Helpline",
+    "state": "Maharashtra",
+    "city": "Navi Mumbai",
+    "phones": [
+      "1800 222 309",
+      "1800 222 310",
+      "+91 82919 20504"
+    ],
+    "address": "Navi Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Municipal helpline",
+      "Ask for veterinary section"
+    ],
+    "source": "https://www.nmmc.gov.in/",
+    "country": "India",
+    "id": 45,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.nmmc.gov.in/",
+    "domain": "animal"
+  },
+  {
+    "type": "Shelter",
+    "name": "Nishabd Dog Shelter",
+    "state": "Uttar Pradesh",
+    "city": "Noida",
+    "phones": [
+      "+91 80101 00700"
+    ],
+    "address": "Sector 115, Noida, Uttar Pradesh",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Ambulance"
+    ],
+    "source": "https://nishabd.org/",
+    "country": "India",
+    "id": 46,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://nishabd.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Save A Stray",
+    "state": "Uttar Pradesh",
+    "city": "Noida",
+    "phones": [
+      "+91 98996 00421"
+    ],
+    "address": "Sector 116, Noida, Uttar Pradesh",
+    "open24": false,
+    "services": [
+      "Animal care",
+      "Shelter",
+      "Medical care"
+    ],
+    "source": "https://saveastray.in/",
+    "country": "India",
+    "id": 47,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://saveastray.in/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Noida Animal Shelter and Hospital",
+    "state": "Uttar Pradesh",
+    "city": "Noida",
+    "phones": [
+      "+91 99993 52343"
+    ],
+    "address": "Sector 94, Noida, Uttar Pradesh",
+    "open24": false,
+    "services": [
+      "Hospital",
+      "Shelter",
+      "Animal distress"
+    ],
+    "source": "https://spcanoida.blogspot.com/",
+    "country": "India",
+    "id": 48,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://spcanoida.blogspot.com/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Pune Municipal Corporation Veterinary Section",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "020 25501236",
+      "020 25501237",
+      "1800 1030 222"
+    ],
+    "address": "Shivajinagar, Pune, Maharashtra",
+    "open24": false,
+    "services": [
+      "Municipal veterinary section",
+      "ABC"
+    ],
+    "source": "https://www.pmc.gov.in/en/b/veterinary-department-0",
+    "country": "India",
+    "id": 49,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.pmc.gov.in/en/b/veterinary-department-0",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "RESQ Charitable Trust",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "+91 91725 11100",
+      "+91 98909 99111"
+    ],
+    "address": "Bavdhan, Pune, Maharashtra",
+    "open24": true,
+    "services": [
+      "Wildlife emergencies",
+      "Technical animal rescue"
+    ],
+    "source": "https://www.resqct.org/contact",
+    "country": "India",
+    "id": 50,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.resqct.org/contact",
+    "domain": "both"
+  },
+  {
+    "type": "Vet",
+    "name": "Blue Cross Society of Pune",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "1800 419 9005"
+    ],
+    "address": "Pune, Maharashtra",
+    "open24": false,
+    "services": [
+      "Free OPD",
+      "Stray dogs & cats",
+      "Vaccination"
+    ],
+    "source": "https://bcspune.org/",
+    "country": "India",
+    "id": 51,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://bcspune.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Saahas For Animals",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "+91 84595 92034"
+    ],
+    "address": "Pune / PCMC, Maharashtra",
+    "open24": true,
+    "services": [
+      "Rescue",
+      "Rapid response"
+    ],
+    "source": "https://saahasforpune.org/",
+    "country": "India",
+    "id": 52,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://saahasforpune.org/",
+    "domain": "animal"
+  },
+  {
+    "type": "Vet",
+    "name": "Thane CPCA Animal Hospital",
+    "state": "Maharashtra",
+    "city": "Thane",
+    "phones": [
+      "+91 87676 12344",
+      "+91 93222 71966"
+    ],
+    "address": "Kolshet Road, Thane West, Maharashtra",
+    "open24": false,
+    "services": [
+      "Animal hospital",
+      "Rescue"
+    ],
+    "source": "https://www.thanecpca.org/contact-us/",
+    "country": "India",
+    "id": 53,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.thanecpca.org/contact-us/",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "Wildlife Welfare Association",
+    "state": "Maharashtra",
+    "city": "Thane",
+    "phones": [
+      "+91 97573 22901",
+      "+91 97573 22902",
+      "+91 97573 22903"
+    ],
+    "address": "Manpada, Thane, Maharashtra",
+    "open24": false,
+    "services": [
+      "Wildlife rescue"
+    ],
+    "source": "https://www.wwaindia.org/web/page/service",
+    "country": "India",
+    "id": 54,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.wwaindia.org/web/page/service",
+    "domain": "animal"
+  },
+  {
+    "type": "Rescuer",
+    "name": "RAWW Wildlife Welfare",
+    "state": "Maharashtra",
+    "city": "Thane",
+    "phones": [
+      "+91 76666 80202",
+      "+91 98697 80202"
+    ],
+    "address": "Thane / Mumbai region, Maharashtra",
+    "open24": false,
+    "services": [
+      "Wildlife rescue",
+      "Ambulance"
+    ],
+    "source": "https://www.raww.in/ourservices-rescue.php",
+    "country": "India",
+    "id": 55,
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.raww.in/ourservices-rescue.php",
+    "domain": "animal"
+  },
+  {
+    "country": "USA",
+    "type": "Vet",
+    "name": "ASPCA Animal Hospital",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 844 692 7722"
+    ],
+    "address": "New York City, New York",
+    "open24": false,
+    "services": [
+      "Animal hospital",
+      "Veterinary care"
+    ],
+    "source": "https://www.aspca.org/about-us/contact-us",
+    "id": "g1",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.aspca.org/about-us/contact-us",
+    "domain": "animal"
+  },
+  {
+    "country": "USA",
+    "type": "Vet",
+    "name": "ASPCA Animal Poison Control Center",
+    "state": "National",
+    "city": "Nationwide",
+    "phones": [
+      "+1 888 426 4435"
+    ],
+    "address": "United States nationwide hotline",
+    "open24": true,
+    "national": true,
+    "services": [
+      "24/7 poison control",
+      "Veterinary toxicology"
+    ],
+    "source": "https://www.aspca.org/about-us/contact-us",
+    "id": "g2",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.aspca.org/about-us/contact-us",
+    "domain": "animal"
+  },
+  {
+    "country": "USA",
+    "type": "Shelter",
+    "name": "Animal Care Centers of NYC",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 788 4000",
+      "311"
+    ],
+    "address": "326 E 110th Street, New York, NY",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Lost & found",
+      "Field services via 311"
+    ],
+    "source": "https://www.nycacc.org/contact/",
+    "id": "g3",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.nycacc.org/contact/",
+    "domain": "animal"
+  },
+  {
+    "country": "USA",
+    "type": "Vet",
+    "name": "Animal Medical Center",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 838 8100"
+    ],
+    "address": "510 E 62nd Street, New York, NY",
+    "open24": true,
+    "services": [
+      "24-hour veterinary emergency"
+    ],
+    "source": "https://www.aspca.org/nyc/nyc-faq",
+    "id": "g4",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.aspca.org/nyc/nyc-faq",
+    "domain": "animal"
+  },
+  {
+    "country": "UK",
+    "type": "Rescuer",
+    "name": "RSPCA Cruelty & Emergency Helpline",
+    "state": "National",
+    "city": "Nationwide",
+    "phones": [
+      "0300 1234 999"
+    ],
+    "address": "United Kingdom nationwide service",
+    "open24": false,
+    "national": true,
+    "services": [
+      "Injured animals",
+      "Cruelty reports",
+      "Animal rescue triage"
+    ],
+    "source": "https://www.rspca.org.uk/reportaconcern",
+    "id": "g5",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.rspca.org.uk/reportaconcern",
+    "domain": "animal"
+  },
+  {
+    "country": "UK",
+    "type": "Vet",
+    "name": "PDSA Veterinary Enquiries",
+    "state": "National",
+    "city": "Nationwide",
+    "phones": [
+      "0300 3737 223"
+    ],
+    "address": "United Kingdom",
+    "open24": false,
+    "national": true,
+    "services": [
+      "Veterinary enquiries",
+      "Pet hospital support"
+    ],
+    "source": "https://www.pdsa.org.uk/contact-us",
+    "id": "g6",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.pdsa.org.uk/contact-us",
+    "domain": "animal"
+  },
+  {
+    "country": "UK",
+    "type": "Shelter",
+    "name": "Battersea Dogs & Cats Home",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "0800 001 4444"
+    ],
+    "address": "4 Battersea Park Road, London SW8 4AA",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Rehoming",
+      "Pet advice"
+    ],
+    "source": "https://www.battersea.org.uk/about-us/contact-us",
+    "id": "g7",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.battersea.org.uk/about-us/contact-us",
+    "domain": "animal"
+  },
+  {
+    "country": "Brazil",
+    "type": "Vet",
+    "name": "São Paulo Municipal Veterinary Hospital – East Unit I",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "156",
+      "+55 11 5461 5600"
+    ],
+    "address": "Av. Salim Farah Maluf at R. Ulisses Cruz, Tatuapé, São Paulo",
+    "open24": true,
+    "services": [
+      "Public veterinary hospital",
+      "Urgency & emergency",
+      "Dogs & cats"
+    ],
+    "source": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+    "id": "g8",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+    "domain": "animal"
+  },
+  {
+    "country": "Brazil",
+    "type": "Vet",
+    "name": "São Paulo Municipal Veterinary Hospital – North Unit",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "156",
+      "+55 11 5461 5600"
+    ],
+    "address": "Rua Atílio Piffer, 687, Casa Verde, São Paulo",
+    "open24": false,
+    "services": [
+      "Public veterinary hospital",
+      "Dogs & cats"
+    ],
+    "source": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+    "id": "g9",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://prefeitura.sp.gov.br/web/saude/w/saude_e_protecao_ao_animal_domestico/hospitais-veterinarios-publicos",
+    "domain": "animal"
+  },
+  {
+    "country": "Brazil",
+    "type": "Rescuer",
+    "name": "Jundiaí Animal Welfare Department (DEBEA)",
+    "state": "São Paulo",
+    "city": "Jundiaí",
+    "phones": [
+      "156",
+      "+55 11 4589 9306",
+      "+55 11 4589 9307"
+    ],
+    "address": "Rua Abraão Farrão, 08, Jundiaí, São Paulo",
+    "open24": false,
+    "services": [
+      "Animal welfare",
+      "Clinical service",
+      "Adoption"
+    ],
+    "source": "https://debea.jundiai.sp.gov.br/contato/",
+    "id": "g10",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://debea.jundiai.sp.gov.br/contato/",
+    "domain": "animal"
+  },
+  {
+    "country": "China",
+    "type": "Rescuer",
+    "name": "China Small Animal Protection Association",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 8855 3597"
+    ],
+    "address": "Haidian District, Beijing",
+    "open24": false,
+    "services": [
+      "Animal protection",
+      "Rescue network"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=China+Small+Animal+Protection+Association+Beijing",
+    "id": "g11",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=China+Small+Animal+Protection+Association+Beijing",
+    "domain": "animal"
+  },
+  {
+    "country": "China",
+    "type": "Vet",
+    "name": "Beijing Guanshang Animal Hospital",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 6204 9742"
+    ],
+    "address": "7 N 3rd Ring Middle Rd, Xicheng District, Beijing",
+    "open24": false,
+    "services": [
+      "Veterinary hospital"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Beijing+Guanshang+Animal+Hospital",
+    "id": "g12",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Beijing+Guanshang+Animal+Hospital",
+    "domain": "animal"
+  },
+  {
+    "country": "China",
+    "type": "Vet",
+    "name": "Beijing Xintiandi International Animal Hospital",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 8456 1939"
+    ],
+    "address": "Wangjing, Chaoyang District, Beijing",
+    "open24": false,
+    "services": [
+      "Animal hospital",
+      "Veterinary care"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Beijing+Xintiandi+International+Animal+Hospital",
+    "id": "g13",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Beijing+Xintiandi+International+Animal+Hospital",
+    "domain": "animal"
+  },
+  {
+    "country": "China",
+    "type": "Shop",
+    "name": "Donna Pet Shop",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 6433 2394"
+    ],
+    "address": "Jiangtai West Road, Chaoyang District, Beijing",
+    "open24": false,
+    "services": [
+      "Pet supplies"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Donna+Pet+Shop+Beijing",
+    "id": "g14",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Donna+Pet+Shop+Beijing",
+    "domain": "animal"
+  },
+  {
+    "country": "Russia",
+    "type": "Shelter",
+    "name": "Murkoshа Cat Shelter",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 495 135 51 03"
+    ],
+    "address": "Ostashkovskaya Ulitsa 14c2, Moscow",
+    "open24": false,
+    "services": [
+      "Cat shelter",
+      "Adoption"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Murkosha+Cat+Shelter+Moscow",
+    "id": "g15",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Murkosha+Cat+Shelter+Moscow",
+    "domain": "animal"
+  },
+  {
+    "country": "Russia",
+    "type": "Vet",
+    "name": "Gor-vet Veterinary Clinic",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 499 444 02 53"
+    ],
+    "address": "Sadovaya-Karetnaya Ulitsa 10, Moscow",
+    "open24": true,
+    "services": [
+      "24-hour veterinarian"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Gor-vet+Moscow",
+    "id": "g16",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Gor-vet+Moscow",
+    "domain": "animal"
+  },
+  {
+    "country": "Russia",
+    "type": "Rescuer",
+    "name": "Ray Fund for Homeless Animals",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 985 066 77 49"
+    ],
+    "address": "Ulitsa Kotsyubinskogo 4, Moscow",
+    "open24": false,
+    "services": [
+      "Homeless animal support",
+      "Rescue network"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Ray+Fund+Moscow+animals",
+    "id": "g17",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Ray+Fund+Moscow+animals",
+    "domain": "animal"
+  },
+  {
+    "country": "Russia",
+    "type": "Shop",
+    "name": "Petshop.ru",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 800 700 00 50"
+    ],
+    "address": "Taganskaya Ulitsa 31/22, Moscow",
+    "open24": false,
+    "services": [
+      "Pet supplies"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Petshop.ru+Taganskaya+Moscow",
+    "id": "g18",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Petshop.ru+Taganskaya+Moscow",
+    "domain": "animal"
+  },
+  {
+    "country": "Mexico",
+    "type": "Vet",
+    "name": "LOCATEL Veterinary Advice",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "*0311",
+      "+52 55 5658 1111"
+    ],
+    "address": "Mexico City telephone veterinary guidance service",
+    "open24": false,
+    "services": [
+      "Veterinary advice",
+      "Government service referrals",
+      "Lost pets"
+    ],
+    "source": "https://311locatel.cdmx.gob.mx/Veterinaria.xhtml",
+    "id": "g19",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://311locatel.cdmx.gob.mx/Veterinaria.xhtml",
+    "domain": "animal"
+  },
+  {
+    "country": "Mexico",
+    "type": "Rescuer",
+    "name": "Agencia de Atención Animal (AGATAN)",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 5693 9892"
+    ],
+    "address": "Ciudad de México",
+    "open24": false,
+    "services": [
+      "Animal welfare agency",
+      "Government resource"
+    ],
+    "source": "https://transparencia.cdmx.gob.mx/agencia-de-atencion-animal",
+    "id": "g20",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://transparencia.cdmx.gob.mx/agencia-de-atencion-animal",
+    "domain": "animal"
+  },
+  {
+    "country": "Mexico",
+    "type": "Rescuer",
+    "name": "Mexico City Emergency / LOCATEL",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "911",
+      "+52 55 5658 1111"
+    ],
+    "address": "Mexico City",
+    "open24": true,
+    "services": [
+      "Emergency routing",
+      "City information"
+    ],
+    "source": "https://www.mexicocity.cdmx.gob.mx/e/emergency/?lang=en",
+    "id": "g21",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.mexicocity.cdmx.gob.mx/e/emergency/?lang=en",
+    "domain": "animal"
+  },
+  {
+    "country": "Japan",
+    "type": "Vet",
+    "name": "TRVA Animal Medical Center – Night Emergency",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 5760 1212",
+      "+81 3 5760 1211"
+    ],
+    "address": "8-19-12 Fukasawa, Setagaya-ku, Tokyo",
+    "open24": false,
+    "services": [
+      "Night veterinary emergency",
+      "Secondary care"
+    ],
+    "source": "https://trva.jp/",
+    "id": "g22",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://trva.jp/",
+    "domain": "animal"
+  },
+  {
+    "country": "Japan",
+    "type": "Rescuer",
+    "name": "Japan Animal Welfare Society (JAWS)",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 6455 7733"
+    ],
+    "address": "5-21-15 Higashigotanda, Shinagawa-ku, Tokyo",
+    "open24": false,
+    "services": [
+      "Animal welfare consultation"
+    ],
+    "source": "https://www.jaws.or.jp/about01/about04/",
+    "id": "g23",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.jaws.or.jp/about01/about04/",
+    "domain": "animal"
+  },
+  {
+    "country": "Japan",
+    "type": "Shelter",
+    "name": "Tokyo ARK – Animal Refuge Kansai",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "050 1557 2763"
+    ],
+    "address": "Tokyo facility (location not publicly disclosed)",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Shelter",
+      "Adoption"
+    ],
+    "source": "https://arkbark.net/en/contact/",
+    "id": "g24",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://arkbark.net/en/contact/",
+    "domain": "animal"
+  },
+  {
+    "country": "Germany",
+    "type": "Shelter",
+    "name": "Tierheim Berlin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 76888 0",
+      "+49 30 76888 201",
+      "+49 30 76888 250"
+    ],
+    "address": "Hausvaterweg 39, 13057 Berlin",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Found animals",
+      "Shelter veterinary service"
+    ],
+    "source": "https://tierschutz-berlin.de/kontakt/",
+    "id": "g25",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://tierschutz-berlin.de/kontakt/",
+    "domain": "animal"
+  },
+  {
+    "country": "Germany",
+    "type": "Vet",
+    "name": "Freie Universität Berlin Small Animal Clinic",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 838 62422",
+      "+49 160 3758447"
+    ],
+    "address": "Oertzenweg 19b, 14163 Berlin",
+    "open24": true,
+    "services": [
+      "Small animal clinic",
+      "Emergency service",
+      "Intensive care"
+    ],
+    "source": "https://www.vetmed.fu-berlin.de/einrichtungen/kliniken/we20/tierhalter/notdienst/index.html",
+    "id": "g26",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.vetmed.fu-berlin.de/einrichtungen/kliniken/we20/tierhalter/notdienst/index.html",
+    "domain": "animal"
+  },
+  {
+    "country": "Germany",
+    "type": "Vet",
+    "name": "Tiernotarzt Berlin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 174 1601606"
+    ],
+    "address": "Berlin mobile emergency veterinarian",
+    "open24": false,
+    "services": [
+      "Emergency veterinarian",
+      "Mobile service"
+    ],
+    "source": "https://tierschutz-berlin.de/kontakt/",
+    "id": "g27",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://tierschutz-berlin.de/kontakt/",
+    "domain": "animal"
+  },
+  {
+    "country": "Argentina",
+    "type": "Vet",
+    "name": "Desivet Veterinary Emergency Clinic",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 4501 7400",
+      "+54 11 4503 1389",
+      "+54 9 11 2335 2383"
+    ],
+    "address": "Av. San Martín 4428, Buenos Aires",
+    "open24": true,
+    "services": [
+      "24-hour emergency",
+      "Hospitalisation",
+      "Veterinary clinic"
+    ],
+    "source": "https://desivet.com.ar/",
+    "id": "g28",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://desivet.com.ar/",
+    "domain": "animal"
+  },
+  {
+    "country": "Argentina",
+    "type": "Vet",
+    "name": "UBA Veterinary Teaching Hospital",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 5287 2000"
+    ],
+    "address": "Av. San Martín 4351, Buenos Aires",
+    "open24": false,
+    "services": [
+      "Small animal hospital",
+      "Veterinary specialties"
+    ],
+    "source": "https://www.fvet.uba.ar/",
+    "id": "g29",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.fvet.uba.ar/",
+    "domain": "animal"
+  },
+  {
+    "country": "Argentina",
+    "type": "Rescuer",
+    "name": "Buenos Aires Wildlife Rescue / Civil Defence",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "103"
+    ],
+    "address": "Buenos Aires City",
+    "open24": true,
+    "services": [
+      "Wildlife emergencies",
+      "Civil Defence"
+    ],
+    "source": "https://buenosaires.gob.ar/gcaba_historico/ecoparque/programas-de-conservacion/centro-de-rescate-de-fauna-silvestre-crfs",
+    "id": "g30",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://buenosaires.gob.ar/gcaba_historico/ecoparque/programas-de-conservacion/centro-de-rescate-de-fauna-silvestre-crfs",
+    "domain": "animal"
+  },
+  {
+    "country": "Argentina",
+    "type": "Vet",
+    "name": "Luis Pasteur Zoonosis Institute",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 4958 9900"
+    ],
+    "address": "Av. Díaz Vélez 4821, Buenos Aires",
+    "open24": false,
+    "services": [
+      "Zoonosis",
+      "Rabies services",
+      "Animal health"
+    ],
+    "source": "https://buenosaires.gob.ar/gcaba_historico/institutopasteur/servicios",
+    "id": "g31",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://buenosaires.gob.ar/gcaba_historico/institutopasteur/servicios",
+    "domain": "animal"
+  },
+  {
+    "id": "b1",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Wildlife Rescue / Raptor Rescue Delhi",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 98100 29698"
+    ],
+    "address": "C-6/1, Rehmani Chowk, Street 9, Wazirabad Village, Delhi 110084",
+    "open24": false,
+    "services": [
+      "Injured birds",
+      "Raptors",
+      "Wildlife rescue",
+      "Bird rehabilitation"
+    ],
+    "source": "https://www.raptorrescue.org/contact",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.raptorrescue.org/contact",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b2",
+    "country": "India",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Government Veterinary Hospital, Tis Hazari",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "011 23890485",
+      "011 20833238"
+    ],
+    "address": "Tis Hazari, Delhi",
+    "open24": true,
+    "services": [
+      "24/7 government veterinary service",
+      "Animals and birds",
+      "Emergency veterinary care"
+    ],
+    "source": "https://development.delhi.gov.in/development/24-x-7-emergency-services-veterinary-hospital-tis-hazari",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://development.delhi.gov.in/development/24-x-7-emergency-services-veterinary-hospital-tis-hazari",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b3",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Pakshimitra Pune — Gaurav Gade",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "+91 70302 85520",
+      "+91 97672 92425"
+    ],
+    "address": "Pune, Maharashtra",
+    "open24": false,
+    "services": [
+      "Bird rescue contact",
+      "District bird rescue network"
+    ],
+    "source": "https://www.pakshimitra.org/bird-rescue/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.pakshimitra.org/bird-rescue/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b4",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Nisarg Sanvardhan Pandharpur — Srikant Badwe",
+    "state": "Maharashtra",
+    "city": "Pandharpur",
+    "phones": [
+      "+91 97636 32528"
+    ],
+    "address": "Pandharpur, Solapur district, Maharashtra",
+    "open24": false,
+    "services": [
+      "Bird rescue contact",
+      "Local bird welfare"
+    ],
+    "source": "https://www.pakshimitra.org/bird-rescue/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.pakshimitra.org/bird-rescue/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b5",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Pakshimitra Satara — Rohit Kulkarni",
+    "state": "Maharashtra",
+    "city": "Satara",
+    "phones": [
+      "+91 96652 72199",
+      "+91 96043 92338",
+      "+91 91309 03096"
+    ],
+    "address": "Satara, Maharashtra",
+    "open24": false,
+    "services": [
+      "Bird rescue contacts",
+      "District bird rescue network"
+    ],
+    "source": "https://www.pakshimitra.org/bird-rescue/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.pakshimitra.org/bird-rescue/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b6",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Jivdaya Charitable Trust — Avian Rescue",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "phones": [
+      "+91 99244 18184"
+    ],
+    "address": "Ahmedabad Panjrapol Campus, Ambawadi, Ahmedabad 380015",
+    "open24": false,
+    "services": [
+      "Bird treatment",
+      "Avian operation theatre",
+      "Rehabilitation",
+      "Mobile treatment van"
+    ],
+    "source": "https://www.jivdayatrust.org/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.jivdayatrust.org/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b7",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Shree Ganesh Foundation — Bird & Animal Rescue",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "phones": [
+      "+91 94263 26350"
+    ],
+    "address": "Block 69, Panchvati Apartment, opposite Vinayak Petrol Pump, Sola Road, Naranpura, Ahmedabad 380063",
+    "open24": false,
+    "services": [
+      "Bird rescue",
+      "Animal rescue",
+      "365-day rescue work"
+    ],
+    "source": "https://shreeganeshfoundation.org/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://shreeganeshfoundation.org/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b8",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "JD Foundation Bird Rescue",
+    "state": "Gujarat",
+    "city": "Ahmedabad",
+    "phones": [
+      "+91 93285 26234"
+    ],
+    "address": "32, near Bhathiji Mandir, Kanaiya Farm, Vatva Gamdi Road, Ahmedabad 382440",
+    "open24": false,
+    "services": [
+      "Bird rescue",
+      "Wildlife assistance"
+    ],
+    "source": "https://www.jdfoundation.org.in/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.jdfoundation.org.in/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b9",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "People for Animals Wildlife Hospital",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "phones": [
+      "+91 99000 25370",
+      "+91 99803 39880"
+    ],
+    "address": "Bengaluru, Karnataka",
+    "open24": false,
+    "services": [
+      "Urban wildlife",
+      "Bird rescue",
+      "Wildlife hospital",
+      "365-day on-call rescue"
+    ],
+    "source": "https://www.pfawildlifehospital.org/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.pfawildlifehospital.org/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b10",
+    "country": "India",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Dr Rina Dev’s Animal & Bird Clinic",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 99677 72829"
+    ],
+    "address": "Khar West, Mumbai 400052, Maharashtra",
+    "open24": false,
+    "services": [
+      "Bird veterinary care",
+      "Animal veterinary care"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Dr+Rina+Dev%27s+Animal+%26+Bird+Clinic+Mumbai",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Dr+Rina+Dev%27s+Animal+%26+Bird+Clinic+Mumbai",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b11",
+    "country": "India",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "The Exotics Vet — Chembur",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 96996 83433"
+    ],
+    "address": "Chembur, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Exotic pets",
+      "Bird veterinary care"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=The+Exotics+Vet+Chembur+Mumbai",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=The+Exotics+Vet+Chembur+Mumbai",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b12",
+    "country": "India",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Small & Exotic Animal Hospital",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 99204 98984"
+    ],
+    "address": "Kandivali West, Mumbai, Maharashtra",
+    "open24": true,
+    "services": [
+      "Exotic animals",
+      "Birds",
+      "24/7 veterinary care"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Small+and+Exotic+Animal+Hospital+Kandivali+West+Mumbai",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Small+and+Exotic+Animal+Hospital+Kandivali+West+Mumbai",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b13",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "HELP Animals & Birds Hospital",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 92233 33338"
+    ],
+    "address": "Dana Bandar / Masjid Bandar, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Animal and bird hospital",
+      "Rescue support"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=HELP+Animals+%26+Birds+Hospital+Mumbai",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=HELP+Animals+%26+Birds+Hospital+Mumbai",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b14",
+    "country": "India",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "MAA Medical Aid For Birds",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 98205 23802"
+    ],
+    "address": "Andheri East, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Bird medical aid",
+      "Bird rescue"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=MAA+Medical+Aid+For+Birds+Mumbai",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=MAA+Medical+Aid+For+Birds+Mumbai",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b15",
+    "country": "India",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "The Exotics Vet — Pimple Nilakh",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "+91 87999 49258"
+    ],
+    "address": "Pimple Nilakh, Pune, Maharashtra",
+    "open24": false,
+    "services": [
+      "Exotic pets",
+      "Bird veterinary care"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=The+Exotics+Vet+Pimple+Nilakh+Pune",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=The+Exotics+Vet+Pimple+Nilakh+Pune",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b16",
+    "country": "India",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "Pune Exotic Birds and Pets",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "phones": [
+      "+91 86691 80992"
+    ],
+    "address": "Kondhwa, Pune, Maharashtra",
+    "open24": false,
+    "services": [
+      "Bird supplies",
+      "Pet shop",
+      "Bird food and accessories"
+    ],
+    "source": "https://www.google.com/maps/search/?api=1&query=Pune+Exotic+Birds+and+Pets+Kondhwa",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.google.com/maps/search/?api=1&query=Pune+Exotic+Birds+and+Pets+Kondhwa",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b17",
+    "country": "India",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "Bird Store Delhi",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 74283 18250"
+    ],
+    "address": "1/5142, Street 5, Balbir Nagar, Shahdara, Delhi 110032",
+    "open24": false,
+    "services": [
+      "Bird food",
+      "Bird supplies",
+      "Bird shop"
+    ],
+    "source": "https://birdstore.in/stores",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://birdstore.in/stores",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b18",
+    "country": "USA",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Wild Bird Fund",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 646 306 2862"
+    ],
+    "address": "565 Columbus Avenue, New York, NY 10024",
+    "open24": false,
+    "services": [
+      "Injured wild birds",
+      "Small wildlife rehabilitation",
+      "Bird rescue hotline"
+    ],
+    "source": "https://www.wildbirdfund.org/about-us/location/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.wildbirdfund.org/about-us/location/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b19",
+    "country": "UK",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Wildlife Aid Foundation",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 1372 360404"
+    ],
+    "address": "Randalls Farmhouse, Randalls Road, Leatherhead, Surrey KT22 0AL",
+    "open24": true,
+    "services": [
+      "Wildlife emergency advice",
+      "Bird rescue",
+      "Wildlife hospital"
+    ],
+    "source": "https://wildlifeaid.org.uk/emergency-helpline/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://wildlifeaid.org.uk/emergency-helpline/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b20",
+    "country": "Brazil",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "São Paulo CeMaCAS / Divisão da Fauna Silvestre",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 3885 6669",
+      "+55 11 95220 0219"
+    ],
+    "address": "Estrada de Perus, 300, Perus, São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Wildlife rescue",
+      "Injured wild birds",
+      "Wildlife reception"
+    ],
+    "source": "https://prefeitura.sp.gov.br/web/meio_ambiente/w/resgate-e-cuidados-com-o-filhote",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://prefeitura.sp.gov.br/web/meio_ambiente/w/resgate-e-cuidados-com-o-filhote",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b21",
+    "country": "China",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Beijing Wildlife Rescue Center",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "89496118"
+    ],
+    "address": "Beijing, China",
+    "open24": false,
+    "services": [
+      "Wildlife rescue",
+      "Injured wild birds"
+    ],
+    "source": "https://yllhj.beijing.gov.cn/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://yllhj.beijing.gov.cn/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b22",
+    "country": "China",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Beijing Raptor Rescue Center",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "62205666"
+    ],
+    "address": "Beijing, China",
+    "open24": false,
+    "services": [
+      "Raptor rescue",
+      "Bird rehabilitation"
+    ],
+    "source": "https://yllhj.beijing.gov.cn/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://yllhj.beijing.gov.cn/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b23",
+    "country": "Russia",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Moscow State Veterinary Service — Ornithology",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 495 612 12 12"
+    ],
+    "address": "Moscow, Russia",
+    "open24": true,
+    "services": [
+      "24/7 state veterinary contact centre",
+      "Bird/ornithology veterinary routing",
+      "Animal emergencies"
+    ],
+    "source": "https://mos-obvet.ru/",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://mos-obvet.ru/",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b24",
+    "country": "Mexico",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Brigada de Vigilancia Animal (BVA)",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 5208 9898"
+    ],
+    "address": "Mexico City, Mexico",
+    "open24": true,
+    "services": [
+      "Domestic and wild animal rescue",
+      "Bird/wildlife response",
+      "Animal welfare"
+    ],
+    "source": "https://www.ssc.cdmx.gob.mx/agrupamientos/brigada-de-vigilancia-animal",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.ssc.cdmx.gob.mx/agrupamientos/brigada-de-vigilancia-animal",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b25",
+    "country": "Japan",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Tokyo Animal Welfare Consultation Center — Tama",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 42 581 7435"
+    ],
+    "address": "Tokyo, Japan",
+    "open24": false,
+    "services": [
+      "Injured dogs/cats",
+      "Pet bird consultation",
+      "Animal welfare consultation"
+    ],
+    "source": "https://www.hokeniryo.metro.tokyo.lg.jp/shisetsu/jigyosyo/douso",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.hokeniryo.metro.tokyo.lg.jp/shisetsu/jigyosyo/douso",
+    "checked": "2026-10-01"
+  },
+  {
+    "id": "b26",
+    "country": "Germany",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "FU Berlin — Ornamental, Zoo & Wild Birds",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 838 62676"
+    ],
+    "address": "Königsweg 63, Building 31, 14163 Berlin",
+    "open24": false,
+    "services": [
+      "Ornamental birds",
+      "Wild birds",
+      "Poultry",
+      "Avian diagnostics and treatment"
+    ],
+    "source": "https://www.vetmed.fu-berlin.de/en/einrichtungen/kliniken/we18/gefluegel/_alt/clinic1/index.html",
+    "verified": true,
+    "community": false,
+    "email": "",
+    "website": "https://www.vetmed.fu-berlin.de/en/einrichtungen/kliniken/we18/gefluegel/_alt/clinic1/index.html",
+    "checked": "2026-10-01"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "The Bai Sakarbai Dinshaw Petit Hospital for Animals",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 85916 59398"
+    ],
+    "address": "Dr S S Rao Road, Parel, Mumbai 400012",
+    "open24": true,
+    "services": [
+      "Animal hospital",
+      "Emergency care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=The+Bai+Sakarbai+Dinshaw+Petit+Hospital+for+Animals+Dr+S+S+Rao+Road%2C+Parel%2C+Mumbai+400012",
+    "id": "x1"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Rescuer",
+    "name": "Animal Rescue & Shelter Foundation",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 98202 77824"
+    ],
+    "address": "Andheri East, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Shelter"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Animal+Rescue+%26+Shelter+Foundation+Andheri+East%2C+Mumbai%2C+Maharashtra",
+    "id": "x2"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Marhaba Pet Shop",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 88793 46624"
+    ],
+    "address": "Mumbai 400009, Maharashtra",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Marhaba+Pet+Shop+Mumbai+400009%2C+Maharashtra",
+    "id": "x3"
+  },
+  {
+    "country": "India",
+    "domain": "both",
+    "type": "Vet",
+    "name": "SUPERPETS Veterinary Hospital Khar",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 98211 12746"
+    ],
+    "address": "Khar West, Mumbai, Maharashtra",
+    "open24": true,
+    "services": [
+      "24/7 veterinary care",
+      "Dogs",
+      "Cats",
+      "Bird/exotic enquiry"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=SUPERPETS+Veterinary+Hospital+Khar+Khar+West%2C+Mumbai%2C+Maharashtra",
+    "id": "x4"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Rescuer",
+    "name": "Animal Matter To Me",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 99207 37737"
+    ],
+    "address": "Malad West, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Hospital",
+      "Rehabilitation"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Animal+Matter+To+Me+Malad+West%2C+Mumbai%2C+Maharashtra",
+    "id": "x5"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "PetZone Mahalaxmi Veterinary Clinic",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 77009 57393"
+    ],
+    "address": "Mahalaxmi, Mumbai, Maharashtra",
+    "open24": true,
+    "services": [
+      "24/7 veterinary clinic"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=PetZone+Mahalaxmi+Veterinary+Clinic+Mahalaxmi%2C+Mumbai%2C+Maharashtra",
+    "id": "x6"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Rescuer",
+    "name": "Welfare of Stray Dogs",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 89760 22838"
+    ],
+    "address": "Sewri, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Street dog welfare",
+      "Rescue support"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Welfare+of+Stray+Dogs+Sewri%2C+Mumbai%2C+Maharashtra",
+    "id": "x7"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Tata Trusts Small Animal Hospital",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 22 6538 3538"
+    ],
+    "address": "Mahalaxmi, Mumbai, Maharashtra",
+    "open24": true,
+    "services": [
+      "Small animal hospital",
+      "Emergency care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tata+Trusts+Small+Animal+Hospital+Mahalaxmi%2C+Mumbai%2C+Maharashtra",
+    "id": "x8"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "HOPE Foundation Animal Shelter",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "phones": [
+      "+91 81695 80661"
+    ],
+    "address": "Mulund West, Mumbai, Maharashtra",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Rescue support"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=HOPE+Foundation+Animal+Shelter+Mulund+West%2C+Mumbai%2C+Maharashtra",
+    "id": "x9"
+  },
+  {
+    "country": "India",
+    "domain": "both",
+    "type": "Vet",
+    "name": "BIRDS & RABBITS Clinic Delhi",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 98992 88789"
+    ],
+    "address": "Paschim Vihar, Delhi",
+    "open24": true,
+    "services": [
+      "Birds",
+      "Rabbits",
+      "Exotic pets"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=BIRDS+%26+RABBITS+Clinic+Delhi+Paschim+Vihar%2C+Delhi",
+    "id": "x10"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Heads Up For Tails Chattarpur",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 82910 13391"
+    ],
+    "address": "Chattarpur, Delhi",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Heads+Up+For+Tails+Chattarpur+Chattarpur%2C+Delhi",
+    "id": "x11"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "DCC Animal Hospital Delhi",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 93115 60101"
+    ],
+    "address": "Delhi",
+    "open24": false,
+    "services": [
+      "Veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=DCC+Animal+Hospital+Delhi+Delhi",
+    "id": "x12"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Vet’s Best Vasant Kunj",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 91166 03111"
+    ],
+    "address": "Vasant Kunj, Delhi",
+    "open24": true,
+    "services": [
+      "24/7 veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Vet%E2%80%99s+Best+Vasant+Kunj+Vasant+Kunj%2C+Delhi",
+    "id": "x13"
+  },
+  {
+    "country": "India",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Pets Garage Delhi",
+    "state": "Delhi",
+    "city": "Delhi",
+    "phones": [
+      "+91 95995 20472"
+    ],
+    "address": "Delhi",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pets+Garage+Delhi+Delhi",
+    "id": "x14"
+  },
+  {
+    "country": "USA",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Veterinary Emergency Group — Chelsea",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 646 582 8882"
+    ],
+    "address": "735 6th Avenue, New York, NY",
+    "open24": true,
+    "services": [
+      "24/7 emergency veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Veterinary+Emergency+Group+%E2%80%94+Chelsea+735+6th+Avenue%2C+New+York%2C+NY",
+    "id": "x15"
+  },
+  {
+    "country": "USA",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Animal Haven",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 274 8511"
+    ],
+    "address": "200 Centre Street, New York, NY",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Adoption"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Animal+Haven+200+Centre+Street%2C+New+York%2C+NY",
+    "id": "x16"
+  },
+  {
+    "country": "USA",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Petco Union Square",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 895 9851"
+    ],
+    "address": "Union Square, New York, NY",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Petco+Union+Square+Union+Square%2C+New+York%2C+NY",
+    "id": "x17"
+  },
+  {
+    "country": "USA",
+    "domain": "both",
+    "type": "Vet",
+    "name": "Center for Avian & Exotic Medicine",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 501 8750"
+    ],
+    "address": "562 Columbus Avenue, New York, NY",
+    "open24": false,
+    "services": [
+      "Avian veterinarian",
+      "Exotic animals"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Center+for+Avian+%26+Exotic+Medicine+562+Columbus+Avenue%2C+New+York%2C+NY",
+    "id": "x18"
+  },
+  {
+    "country": "USA",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Humane Society of New York",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 752 4840"
+    ],
+    "address": "New York City, NY",
+    "open24": false,
+    "services": [
+      "Shelter",
+      "Veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Humane+Society+of+New+York+New+York+City%2C+NY",
+    "id": "x19"
+  },
+  {
+    "country": "USA",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Pet Market NYC",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 212 956 3700"
+    ],
+    "address": "New York City, NY",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pet+Market+NYC+New+York+City%2C+NY",
+    "id": "x20"
+  },
+  {
+    "country": "UK",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Medivet 24 Hour Camberwell",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 20 4638 9017"
+    ],
+    "address": "7 Kenbury Street, London",
+    "open24": true,
+    "services": [
+      "24-hour veterinary emergency"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Medivet+24+Hour+Camberwell+7+Kenbury+Street%2C+London",
+    "id": "x21"
+  },
+  {
+    "country": "UK",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "London Animal Hospital",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 20 3816 1010"
+    ],
+    "address": "London, England",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=London+Animal+Hospital+London%2C+England",
+    "id": "x22"
+  },
+  {
+    "country": "UK",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "The Mayhew",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 20 8962 8000"
+    ],
+    "address": "London, England",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Welfare"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=The+Mayhew+London%2C+England",
+    "id": "x23"
+  },
+  {
+    "country": "UK",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Pets at Home Camden",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 345 600 6082"
+    ],
+    "address": "Camden, London",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pets+at+Home+Camden+Camden%2C+London",
+    "id": "x24"
+  },
+  {
+    "country": "UK",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "Wildlife Rescue & Ambulance Service",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 7970 141282"
+    ],
+    "address": "Enfield, Greater London",
+    "open24": false,
+    "services": [
+      "Wildlife rescue",
+      "Bird rescue"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Wildlife+Rescue+%26+Ambulance+Service+Enfield%2C+Greater+London",
+    "id": "x25"
+  },
+  {
+    "country": "UK",
+    "domain": "animal",
+    "type": "Rescuer",
+    "name": "Blue Cross Victoria Animal Hospital",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 300 777 1890"
+    ],
+    "address": "Victoria, London",
+    "open24": false,
+    "services": [
+      "Animal welfare",
+      "Veterinary support"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Blue+Cross+Victoria+Animal+Hospital+Victoria%2C+London",
+    "id": "x26"
+  },
+  {
+    "country": "UK",
+    "domain": "both",
+    "type": "Vet",
+    "name": "RVC Small Animal Practice",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 20 7387 8134"
+    ],
+    "address": "London, England",
+    "open24": false,
+    "services": [
+      "Veterinary care",
+      "Exotic/bird enquiry"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=RVC+Small+Animal+Practice+London%2C+England",
+    "id": "x27"
+  },
+  {
+    "country": "UK",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Angel Pet Supplies",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 20 7278 1503"
+    ],
+    "address": "London, England",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Angel+Pet+Supplies+London%2C+England",
+    "id": "x28"
+  },
+  {
+    "country": "Brazil",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "São Paulo Veterinary Hospital — Av. Nordestina",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 2533 0000"
+    ],
+    "address": "Av. Nordestina 581, São Paulo, SP",
+    "open24": true,
+    "services": [
+      "24-hour veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=S%C3%A3o+Paulo+Veterinary+Hospital+%E2%80%94+Av.+Nordestina+Av.+Nordestina+581%2C+S%C3%A3o+Paulo%2C+SP",
+    "id": "x29"
+  },
+  {
+    "country": "Brazil",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "UIPA — União Internacional Protetora dos Animais",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 97950 1090"
+    ],
+    "address": "Av. Presidente Castelo Branco 3200, São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Animal protection",
+      "Shelter"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=UIPA+%E2%80%94+Uni%C3%A3o+Internacional+Protetora+dos+Animais+Av.+Presidente+Castelo+Branco+3200%2C+S%C3%A3o+Paulo%2C+SP",
+    "id": "x30"
+  },
+  {
+    "country": "Brazil",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Mundo Pet São Paulo",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 98966 0280"
+    ],
+    "address": "São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Mundo+Pet+S%C3%A3o+Paulo+S%C3%A3o+Paulo%2C+SP",
+    "id": "x31"
+  },
+  {
+    "country": "Brazil",
+    "domain": "both",
+    "type": "Vet",
+    "name": "Wildvet Clínica Veterinária",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 3045 0045"
+    ],
+    "address": "R. Prof. Vahia de Abreu 514, São Paulo, SP",
+    "open24": true,
+    "services": [
+      "Wildlife",
+      "Exotic animals",
+      "Veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Wildvet+Cl%C3%ADnica+Veterin%C3%A1ria+R.+Prof.+Vahia+de+Abreu+514%2C+S%C3%A3o+Paulo%2C+SP",
+    "id": "x32"
+  },
+  {
+    "country": "Brazil",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "Divisão da Fauna Silvestre São Paulo",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 3885 6669"
+    ],
+    "address": "São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Wildlife rescue",
+      "Bird assistance"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Divis%C3%A3o+da+Fauna+Silvestre+S%C3%A3o+Paulo+S%C3%A3o+Paulo%2C+SP",
+    "id": "x33"
+  },
+  {
+    "country": "Brazil",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Hospital Veterinário Anhembi Morumbi",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 2790 4641"
+    ],
+    "address": "São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Hospital+Veterin%C3%A1rio+Anhembi+Morumbi+S%C3%A3o+Paulo%2C+SP",
+    "id": "x34"
+  },
+  {
+    "country": "Brazil",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Petz Augusta",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 2181 7365"
+    ],
+    "address": "São Paulo, SP",
+    "open24": true,
+    "services": [
+      "24-hour pet shop",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Petz+Augusta+S%C3%A3o+Paulo%2C+SP",
+    "id": "x35"
+  },
+  {
+    "country": "Brazil",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Avian Clinic São Paulo",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 97673 1417"
+    ],
+    "address": "São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Avian veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Avian+Clinic+S%C3%A3o+Paulo+S%C3%A3o+Paulo%2C+SP",
+    "id": "x36"
+  },
+  {
+    "country": "Germany",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Valera Tierklinik Berlin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 201805750"
+    ],
+    "address": "Potsdamer Str. 23/24, Berlin",
+    "open24": true,
+    "services": [
+      "24-hour veterinary clinic"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Valera+Tierklinik+Berlin+Potsdamer+Str.+23%2F24%2C+Berlin",
+    "id": "x37"
+  },
+  {
+    "country": "Germany",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Megazoo Berlin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 63311750"
+    ],
+    "address": "Haynauer Straße, Berlin",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Megazoo+Berlin+Haynauer+Stra%C3%9Fe%2C+Berlin",
+    "id": "x39"
+  },
+  {
+    "country": "Germany",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "VOGELPRAXIS Berlin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 34902843"
+    ],
+    "address": "Mierendorffstraße 23, Berlin",
+    "open24": false,
+    "services": [
+      "Avian veterinarian",
+      "Bird medicine"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=VOGELPRAXIS+Berlin+Mierendorffstra%C3%9Fe+23%2C+Berlin",
+    "id": "x40"
+  },
+  {
+    "country": "Germany",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "Sanctuary & Wildlife Rescue Notkleintiere",
+    "state": "Brandenburg",
+    "city": "Wensickendorf",
+    "phones": [
+      "+49 162 3177177"
+    ],
+    "address": "Wensickendorf, Brandenburg",
+    "open24": true,
+    "services": [
+      "Wildlife rescue",
+      "Bird rescue"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Sanctuary+%26+Wildlife+Rescue+Notkleintiere+Wensickendorf%2C+Brandenburg",
+    "id": "x41"
+  },
+  {
+    "country": "Germany",
+    "domain": "both",
+    "type": "Vet",
+    "name": "FU Berlin Small Animal & Exotic Clinic",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 83862356"
+    ],
+    "address": "Oertzenweg 19B, Berlin",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care",
+      "Exotic animal enquiry"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=FU+Berlin+Small+Animal+%26+Exotic+Clinic+Oertzenweg+19B%2C+Berlin",
+    "id": "x42"
+  },
+  {
+    "country": "Germany",
+    "domain": "bird",
+    "type": "Rescuer",
+    "name": "Wildvogelstation Süd",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 1522 2179146"
+    ],
+    "address": "Berlin",
+    "open24": false,
+    "services": [
+      "Wild bird rescue",
+      "Rehabilitation"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Wildvogelstation+S%C3%BCd+Berlin",
+    "id": "x43"
+  },
+  {
+    "country": "Germany",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "NABU Berlin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 98608370"
+    ],
+    "address": "Berlin",
+    "open24": false,
+    "services": [
+      "Wildlife advice",
+      "Bird conservation"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=NABU+Berlin+Berlin",
+    "id": "x44"
+  },
+  {
+    "country": "Japan",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Minato Emergency Animal Center",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 6432 4622"
+    ],
+    "address": "Shiba, Minato City, Tokyo",
+    "open24": false,
+    "services": [
+      "Night veterinary emergency"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Minato+Emergency+Animal+Center+Shiba%2C+Minato+City%2C+Tokyo",
+    "id": "x45"
+  },
+  {
+    "country": "Japan",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Tokyo Cat Guardian",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [],
+    "address": "Minamiotsuka, Tokyo",
+    "open24": false,
+    "services": [
+      "Cat rescue",
+      "Shelter",
+      "Adoption"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tokyo+Cat+Guardian+Minamiotsuka%2C+Tokyo",
+    "id": "x46"
+  },
+  {
+    "country": "Japan",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Pet Paradise Shinjuku",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 5269 7218"
+    ],
+    "address": "Shinjuku, Tokyo",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pet+Paradise+Shinjuku+Shinjuku%2C+Tokyo",
+    "id": "x47"
+  },
+  {
+    "country": "Japan",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Morishita Bird Clinic",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 3862 6535"
+    ],
+    "address": "Tokyo",
+    "open24": false,
+    "services": [
+      "Avian veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Morishita+Bird+Clinic+Tokyo",
+    "id": "x48"
+  },
+  {
+    "country": "Japan",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Japan Animal Medical Center",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 3378 3366"
+    ],
+    "address": "Shibuya, Tokyo",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Japan+Animal+Medical+Center+Shibuya%2C+Tokyo",
+    "id": "x49"
+  },
+  {
+    "country": "Japan",
+    "domain": "animal",
+    "type": "Rescuer",
+    "name": "anifare Odaiba",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 50 1808 1264"
+    ],
+    "address": "Odaiba, Tokyo",
+    "open24": false,
+    "services": [
+      "Animal rescue",
+      "Adoption support"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=anifare+Odaiba+Odaiba%2C+Tokyo",
+    "id": "x50"
+  },
+  {
+    "country": "Japan",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Daktari Animal Hospital Tokyo",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 5420 0012"
+    ],
+    "address": "Tokyo",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Daktari+Animal+Hospital+Tokyo+Tokyo",
+    "id": "x51"
+  },
+  {
+    "country": "Japan",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Ebisu Bird Clinic MAI",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 3461 8005"
+    ],
+    "address": "Ebisu, Tokyo",
+    "open24": false,
+    "services": [
+      "Avian veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Ebisu+Bird+Clinic+MAI+Ebisu%2C+Tokyo",
+    "id": "x52"
+  },
+  {
+    "country": "Mexico",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Mexico Veterinary Center",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 5598 4203"
+    ],
+    "address": "Mexico City",
+    "open24": false,
+    "services": [
+      "Veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Mexico+Veterinary+Center+Mexico+City",
+    "id": "x53"
+  },
+  {
+    "country": "Mexico",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Perro de Mundo",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 5211 1212"
+    ],
+    "address": "Mexico City",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Perro+de+Mundo+Mexico+City",
+    "id": "x54"
+  },
+  {
+    "country": "Mexico",
+    "domain": "both",
+    "type": "Vet",
+    "name": "Exotic Veterinary Center",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 6795 0206"
+    ],
+    "address": "Mexico City",
+    "open24": false,
+    "services": [
+      "Exotic pets",
+      "Bird veterinary enquiry"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Exotic+Veterinary+Center+Mexico+City",
+    "id": "x55"
+  },
+  {
+    "country": "Mexico",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Hospital Veterinario Médica Animal",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 5538 0759"
+    ],
+    "address": "Mexico City",
+    "open24": true,
+    "services": [
+      "24-hour veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Hospital+Veterinario+M%C3%A9dica+Animal+Mexico+City",
+    "id": "x56"
+  },
+  {
+    "country": "Mexico",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Refugio Franciscano",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 6109 3307"
+    ],
+    "address": "Mexico City",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Rescue"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Refugio+Franciscano+Mexico+City",
+    "id": "x57"
+  },
+  {
+    "country": "Mexico",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Pet N’Go Condesa",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 8015 5258"
+    ],
+    "address": "Condesa, Mexico City",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pet+N%E2%80%99Go+Condesa+Condesa%2C+Mexico+City",
+    "id": "x58"
+  },
+  {
+    "country": "Mexico",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Tzintzun Clínica de Aves",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 56 1982 9037"
+    ],
+    "address": "Mexico City",
+    "open24": false,
+    "services": [
+      "Avian veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Tzintzun+Cl%C3%ADnica+de+Aves+Mexico+City",
+    "id": "x59"
+  },
+  {
+    "country": "Mexico",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "Exóticos y Salvajes",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 5661 9545"
+    ],
+    "address": "Mexico City",
+    "open24": false,
+    "services": [
+      "Wildlife",
+      "Exotic animal rescue"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Ex%C3%B3ticos+y+Salvajes+Mexico+City",
+    "id": "x60"
+  },
+  {
+    "country": "Argentina",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "UBA Veterinary Hospital",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 5287 2339"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": false,
+    "services": [
+      "University veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=UBA+Veterinary+Hospital+Buenos+Aires%2C+Argentina",
+    "id": "x61"
+  },
+  {
+    "country": "Argentina",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Adopteros Argentina",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 3818 0841"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Adoption",
+      "Rescue support"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Adopteros+Argentina+Buenos+Aires%2C+Argentina",
+    "id": "x62"
+  },
+  {
+    "country": "Argentina",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Centro Pet Buenos Aires",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 7079 1234"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Centro+Pet+Buenos+Aires+Buenos+Aires%2C+Argentina",
+    "id": "x63"
+  },
+  {
+    "country": "Argentina",
+    "domain": "both",
+    "type": "Vet",
+    "name": "Fauna Vets",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 3940 1395"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": true,
+    "services": [
+      "Exotic animals",
+      "Wildlife",
+      "Veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Fauna+Vets+Buenos+Aires%2C+Argentina",
+    "id": "x64"
+  },
+  {
+    "country": "Argentina",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "Fundación Vida Silvestre Argentina",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 4331 3631"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": false,
+    "services": [
+      "Wildlife conservation",
+      "Wildlife guidance"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Fundaci%C3%B3n+Vida+Silvestre+Argentina+Buenos+Aires%2C+Argentina",
+    "id": "x65"
+  },
+  {
+    "country": "Argentina",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Centro Médico Veterinario Buenos Aires",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 4931 4425"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Centro+M%C3%A9dico+Veterinario+Buenos+Aires+Buenos+Aires%2C+Argentina",
+    "id": "x66"
+  },
+  {
+    "country": "Argentina",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Paws Pet Market",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 6693 2149"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": false,
+    "services": [
+      "Pet food",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Paws+Pet+Market+Buenos+Aires%2C+Argentina",
+    "id": "x67"
+  },
+  {
+    "country": "Argentina",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "AVI Comprehensive Care Veterinary",
+    "state": "Buenos Aires (CABA)",
+    "city": "Buenos Aires",
+    "phones": [
+      "+54 11 3193 1561"
+    ],
+    "address": "Buenos Aires, Argentina",
+    "open24": false,
+    "services": [
+      "Avian veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=AVI+Comprehensive+Care+Veterinary+Buenos+Aires%2C+Argentina",
+    "id": "x68"
+  },
+  {
+    "country": "Russia",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Veterinarnyy Tsentr Moscow",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 499 477 24 44"
+    ],
+    "address": "Moscow, Russia",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Veterinarnyy+Tsentr+Moscow+Moscow%2C+Russia",
+    "id": "x69"
+  },
+  {
+    "country": "Russia",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "PETFOOD Moscow",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 495 149 70 90"
+    ],
+    "address": "Moscow, Russia",
+    "open24": true,
+    "services": [
+      "24-hour pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=PETFOOD+Moscow+Moscow%2C+Russia",
+    "id": "x70"
+  },
+  {
+    "country": "Russia",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Green Parrot Veterinary Center",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 926 608 43 46"
+    ],
+    "address": "Moscow, Russia",
+    "open24": false,
+    "services": [
+      "Birds",
+      "Exotic animals"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Green+Parrot+Veterinary+Center+Moscow%2C+Russia",
+    "id": "x71"
+  },
+  {
+    "country": "Russia",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Super Sobaka Shelter",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 916 734 77 14"
+    ],
+    "address": "Moscow, Russia",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Adoption"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Super+Sobaka+Shelter+Moscow%2C+Russia",
+    "id": "x72"
+  },
+  {
+    "country": "Russia",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Veterinarnaya Klinika Tsentr",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 499 110 13 43"
+    ],
+    "address": "Moscow, Russia",
+    "open24": true,
+    "services": [
+      "24-hour veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Veterinarnaya+Klinika+Tsentr+Moscow%2C+Russia",
+    "id": "x73"
+  },
+  {
+    "country": "Russia",
+    "domain": "bird",
+    "type": "Vet",
+    "name": "Eklektus Bird Clinic",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 903 568 58 50"
+    ],
+    "address": "Moscow, Russia",
+    "open24": true,
+    "services": [
+      "24-hour bird veterinary care"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Eklektus+Bird+Clinic+Moscow%2C+Russia",
+    "id": "x74"
+  },
+  {
+    "country": "Russia",
+    "domain": "both",
+    "type": "Rescuer",
+    "name": "Wildlife Rescue Station Karamyshevo",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 925 404 66 89"
+    ],
+    "address": "Moscow, Russia",
+    "open24": false,
+    "services": [
+      "Wildlife rescue",
+      "Bird rescue"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Wildlife+Rescue+Station+Karamyshevo+Moscow%2C+Russia",
+    "id": "x75"
+  },
+  {
+    "country": "China",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Beijing Newgreen Animal Hospital",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 8152 5155"
+    ],
+    "address": "Beijing, China",
+    "open24": false,
+    "services": [
+      "Veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Beijing+Newgreen+Animal+Hospital+Beijing%2C+China",
+    "id": "x76"
+  },
+  {
+    "country": "China",
+    "domain": "animal",
+    "type": "Shop",
+    "name": "Beijing Aisida Pets Transaction Market",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 6736 7047"
+    ],
+    "address": "Beijing, China",
+    "open24": false,
+    "services": [
+      "Pet market",
+      "Pet supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Beijing+Aisida+Pets+Transaction+Market+Beijing%2C+China",
+    "id": "x77"
+  },
+  {
+    "country": "China",
+    "domain": "animal",
+    "type": "Vet",
+    "name": "Siwei International Animal Hospital",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 10 8774 8653"
+    ],
+    "address": "Beijing, China",
+    "open24": false,
+    "services": [
+      "Veterinary hospital"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Siwei+International+Animal+Hospital+Beijing%2C+China",
+    "id": "x78"
+  },
+  {
+    "country": "China",
+    "domain": "animal",
+    "type": "Shelter",
+    "name": "Wangwang Miaowu Animal Orphanage",
+    "state": "Beijing",
+    "city": "Beijing",
+    "phones": [
+      "+86 133 8102 0457"
+    ],
+    "address": "Beijing, China",
+    "open24": false,
+    "services": [
+      "Animal shelter",
+      "Rescue"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Wangwang+Miaowu+Animal+Orphanage+Beijing%2C+China",
+    "id": "x79"
+  },
+  {
+    "country": "USA",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "New York Bird Supply",
+    "state": "New York",
+    "city": "New York City",
+    "phones": [
+      "+1 800 772 2473"
+    ],
+    "address": "3501 Rombouts Ave, Bronx, NY 10475",
+    "open24": false,
+    "services": [
+      "Bird food",
+      "Bird supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.newyorkbirdsupply.com/pages/contact-us",
+    "id": "x80"
+  },
+  {
+    "country": "UK",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "London Bird Shop",
+    "state": "England",
+    "city": "London",
+    "phones": [
+      "+44 20 8367 8814"
+    ],
+    "address": "Browns Garden Village, Theobalds Park Rd, London EN2 9DG",
+    "open24": false,
+    "services": [
+      "Bird shop",
+      "Bird supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=London+Bird+Shop+Browns+Garden+Village+London",
+    "id": "x81"
+  },
+  {
+    "country": "Brazil",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "Pet Avian",
+    "state": "São Paulo",
+    "city": "São Paulo",
+    "phones": [
+      "+55 11 99240 8879"
+    ],
+    "address": "Av. Indianópolis, 2436–2456, São Paulo, SP",
+    "open24": false,
+    "services": [
+      "Bird supplies",
+      "Pet shop"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=Pet+Avian+S%C3%A3o+Paulo",
+    "id": "x82"
+  },
+  {
+    "country": "Germany",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "Zoohandlung Fridolin",
+    "state": "Berlin",
+    "city": "Berlin",
+    "phones": [
+      "+49 30 344 8936"
+    ],
+    "address": "Kaiserin-Augusta-Allee 81, 10589 Berlin",
+    "open24": false,
+    "services": [
+      "Bird food",
+      "Bird accessories",
+      "Wild-bird food"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://zoofridolin.de/",
+    "id": "x83"
+  },
+  {
+    "country": "Japan",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "WBSJ Birdshop",
+    "state": "Tokyo",
+    "city": "Tokyo",
+    "phones": [
+      "+81 3 5436 2624"
+    ],
+    "address": "3-9-23 Nishigotanda, Shinagawa City, Tokyo",
+    "open24": false,
+    "services": [
+      "Bird shop",
+      "Bird-watching and bird goods"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.wbsj.org/shopping/shop/",
+    "id": "x84"
+  },
+  {
+    "country": "Russia",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "101 Popugai",
+    "state": "Moscow",
+    "city": "Moscow",
+    "phones": [
+      "+7 925 773 21 01"
+    ],
+    "address": "Ul. Pererva 39, Moscow",
+    "open24": false,
+    "services": [
+      "Parrot food",
+      "Bird toys",
+      "Bird supplies"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://shop.101popugai.ru/catalog",
+    "id": "x85"
+  },
+  {
+    "country": "Mexico",
+    "domain": "bird",
+    "type": "Shop",
+    "name": "D-Vet Exotics — Food & Accessories",
+    "state": "Ciudad de México",
+    "city": "Mexico City",
+    "phones": [
+      "+52 55 7677 0857"
+    ],
+    "address": "Calle de Empresa 91, Insurgentes Mixcoac, Mexico City",
+    "open24": false,
+    "services": [
+      "Bird food",
+      "Exotic pet accessories",
+      "Avian clinic on site"
+    ],
+    "checked": "2026-10-02",
+    "source": "https://www.google.com/maps/search/?api=1&query=D-Vet+Exotics+Mexico+City",
+    "id": "x86"
+  }
+]

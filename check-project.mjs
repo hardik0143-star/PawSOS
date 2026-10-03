@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root = process.cwd();
+const required = ['index.html','app.js','styles.css','manifest.json','sw.js','api/contacts.js','api/submissions.js','api/admin-login.js','api/admin-contacts.js','api/admin-submissions.js','supabase/setup.sql'];
+const missing = required.filter(f => !fs.existsSync(path.join(root,f)));
+if (missing.length) throw new Error('Missing files: ' + missing.join(', '));
+const html = fs.readFileSync(path.join(root,'index.html'),'utf8');
+if (!html.includes('PawWing SOS') || !html.includes('adminSubmissions') || !html.includes('cloudStatus')) throw new Error('Cloud UI markers missing.');
+const manifest = JSON.parse(fs.readFileSync(path.join(root,'manifest.json'),'utf8'));
+if (!manifest.id.includes('v5-3')) throw new Error('Manifest version not updated.');
+console.log('Project structure OK.');
